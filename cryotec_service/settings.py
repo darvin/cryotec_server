@@ -89,13 +89,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'django_evolution',
     'jsonrpc',
-#    'dmigrations',
-#    'south',
-
-
 )
-#DMIGRATIONS_DIR = os.path.join(os.path.dirname(__file__), 'migrations')
-
 
 
 SERIALIZATION_MODULES = {
@@ -107,9 +101,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
-    "django.core.context_processors.request", 
-    'machines.context_processors.machines_tree',
-    
+    "django.core.context_processors.request",   
     )
 
 
