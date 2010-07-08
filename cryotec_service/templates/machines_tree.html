@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript" src="/site_media/libs/js/jquery-1.4.2.js"></script>
+<link rel="stylesheet" href="/site_media/libs/css/jquery.treeview.css" />
+<script src="/site_media/libs/js/jquery.treeview.js" type="text/javascript"></script>
+<script src="/site_media/libs/js/jquery.cookie.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="/site_media/machinestree.js"></script>
+<title>{% block title %}A Generic Title{% endblock %}</title>
+</head>
+<body>
+{% load machines_extras %}
+
+
+
+	
+
+
+
+<div id="machines_tree_control">
+	<a title="Collapse the entire tree below" href="#"><img src="/site_media/libs/css/images/minus.gif" /> Collapse All</a>
+	<a title="Expand the entire tree below" href="#"><img src="/site_media/libs/css/images/plus.gif" /> Expand All</a>
+	<a title="Toggle the tree below, opening closed branches, closing open branches" href="#">Toggle All</a>
+</div>
+
+<ul class="treeview" id="machines_tree">
+{% tree machine_types|machine_types_astree %}
+<a href="{{ item.get_absolute_url }}">{{ item }}</a>
+{% endtree %}
+</ul>
+
+
+
+
+
+</body>
+</html>
