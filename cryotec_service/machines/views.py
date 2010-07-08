@@ -46,20 +46,7 @@ def getAll(request):
 @jsonrpc_method('machines_get(machine_pk=int, client_pk=int, machinemark_pk=int)') 
 def get(request, machine_pk=None, client_pk=None, machinemark_pk=None):
 #    print "FUCUUU!!! %s %s %s " % (machine_pk,client_pk, machinemark_pk)
-    if not (machine_pk in (None, -1)):
-        print "mach_pk"
-        m = [Machine.objects.get(pk=machine_pk)]
-    elif not (client_pk in (None, -1)):
-        if not (machinemark_pk in (None, -1)):
-            print "cli+mark"
-            m = Machine.objects.filter(client__pk=client_pk, machinemark__pk=machinemark_pk)
-        else:
-            print "cli"
-            m = Machine.objects.filter(client__pk=client_pk)
-    elif not (machinemark_pk in (None, -1)):
-        m = Machine.objects.filter(machinemark__pk=machinemark_pk)
-    else:
-        m = Machine.objects.all()
+    m = Machine.objects.get_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
 #    m = Machine.objects.filter(pk=machine_pk)
     #m = Machine.objects.get(pk=machine_pk)
     print m

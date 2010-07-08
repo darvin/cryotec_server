@@ -3,6 +3,14 @@
 from django.db import models
 from machines.models import Machine
 
+
+class ActionManager(models.Manager):
+    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
+        pks = Machine.objects.get_pks_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
+        return self.filter(machine__pk__in=pks)
+
+
+
 class Action(models.Model):
     """
     Отцовский класс для всех событий (действий) - тех-обслуживаний, профосмотров, репортов неисправностей
@@ -14,6 +22,8 @@ class Action(models.Model):
     """Текстовое содержание действия - комментарий"""
     date = models.DateField()
     """Дата/время действия"""
+    
+    objects = ActionManager()
     
     def __unicode__(self):
         return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
