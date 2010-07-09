@@ -53,8 +53,4 @@ class RightPanel(TabPanel):
         self.setSize("%d" % scrollWidth, "%d" % scrollHeight)
 
 
-       
-    def refresh(self):
-        for tab in self.tabs:
-            tab.refresh()
       

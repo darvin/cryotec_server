@@ -20,7 +20,7 @@ from RightPanel import RightPanel
 
 
 from JsonRpcProxy import jsonrpc_proxy
-
+from Filters import MachineFilter
 
 class CryotecClient(object):
     '''
@@ -30,11 +30,13 @@ class CryotecClient(object):
     def onModuleLoad(self):
         self.singleton = self
         
-        self.selected_client_pk = -1
-        self.selected_machine_pk = -1
-        self.selected_machinetype_pk = -1
-        self.selected_machinemark_pk = -1
+#        self.selected_client_pk = -1
+#        self.selected_machine_pk = -1
+#        self.selected_machinetype_pk = -1
+#        self.selected_machinemark_pk = -1
+#        
         
+        self.machine_filter = MachineFilter(-1,-1,-1)
         
         self.leftpanel = LeftPanel(self.singleton)
         leftpanel_outer = DisclosurePanel("Машины")
@@ -68,7 +70,6 @@ class CryotecClient(object):
     
     def call_rpc_actions_getByMachine(self, handler):
         jsonrpc_proxy.actions_getByMachine(self.selected_machine_pk, self.selected_client_pk, self.selected_machinemark_pk, handler)
-
     
         
     def call_rpc_machines_get(self, handler):

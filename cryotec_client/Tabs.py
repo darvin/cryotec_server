@@ -59,13 +59,14 @@ class MachineTab(AbstractTab):
         self.html = HTML()
         self.panel.add(self.html)
         self.add(self.panel)
+        self.app.machine_filter.add_handler("client","machines_get",self)
+        self.app.machine_filter.add_handler("machine","machines_get",self)
+        self.app.machine_filter.add_handler("mark","machines_get",self)
         
-    def refresh(self):
-        self.app.call_rpc_machines_get(self)
 
             
     def onRemoteResponse(self, response, request_info):
-        if (self.app.selected_machine_pk is not None):
+        if (self.app.machine_filter.is_not_blank()):
             response_decoded = jsonrpc_proxy.decode(response)
             self.html.setHTML("%s"%response_decoded)
         
@@ -123,6 +124,12 @@ class ActionTab(AbstractTab):
         
         self.panel.add(toolbar)
         self.panel.add(HTML("снизу табличка"))
+        self.html = HTML()
+        self.panel.add(self.html)
+        
+        self.app.machine_filter.add_handler("client","actions_getByMachine",self)
+        self.app.machine_filter.add_handler("machine","actions_getByMachine",self)
+        self.app.machine_filter.add_handler("mark","actions_getByMachine",self)
         
         
         
@@ -131,6 +138,7 @@ class ActionTab(AbstractTab):
                                  Spacing=4)
         contents.add(HTML('Тут будут формы ввода, подтверждения и т.д.'))
         contents.add(Button("Close", getattr(self, "onClose")))
+        
 
         self._dialog = DialogBox(glass=True)
         self._dialog.setHTML('<b>Диалоговое окно</b>')
@@ -140,10 +148,20 @@ class ActionTab(AbstractTab):
         top = (Window.getClientHeight() - 100) / 2 + Window.getScrollTop()
         self._dialog.setPopupPosition(left, top)
         self._dialog.show()
-
+        
 
     def onClose(self, event):
         self._dialog.hide()
+        
+        
+            
+    def onRemoteResponse(self, response, request_info):
+        response_decoded = jsonrpc_proxy.decode(response)
+        self.html.setHTML("%s"%response_decoded)
+        
+    def onRemoteError(self, code, message, request_info):
+        print "error"
+        print ("error %s" % str(message))
 
 
 class ReportTab(ActionTab):
@@ -188,7 +206,7 @@ class MaintenanceTab(ActionTab):
 
     
 TAB_CLASSES = (MachineTab,
-#               ActionTab,
+               ActionTab,
 #               ReportTab,
 #               FixTab,
 #               CheckupTab,

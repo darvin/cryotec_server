@@ -27,8 +27,8 @@ def getAll(request):
 
 
 
-@jsonrpc_method('machines_get(machine_pk=int, client_pk=int, machinemark_pk=int)') 
-def get(request, machine_pk=None, client_pk=None, machinemark_pk=None):
+@jsonrpc_method('machines_get(machine_pk=int, machinemark_pk=int, client_pk=int)') 
+def get(request, machine_pk=None,  machinemark_pk=None, client_pk=None):
     m = Machine.objects.get_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
 
     print m

@@ -26,7 +26,7 @@ class ClientsListBox(ListBox):
         ListBox.__init__(self)  
         self.app = app
         self.addChangeListener(getattr(self, "onItemSelected"))
-
+        
         
     def refresh(self):
         self.app.selected_client_pk = -1
@@ -36,13 +36,9 @@ class ClientsListBox(ListBox):
         
         print "selected"
         self.client_pk = self.getValue(self.getSelectedIndex())
-        print self.client_pk
-        self.app.selected_client_pk = int(self.client_pk) 
+        self.app.machine_filter.set("client", int(self.client_pk)) 
         
-        self.app.selected_machine_pk = -1
-        self.app.selected_machinetype_pk = -1
-        self.app.selected_machinemark_pk = -1
-        self.app.leftpanel.machines.refresh()
+        
         
     def onRemoteResponse(self, response, request_info):
         self.clear()
@@ -64,24 +60,25 @@ class MachinesTree(Tree):
         self.app = app
         self.addTreeListener(self)
         
-    def refresh(self):
-        self.app.call_rpc_machines_get(self)
-#        print "machines refresh %s" % client_pk
- 
+        self.app.machine_filter.add_handler("client","machines_get",self)
+        
+#    def refresh(self):
+#        self.app.call_rpc_machines_get(self)
+##        print "machines refresh %s" % client_pk
+# 
 
     def onTreeItemSelected(self, item):
-        value = item.getUserObject()
+        value = item.getUserObject() 
         
         if value is not None:
             print value
             t, v = value.split(";")
             if t == "machine":
-                self.app.selected_machine_pk = int(v)
+                self.app.machine_filter.set("machine", int(v))
             elif t=="machinemark":
-                self.app.selected_machine_pk = -1
-                self.app.selected_machinemark_pk = int(v)
+                self.app.machine_filter.set("mark", int(v))
             elif (t=="all") and (v==1):
-                self.app.selected_machine_pk = -1
+                self.app.machine_filter.set("mark", -1)
                 
 
             
@@ -93,6 +90,10 @@ class MachinesTree(Tree):
 
 
     def onRemoteResponse(self, response, request_info):
+        print "################################################"
+        print request_info.__dict__
+        
+        
         response_decoded = jsonrpc_proxy.decode(response)
         
         self.clear()
@@ -124,41 +125,6 @@ class MachinesTree(Tree):
                 types[type] = typeitem
                 self.addItem(typeitem)
                 process_mark(mark, marks, machineitem, types, type, mark_name)
-#    def onRemoteResponse(self, response, request_info):
-#        def get_or_create(dic, ind1, ind2):
-#            if ind1 in dic:
-#                if ind2 in dic[ind1]:
-#                    return dic[ind1][ind2]
-#                else:
-#                    dic[ind1][ind2] = []
-#                    return dic[ind1][ind2]
-#            else:
-#                dic[ind1] = {}
-#                dic[ind1][ind2] = []
-#                return dic[ind1][ind2]
-#             
-#        response_decoded = jsonrpc_proxy.decode(response)
-#        machines = {}
-#        for machine in response_decoded:
-##            print machine
-#            type = machine["extras"]["get_machinetype_name"]
-#            mark = machine["extras"]["get_machinemark_name"]
-#            
-#            get_or_create(machines,type,mark).append({"name": machine["extras"]["__unicode__"],
-#                                         "pk": machine["pk"]})
-#            
-#        self.clear()
-#        self.addItem(self.createItem(u"Все", value="all;%s"%str(-1)))
-#        for type in machines:
-#            typeitem = self.createItem(type)
-#            self.addItem(typeitem)
-#            for mark in machines[type]:
-#                markitem = self.createItem(mark)
-#                typeitem.addItem(markitem)
-#                for machine in machines[type][mark]:
-#                    print machine
-#                    machineitem = self.createItem(machine["name"],value="machine;%s"%machine["pk"])
-#                    markitem.addItem(machineitem)
 
     def onRemoteError(self, code, message, request_info):
         print "error"
@@ -195,7 +161,7 @@ class LeftPanel(StackPanel):
         self.add(self.machines, "Машины")
         self.add(self.clients, "Клиенты")
         
-        self.machines.refresh()
+#        self.machines.refresh()
         self.clients.refresh()
         self.clients.selectValue("-1")
 

@@ -1,3 +1,5 @@
+import pyjd
+
 from pyjamas.JSONService import JSONProxy
 from pyjamas.JSONParser import JSONParser
 
@@ -20,6 +22,7 @@ class RemoteService(JSONProxy):
                                 "actions_getAll",
                                 "clients_getAll",
                                 "actions_get",
+                                "actions_getByMachine",
                               ])
         
         try:
