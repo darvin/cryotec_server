@@ -7,11 +7,16 @@ class MachineType(models.Model):
     """
     Тип машины
     """
-    name = models.CharField(max_length=30)
+    name = models.CharField("Название типа машин", max_length=30)
     """Название"""
     
     def __unicode__(self):
         return u"%s" % self.name
+
+    class Meta:
+        verbose_name = "Тип машины"
+        verbose_name_plural = "Типы машин"
+
 
     
     def get_absolute_url(self):
@@ -22,12 +27,17 @@ class MachineMark(models.Model):
     """
     Марка машины
     """
-    name = models.CharField(max_length=30)
+    name = models.CharField("Марка", max_length=30)
     """Название"""
     machinetype = models.ForeignKey(MachineType)
     """Тип машин, к которому принадлежит марка"""
     to_days_max = models.IntegerField()
     motohours_max = models.IntegerField()
+
+    class Meta:
+        verbose_name = "Марка машины"
+        verbose_name_plural = "Марки машин"
+
 
     def __unicode__(self):
         return u"%s" % self.name
@@ -64,19 +74,23 @@ class Machine(models.Model):
     """
     Конкретная машина
     """
-    serial = models.CharField(max_length=30)
+    serial = models.CharField("Серийный номер", max_length=30)
     """Серийный номер машины"""
     client = models.ForeignKey(Client)
     """Клиент, которому продана машина"""
-    alias = models.CharField(max_length=30, blank=True)
+    alias = models.CharField("Псевдоним, будет отображаться как индетефикатор машины, вместо ИМЯКЛИЕНТА_МАРКАМАШИНЫ", max_length=30, blank=True)
     """Псевдоним машины"""
-    motohours = models.IntegerField()
+    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
     machinemark = models.ForeignKey(MachineMark)
     """Марка машины"""
     
     objects = MachineManager()
+
+    class Meta:
+        verbose_name = "Машина"
+        verbose_name_plural = "Машины"
     
-    
+
     def __unicode__(self):
         if self.alias:
             return u"%s" % self.alias

@@ -18,12 +18,18 @@ class Action(models.Model):
     """
     machine = models.ForeignKey(Machine)
     """Машина, к которой относится действие"""
-    comment = models.CharField(max_length=3000)
+    comment = models.CharField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
-    date = models.DateField()
+    date = models.DateField("Дата")
     """Дата/время действия"""
     
     objects = ActionManager()
+    
+    
+    class Meta:
+        verbose_name = "Событие"
+        verbose_name_plural = "События"
+
     
     def __unicode__(self):
         return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
@@ -49,6 +55,12 @@ class PAction(Action):
     Отцовский класс для периодических действий
     """
     pass
+
+    class Meta:
+        verbose_name = "Периодическое событие"
+        verbose_name_plural = "Периодическое события"
+
+
     def get_real(self):
         try:
             return self.checkup
@@ -63,8 +75,12 @@ class Checkup(PAction):
     """
     Профосмотр - проводится в соответствии с календарным планом
     """
-    motohours = models.IntegerField()
+    motohours = models.IntegerField("Моточасы, считанные во время профосмотра с машины")
     """Моточасы, считанные во время профосмотра с машины"""
+
+    class Meta:
+        verbose_name = "Профосмотр"
+        verbose_name_plural = "Профосмотры"
 
     
 class Maintenance(PAction):
@@ -72,6 +88,9 @@ class Maintenance(PAction):
     Техобслуживание = проводится в соответствии с моточасами
     """    
     pass
+    class Meta:
+        verbose_name = "Техобслуживание"
+        verbose_name_plural = "Техобслуживания"
 
 
 class Report(Action):
@@ -80,9 +99,9 @@ class Report(Action):
     """
     paction = models.ForeignKey(PAction, blank=True, null=True)
     """Периодическое действие, во время которого выявлена неисправность"""
-    fixed = models.BooleanField()
+    fixed = models.BooleanField("Неисправность исправлена")
     """Исправлена ли неисправность. Изначально - не исправлена. Опциональное"""
-    by_client = models.BooleanField()
+    by_client = models.BooleanField("Сообщено клиентом")
     """сообщено клиентом. Изначально - отрицательно. Опциональное"""
     
     INTERESTS_CHOICES = (
@@ -92,8 +111,14 @@ class Report(Action):
             (3, 'Серьезная неисправность'),
             (4, 'Полный отказ'),
     )
-    interest = models.PositiveSmallIntegerField(choices=INTERESTS_CHOICES, default=0)
+    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=INTERESTS_CHOICES, default=0)
     """Серьезность неисправности"""
+
+
+    class Meta:
+        verbose_name = "Неисправность"
+        verbose_name_plural = "Неисправности"
+
     
     def __unicode__(self):
         return u"%s: %s (%d)" % (self.date.strftime("%d.%m.%y"), self.comment, self.interest)
@@ -105,3 +130,7 @@ class Fix(Action):
     """
     report = models.ForeignKey(Report)
     """Сообщение о неисправности, ремонт которой проводился"""
+    
+    class Meta:
+        verbose_name = "Ремонт"
+        verbose_name_plural = "Ремонты"
