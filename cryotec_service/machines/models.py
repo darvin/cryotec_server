@@ -29,7 +29,7 @@ class MachineMark(models.Model):
     """
     name = models.CharField("Марка", max_length=30)
     """Название"""
-    machinetype = models.ForeignKey(MachineType)
+    machinetype = models.ForeignKey(MachineType, verbose_name="Тип машин")
     """Тип машин, к которому принадлежит марка"""
     to_days_max = models.IntegerField()
     motohours_max = models.IntegerField()
@@ -76,12 +76,12 @@ class Machine(models.Model):
     """
     serial = models.CharField("Серийный номер", max_length=30)
     """Серийный номер машины"""
-    client = models.ForeignKey(Client)
+    client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит машина" )
     """Клиент, которому продана машина"""
     alias = models.CharField("Псевдоним, будет отображаться как индетефикатор машины, вместо ИМЯКЛИЕНТА_МАРКАМАШИНЫ", max_length=30, blank=True)
     """Псевдоним машины"""
     motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
-    machinemark = models.ForeignKey(MachineMark)
+    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
     """Марка машины"""
     
     objects = MachineManager()

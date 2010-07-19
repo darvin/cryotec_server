@@ -16,7 +16,7 @@ class Action(models.Model):
     Отцовский класс для всех событий (действий) - тех-обслуживаний, профосмотров, репортов неисправностей
     и ремонтов.
     """
-    machine = models.ForeignKey(Machine)
+    machine = models.ForeignKey(Machine, verbose_name="Машина, к которой относится действие")
     """Машина, к которой относится действие"""
     comment = models.CharField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
@@ -33,6 +33,12 @@ class Action(models.Model):
     
     def __unicode__(self):
         return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
+    @classmethod
+    def get_admin_path(cls):
+        print "sdf!"
+        print cls.get_real()
+        return cls.get_real()
+    
     
     def get_real(self):
         try:
@@ -97,7 +103,7 @@ class Report(Action):
     """
     Сообщение о неисправности
     """
-    paction = models.ForeignKey(PAction, blank=True, null=True)
+    paction = models.ForeignKey(PAction, blank=True, null=True, verbose_name="Техобслуживание или профосмотр, во время которого обнаружена неисправность")
     """Периодическое действие, во время которого выявлена неисправность"""
     fixed = models.BooleanField("Неисправность исправлена")
     """Исправлена ли неисправность. Изначально - не исправлена. Опциональное"""
@@ -105,11 +111,11 @@ class Report(Action):
     """сообщено клиентом. Изначально - отрицательно. Опциональное"""
     
     INTERESTS_CHOICES = (
-            (0, 'Сообщение'),
-            (1, 'Мелкая поломка'),
-            (2, 'Средняя поломка'),
-            (3, 'Серьезная неисправность'),
-            (4, 'Полный отказ'),
+        (0, 'Сообщение'),
+        (1, 'Мелкая поломка'),
+        (2, 'Средняя поломка'),
+        (3, 'Серьезная неисправность'),
+        (4, 'Полный отказ'),
     )
     interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=INTERESTS_CHOICES, default=0)
     """Серьезность неисправности"""
@@ -128,7 +134,7 @@ class Fix(Action):
     """
     Ремонт
     """
-    report = models.ForeignKey(Report)
+    report = models.ForeignKey(Report, verbose_name="Сообщение о неисправности, ремонт которой проводился")
     """Сообщение о неисправности, ремонт которой проводился"""
     
     class Meta:

@@ -10,7 +10,7 @@ class ChecklistQuestion(models.Model):
     """
     comment = models.CharField("Текст вопроса",max_length=100)
     """Содержание вопроса"""
-    machinemark = models.ForeignKey(MachineMark)
+    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машин, к которым относится вопрос чеклиста")
     """Марка машин, к которым относится вопрос чеклиста"""
     required = models.BooleanField("Требуемый")
     """Необходим ли ответ для вопроса"""
@@ -30,9 +30,9 @@ class ChecklistAnswer(models.Model):
     """
     Ответ на вопрос чеклиста
     """
-    checklistquestion = models.ForeignKey(ChecklistQuestion)
+    checklistquestion = models.ForeignKey(ChecklistQuestion, verbose_name="Вопрос к этому ответу")
     """Вопрос к этому ответу"""
-    paction = models.ForeignKey(PAction)
+    paction = models.ForeignKey(PAction, verbose_name="Переодическое проверка, в результате которой получен ответ")
     """Переодическое проверка, в результате которой получен ответ"""
     comment = models.CharField("Текстовый комментарий",max_length=300)
     """Текстовый комментарий"""
