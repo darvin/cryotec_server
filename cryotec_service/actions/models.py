@@ -16,7 +16,7 @@ class Action(models.Model):
     Отцовский класс для всех событий (действий) - тех-обслуживаний, профосмотров, репортов неисправностей
     и ремонтов.
     """
-    machine = models.ForeignKey(Machine, verbose_name="Машина, к которой относится действие")
+    machine = models.ForeignKey(Machine, verbose_name="Машина")
     """Машина, к которой относится действие"""
     comment = models.CharField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
@@ -103,9 +103,9 @@ class Report(Action):
     """
     Сообщение о неисправности
     """
-    paction = models.ForeignKey(PAction, blank=True, null=True, verbose_name="Техобслуживание или профосмотр, во время которого обнаружена неисправность")
+    paction = models.ForeignKey(PAction, blank=True, null=True, verbose_name="Событие")
     """Периодическое действие, во время которого выявлена неисправность"""
-    fixed = models.BooleanField("Неисправность исправлена")
+    fixed = models.BooleanField("Исправлена")
     """Исправлена ли неисправность. Изначально - не исправлена. Опциональное"""
     by_client = models.BooleanField("Сообщено клиентом")
     """сообщено клиентом. Изначально - отрицательно. Опциональное"""
