@@ -1,8 +1,22 @@
 from django.contrib import admin
+from checklists.admin import ChecklistAnswerInline
 from actions.models import Checkup, Maintenance, Fix, Report, PAction, Action
 
-admin.site.register(Checkup)
-admin.site.register(Maintenance)
+
+
+
+
+
+class CheckupAdmin(admin.ModelAdmin):
+    inlines = [ChecklistAnswerInline]
+
+class MaintenanceAdmin(admin.ModelAdmin):
+    inlines = [ChecklistAnswerInline]
+
+
+
+admin.site.register(Checkup, CheckupAdmin)
+admin.site.register(Maintenance, MaintenanceAdmin)
 admin.site.register(Fix)
 admin.site.register(Report)
 
@@ -28,11 +42,11 @@ class LinkedInline(admin.options.InlineModelAdmin):
 
 
 
-class ActionInline(admin.StackedInline):
+class ActionInline(LinkedInline):
     model = Action
 
 
-class ReportInline(admin.StackedInline):
+class ReportInline(LinkedInline):
     model = Report
 
 

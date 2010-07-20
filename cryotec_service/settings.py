@@ -95,6 +95,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'django_evolution',
     'jsonrpc',
+    'libs',
 )
 
 

@@ -1,5 +1,6 @@
 from django.contrib import admin
 from actions.admin import FixInline, ReportInline, MaintenanceInline, CheckupInline
+from checklists.admin import ChecklistQuestionInline
 from machines.models import Machine, MachineMark, MachineType
 
 
@@ -15,7 +16,7 @@ class MachineMarkInline(admin.TabularInline):
 
 
 class MachineMarkAdmin(admin.ModelAdmin):
-    inlines = [MachineInline]
+    inlines = [ChecklistQuestionInline, MachineInline]
 
 class MachineTypeAdmin(admin.ModelAdmin):
     inlines = [MachineMarkInline]
