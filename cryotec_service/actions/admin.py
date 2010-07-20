@@ -2,7 +2,7 @@ from django.contrib import admin
 from checklists.admin import ChecklistAnswerInline
 from actions.models import Checkup, Maintenance, Fix, Report, PAction, Action
 
-
+from libs.admin import LinkedInline
 
 
 
@@ -25,18 +25,6 @@ admin.site.register(Report)
 
 
 
-
-
-
-#override of the InlineModelAdmin to support the link in the tabular inline
-class LinkedInline(admin.options.InlineModelAdmin):
-    template = "linked.html"
-    admin_model_path = None
-
-    def __init__(self, *args):
-        super(LinkedInline, self).__init__(*args)
-        if self.admin_model_path is None:
-            self.admin_model_path = "actions/" + self.model.__name__.lower()
 
 
 

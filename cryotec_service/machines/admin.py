@@ -2,16 +2,16 @@ from django.contrib import admin
 from actions.admin import FixInline, ReportInline, MaintenanceInline, CheckupInline
 from checklists.admin import ChecklistQuestionInline
 from machines.models import Machine, MachineMark, MachineType
+from libs.admin import LinkedInline
 
 
 
 
 
-
-class MachineInline(admin.TabularInline):
+class MachineInline(LinkedInline):
     model = Machine
 
-class MachineMarkInline(admin.TabularInline):
+class MachineMarkInline(LinkedInline):
     model = MachineMark
 
 
