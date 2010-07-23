@@ -31,9 +31,10 @@ class MachineMark(models.Model):
     """Название"""
     machinetype = models.ForeignKey(MachineType, verbose_name="Тип машин")
     """Тип машин, к которому принадлежит марка"""
-    to_days_max = models.IntegerField()
-    motohours_max = models.IntegerField()
 
+    month_default = models.IntegerField("Количество месяцев до следущего профосмотра (по умолчанию)")
+    motohours_default = models.IntegerField("Количество моточасов до следующего техобслуживания (по умолчанию)")
+    
     class Meta:
         verbose_name = "Марка машины"
         verbose_name_plural = "Марки машин"
@@ -74,15 +75,20 @@ class Machine(models.Model):
     """
     Конкретная машина
     """
-    serial = models.CharField("Серийный номер", max_length=30)
+    serial = models.CharField("Серийный номер", max_length=30,  blank=True, null=True)
     """Серийный номер машины"""
     client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит машина" )
+    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил машину",  blank=True, null=True)
+
     """Клиент, которому продана машина"""
     alias = models.CharField("Псевдоним, будет отображаться как индетефикатор машины, вместо ИМЯКЛИЕНТА_МАРКАМАШИНЫ", max_length=30, blank=True)
     """Псевдоним машины"""
-    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
     machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
     """Марка машины"""
+    
+    month = models.IntegerField("Количество месяцев до следущего профосмотра")
+    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
+    
     
     objects = MachineManager()
 
