@@ -91,9 +91,11 @@ INSTALLED_APPS = (
     'machines',
     'clients',
     'actions',
+    'files',
     'checklists',
     'django_extensions',
-    'django_evolution',
+    #'django_evolution',
+    'south',
     'jsonrpc',
     'libs',
 )

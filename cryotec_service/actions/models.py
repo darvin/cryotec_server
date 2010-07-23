@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.contrib.auth.models import User
 
 from django.db import models
 from machines.models import Machine
@@ -20,8 +21,9 @@ class Action(models.Model):
     """Машина, к которой относится действие"""
     comment = models.CharField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
-    date = models.DateField("Дата")
+    date = models.DateField("Дата", auto_now_add=True)
     """Дата/время действия"""
+    user = models.ForeignKey(User, verbose_name="Пользователь")
     
     objects = ActionManager()
     

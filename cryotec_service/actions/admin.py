@@ -3,17 +3,22 @@ from checklists.admin import ChecklistAnswerInline
 from actions.models import Checkup, Maintenance, Fix, Report, PAction, Action
 from actions.forms import ReportAdminForm
 from libs.admin import LinkedInline
+from files.admin import UploadInline
 
 
 class ReportAdmin(admin.ModelAdmin):
     form = ReportAdminForm
+    inlines = [UploadInline]
     
+    
+class FixAdmin(admin.ModelAdmin):
+    inlines = [UploadInline]
     
 class CheckupAdmin(admin.ModelAdmin):
-    inlines = [ChecklistAnswerInline]
+    inlines = [ChecklistAnswerInline,UploadInline]
 
 class MaintenanceAdmin(admin.ModelAdmin):
-    inlines = [ChecklistAnswerInline]
+    inlines = [ChecklistAnswerInline,UploadInline]
 
 
 
