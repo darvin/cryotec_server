@@ -19,7 +19,7 @@ class Action(models.Model):
     """
     machine = models.ForeignKey(Machine, verbose_name="Машина")
     """Машина, к которой относится действие"""
-    comment = models.CharField("Комментарий", max_length=3000)
+    comment = models.TextField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
     date = models.DateField("Дата", auto_now_add=True)
     """Дата/время действия"""
@@ -62,7 +62,8 @@ class PAction(Action):
     """
     Отцовский класс для периодических действий
     """
-    pass
+    motohours = models.IntegerField("Моточасы")
+    """Моточасы, считанные во время профосмотра с машины"""
 
     class Meta:
         verbose_name = "Периодическое событие"
@@ -83,9 +84,7 @@ class Checkup(PAction):
     """
     Профосмотр - проводится в соответствии с календарным планом
     """
-    motohours = models.IntegerField("Моточасы, считанные во время профосмотра с машины")
-    """Моточасы, считанные во время профосмотра с машины"""
-
+    pass
     class Meta:
         verbose_name = "Профосмотр"
         verbose_name_plural = "Профосмотры"

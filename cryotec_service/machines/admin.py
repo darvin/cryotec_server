@@ -33,8 +33,12 @@ class MachineTypeAdmin(admin.ModelAdmin):
     inlines = [MachineMarkInline]
 
 class MachineAdmin(admin.ModelAdmin):
-    inlines = [ReportInline, FixInline, MaintenanceInline, CheckupInline]
-    inlines += [UploadInline]
+    inlines = [ReportInline, \
+               FixInline, \
+               MaintenanceInline, \
+               CheckupInline, \
+               UploadInline, \
+               ]
 
 
 

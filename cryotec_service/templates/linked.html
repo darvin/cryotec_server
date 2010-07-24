@@ -1,5 +1,4 @@
 {% load i18n adminmedia %}
-{% load cryotec_extras %}
 
 <div class="inline-group" id="{{ inline_admin_formset.formset.prefix }}-group">
   <div class="tabular inline-related {% if forloop.last %}last-related{% endif %}">
@@ -19,7 +18,7 @@
      </tr></thead>
 
      <tbody>
-     {% for inline_admin_form in inline_admin_formset|rstrip_inline_formset:3 %}
+     {% for inline_admin_form in inline_admin_formset %}
         {% if inline_admin_form.form.non_field_errors %}
         <tr><td colspan="{{ inline_admin_form.field_count }}">{{ inline_admin_form.form.non_field_errors }}</td></tr>
         {% endif %}
