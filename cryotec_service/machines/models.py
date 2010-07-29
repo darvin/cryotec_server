@@ -78,7 +78,7 @@ class Machine(models.Model):
     serial = models.CharField("Серийный номер", max_length=30,  blank=True, null=True)
     """Серийный номер машины"""
     client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит машина",   related_name="machines")
-#    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил машину",  blank=True, null=True,  related_name="machines_customer")
+    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил машину",  blank=True, null=True,  related_name="machines_customer")
 
     """Клиент, которому продана машина"""
     alias = models.CharField("Псевдоним", max_length=30, blank=True)
@@ -119,3 +119,8 @@ class Machine(models.Model):
     
     def get_machinemark_pk(self):
         return self.machinemark.pk
+    
+    def save(self):
+        if self.customer == None:
+            self.customer = self.client
+        super(Machine,self).save()
