@@ -38,3 +38,7 @@ class Upload(models.Model):
     class Meta:
         verbose_name = "Файл"
         verbose_name_plural = "Файлы"
+    
+    
+    def __unicode__(self):
+        return "%s" % self.file.name

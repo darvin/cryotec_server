@@ -1,0 +1,43 @@
+htfcss: lass font-family: monospace;
+htfcss: lass font-family: monospace;
+htfcss: lass font-family: monospace;
+htfcss: cmmi font-style: italic;
+htfcss: cmmib font-style: italic; font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: cmbsy font-weight: bold;
+htfcss: lass font-family: monospace;
+File: basic_presentation.4oo
+File: basic_presentation.tmp
+File: basic_presentation-settings.4os
+File: basic_presentation-styles.4oy
+File: basic_presentation-manifest.4of
+File: basic_presentation-meta.4ot
+File: basic_presentation.4od
+File: basic_presentation.odt
+--- characters ---
+Font("cmr","10","10","109")
+Font("lass","1095","10","100")
+Font("cmbsy","10","10","109")
+Font("cmbsy","8","8","100")
+Font("cmbsy","6","6","100")
+Font("cmex","10","10","109")
+Font("cmex","8","8","100")
+Font("cmex","7","7","85")
+Font("msam","10","10","109")
+Font("msam","10","10","80")
+Font("msam","7","7","85")
+Font("msbm","10","10","109")
+Font("msbm","10","10","80")
+Font("msbm","7","7","85")
+Font("cmr","8","8","100")
+Font("cmr","6","6","100")
+Font("cmmi","10","10","109")
+Font("cmmi","8","8","100")
+Font("cmmi","6","6","100")
+Font("cmsy","10","10","109")
+Font("cmsy","8","8","100")
+Font("cmsy","6","6","100")
+Font("lass","1440","14","100")
+Font("lass","1000","10","100")
+Font("lass","1200","12","100")

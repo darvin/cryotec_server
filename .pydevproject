@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?eclipse-pydev version="1.0"?>
+
+<pydev_project>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_INTERPRETER">Default</pydev_property>
+<pydev_property name="org.python.pydev.PYTHON_PROJECT_VERSION">python 2.6</pydev_property>
+<pydev_variables_property name="org.python.pydev.PROJECT_VARIABLE_SUBSTITUTION">
+<key>DJANGO_MANAGE_LOCATION</key>
+<value>cryotec_service/manage.py</value>
+<key>DJANGO_SETTINGS_MODULE</key>
+<value>cryotec_service.settings</value>
+</pydev_variables_property>
+<pydev_pathproperty name="org.python.pydev.PROJECT_SOURCE_PATH">
+<path>/cryotec_service</path>
+<path>/cryotec_service/cryotec_service</path>
+</pydev_pathproperty>
+
+<pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
+<path>/var/lib/python-support/python2.6</path>
+<path>/usr/local/lib/python2.6/dist-packages/mpttadmin-0.3-py2.6.egg</path>
+</pydev_pathproperty>
+</pydev_project>

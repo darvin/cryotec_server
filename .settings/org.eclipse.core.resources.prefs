@@ -1,0 +1,13 @@
+#Thu Jul 29 18:16:32 EEST 2010
+eclipse.preferences.version=1
+encoding//cryotec_client/CryotecClient.py=utf-8
+encoding//cryotec_service/actions/forms.py=utf-8
+encoding//cryotec_service/actions/models.py=utf-8
+encoding//cryotec_service/checklists/forms.py=utf-8
+encoding//cryotec_service/checklists/models.py=utf-8
+encoding//cryotec_service/clients/models.py=utf-8
+encoding//cryotec_service/dashboard.py=utf-8
+encoding//cryotec_service/files/models.py=utf-8
+encoding//cryotec_service/machines/admin.py=utf-8
+encoding//cryotec_service/machines/models.py=utf-8
+encoding//cryotec_service/machines/templatetags/machines_extras.py=utf-8

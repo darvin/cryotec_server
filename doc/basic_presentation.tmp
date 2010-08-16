@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE office:document-content PUBLIC "-//OpenOffice.org//DTD OfficeDocument 2.0//EN" "office.dtd"> 
+ 
+<?xtpipes file="oo-text.4xt" ?> 
+<office:document-content  
+xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"  
+xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"  
+xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"  
+xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"  
+xmlns:fo="http://www.w3.org/1999/XSL/Format"  
+xmlns:xlink="http://www.w3.org/1999/xlink"  
+xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"  
+xmlns:dc="http://purl.org/dc/elements/1.1/"  
+xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"  
+xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" 
+xmlns:svg="http://www.w3.org/2000/svg"  
+xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"  
+xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"  
+xmlns:math="http://www.w3.org/1998/Math/MathML"  
+xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"  
+xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"  
+xmlns:ooo="http://openoffice.org/2004/office"  
+xmlns:ooow="http://openoffice.org/2004/writer"  
+xmlns:oooc="http://openoffice.org/2004/calc"  
+xmlns:dom="http://www.w3.org/2001/xml-events"  
+xmlns:xforms="http://www.w3.org/2002/xforms"  
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+xmlns:anim="urn:oasis:names:tc:opendocument:xmlns:animation:1.0"  
+xmlns:smil="urn:oasis:names:tc:opendocument:xmlns:smil-compatible:1.0" 
+xmlns:presentation="urn:oasis:names:tc:opendocument:xmlns:presentation:1.0" 
+office:version="1.0" > 
+<office:automatic-styles> <?tex4ht-lg file="basic_presentation.lg" ?> <style:style style:name="Figure" style:family="section"> 
+<style:section-properties fo:margin-left="0.25in" fo:margin-right="0.25in" style:editable="true"> 
+<style:columns fo:column-count="0" fo:column-gap="0in"/> </style:section-properties> </style:style> 
+<style:page-layout style:name="Standard-page-layout"> 
+<style:page-layout-properties fo:page-width="364.19536pt" fo:page-height="273.14662pt" style:num-format="1" style:print-orientation="portrait" fo:margin-top="0.7874in" fo:margin-bottom="0.7874in" fo:margin-left="0.7874in" fo:margin-right="0.7874in" style:writing-mode="lr-tb" style:footnote-max-height="0in"> 
+<style:footnote-sep style:width="0.0071in" style:distance-before-sep="0.0398in" style:distance-after-sep="0.0398in" style:adjustment="left" style:rel-width="25%" style:color="#000000"/> 
+</style:page-layout-properties> 
+<style:header-style/> <style:footer-style/> </style:page-layout> 
+ 
+</office:automatic-styles>     <office:body><office:text>
+<t4htlink 
+ href="#x1-2r1" name="x1-2r1"></t4htlink>
+<t4htlink 
+ href="#x1-3r1" name="x1-3r1"></t4htlink>
+                                                           
+                                                           
+                         <!--l. 24--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">Cryotec</text:span>
+                         <text:span 
+text:style-name="lass-1440">Service</text:span>
+                             <text:span 
+text:style-name="lass-1440">-</text:span>
+                         <text:span 
+text:style-name="lass-1440">&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0430;</text:span>
+                    <text:span 
+text:style-name="lass-1440">&#x0436;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>
+                   <text:span 
+text:style-name="lass-1440">&#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>
+                                                           
+                          </text:p> 
+<!--l. 24--><text:p text:style-name="Text-body">&#x0421;&#x0435;&#x0440;&#x0433;&#x0435;&#x0439;
+                          &#x041A;&#x043B;&#x0438;&#x043C;&#x043E;&#x0432;
+                                                           
+                             </text:p> 
+<!--l. 24--><text:p text:style-name="Text-body">
+                                                           
+                          </text:p> 
+<!--l. 24--><text:p text:style-name="Text-body">&#x0410;&#x0432;&#x0433;&#x0443;&#x0441;&#x0442;
+                           2010
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-4r1" name="x1-4r1"></t4htlink>
+</text:p> 
+<!--l. 27--><text:p text:style-name="Text-body"><t4htlink 
+ href="#Outline0.1" name="Outline0.1"></t4htlink>
+<t4htlink 
+ href="#x1-5r1" name="x1-5r1"></t4htlink>
+                                                           
+                                                           
+</text:p> 
+<!--l. 29--><text:p text:style-name="Text-body"><t4htlink 
+ href="#Outline0.1.1.4" name="Outline0.1.1.4"></t4htlink>   <t4htlink 
+ href="#x1-6r2" name="x1-6r2"></t4htlink> <t4htlink 
+ href="#x1-7r1" name="x1-7r1"></t4htlink>                             <!--l. 44--><text:p text:style-name="Text-body">
+                              </text:p> 
+<!--l. 44--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0424;&#x0443;&#x043D;&#x043A;&#x0446;&#x0438;&#x0438;</text:span>
+                           <text:span 
+text:style-name="lass-1440">&#x043F;&#x0440;&#x043E;&#x0433;&#x0440;&#x0430;&#x043C;&#x043C;&#x043D;&#x043E;&#x0433;&#x043E;</text:span>
+                              <text:span 
+text:style-name="lass-1440">&#x043F;&#x0440;&#x043E;&#x0434;&#x0443;&#x043A;&#x0442;&#x0430;</text:span>                              
+    </text:p> 
+<!--l. 44--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x043F;&#x0430;&#x0440;&#x043A;&#x0430;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x0441;&#x043E;&#x0431;&#x044B;&#x0442;&#x0438;&#x0439;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;,
+    &#x0440;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;&#x043E;&#x0432;
+    &#x0438;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0421;&#x043E;&#x0437;&#x0434;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438;
+    &#x043F;&#x043E;
+    &#x0440;&#x0430;&#x0437;&#x043B;&#x0438;&#x0447;&#x043D;&#x044B;&#x043C;
+    &#x043F;&#x0430;&#x0440;&#x0430;&#x043C;&#x0435;&#x0442;&#x0440;&#x0430;&#x043C;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x043E;&#x0433;&#x043D;&#x043E;&#x0437;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x0435;&#x043D;&#x0438;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x043E;&#x044F;&#x0449;&#x0438;&#x0445;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0439;
+    &#x043D;&#x0430;
+    &#x043E;&#x0441;&#x043D;&#x043E;&#x0432;&#x0435;
+    &#x0432;&#x0432;&#x0435;&#x0434;&#x0435;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0432;&#x0435;&#x0434;&#x043E;&#x043C;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043F;&#x0435;&#x0440;&#x0441;&#x043E;&#x043D;&#x0430;&#x043B;&#x0430;
+    &#x043E;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x043E;&#x044F;&#x0449;&#x0438;&#x0445;
+    &#x0441;&#x043E;&#x0431;&#x044B;&#x0442;&#x0438;&#x044F;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x043F;&#x0440;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043F;&#x0440;&#x0430;&#x0432;&#x0430;&#x043C;&#x0438;
+    &#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x043E;&#x0432;&#x0430;&#x0442;&#x0435;&#x043B;&#x0435;&#x0439;
+    &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x044B;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x0440;&#x0430;&#x0441;&#x0445;&#x043E;&#x0434;&#x043D;&#x044B;&#x0445;
+    &#x043C;&#x0430;&#x0442;&#x0435;&#x0440;&#x0438;&#x0430;&#x043B;&#x043E;&#x0432;,
+    &#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x043C;&#x044B;&#x0445;
+    &#x0432;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0439;</text:p> 
+</text:list-item> 
+</text:list > 
+                                   
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-8r3" name="x1-8r3"></t4htlink>
+<t4htlink 
+ href="#x1-9r2" name="x1-9r2"></t4htlink>
+                                                           
+                                                           
+                           <!--l. 65--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0423;&#x0447;&#x0435;&#x0442;</text:span>
+                               <text:span 
+text:style-name="lass-1440">&#x043F;&#x0430;&#x0440;&#x043A;&#x0430;</text:span>
+                               <text:span 
+text:style-name="lass-1440">&#x043C;&#x0430;&#x0448;&#x0438;&#x043D;</text:span>                               
+    </text:p> 
+<!--l. 65--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041A;&#x0430;&#x0436;&#x0434;&#x0430;&#x044F; &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x0430;, &#x0432;&#x0432;&#x0435;&#x0434;&#x0435;&#x043D;&#x043D;&#x0430;&#x044F; &#x0432; &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0443;, &#x0438;&#x043C;&#x0435;&#x0435;&#x0442;: 
+        </text:p> 
+<!--l. 65--><text:list text:style-name="Itemize" > 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x0417;&#x0430;&#x043F;&#x0438;&#x0441;&#x044C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0435;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x043E;&#x043C;&#x0443;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043F;&#x0440;&#x043E;&#x0434;&#x0430;&#x043D;&#x0430;/&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x0439;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0435;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x0442;</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x041C;&#x0430;&#x0440;&#x043A;&#x0443;</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x0422;&#x0438;&#x043F;</text:span>
+        <text:span 
+text:style-name="lass-1000">(&#x043A;&#x0430;&#x0442;&#x0435;&#x0433;&#x043E;&#x0440;&#x0438;&#x044E;)</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x0414;&#x0430;&#x043D;&#x043D;&#x044B;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043D;&#x0435;&#x043E;&#x0431;&#x0445;&#x043E;&#x0434;&#x0438;&#x043C;&#x043E;&#x043C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x043B;&#x0438;&#x0447;&#x0435;&#x0441;&#x0442;&#x0432;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043D;&#x0430;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0434;&#x043B;&#x044F;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0435;&#x0433;&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x0414;&#x0430;&#x043D;&#x043D;&#x044B;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0442;&#x0435;&#x043A;&#x0443;&#x0449;&#x0435;&#x043C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x043B;&#x0438;&#x0447;&#x0435;&#x0441;&#x0442;&#x0432;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x041F;&#x0435;&#x0440;&#x0438;&#x043E;&#x0434;&#x0438;&#x0447;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;</text:span>
+        <text:span 
+text:style-name="lass-1000">(&#x0432;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043C;&#x0435;&#x0441;&#x044F;&#x0446;&#x0430;&#x0445;)</text:span></text:p> 
+</text:list-item> 
+</text:list > 
+
+    </text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0414;&#x043E;&#x043F;&#x0443;&#x0441;&#x043A;&#x0430;&#x044E;&#x0442;&#x0441;&#x044F; &#x0432;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438; &#x043F;&#x043E; &#x043B;&#x044E;&#x0431;&#x044B;&#x043C; &#x0441;&#x043E;&#x0447;&#x0435;&#x0442;&#x0430;&#x043D;&#x0438;&#x044F;&#x043C; &#x044D;&#x0442;&#x0438;&#x0445; &#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;, &#x0430;
+    &#x0442;&#x0430;&#x043A;&#x0436;&#x0435; &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435; &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041A;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x0435;
+    &#x043C;&#x043E;&#x0436;&#x0435;&#x0442;
+    &#x0431;&#x044B;&#x0442;&#x044C;
+    &#x043F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x043E;
+    &#x043D;&#x0435;&#x043E;&#x0433;&#x0440;&#x0430;&#x043D;&#x0438;&#x0447;&#x0435;&#x043D;&#x043D;&#x043E;&#x0435;
+    &#x043A;&#x043E;&#x043B;&#x0438;&#x0447;&#x0435;&#x0441;&#x0442;&#x0432;&#x043E;
+    &#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432;
+    &#x043B;&#x044E;&#x0431;&#x044B;&#x0445;
+    &#x0444;&#x043E;&#x0440;&#x043C;&#x0430;&#x0442;&#x043E;&#x0432;
+    (&#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;,
+    &#x0441;&#x0445;&#x0435;&#x043C;&#x044B;,
+    &#x0442;&#x0430;&#x0431;&#x043B;&#x0438;&#x0446;&#x044B;,
+    &#x0444;&#x043E;&#x0442;&#x043E;&#x0433;&#x0440;&#x0430;&#x0444;&#x0438;&#x0438;)</text:p> 
+</text:list-item> 
+</text:list > 
+                                          
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-10r4" name="x1-10r4"></t4htlink>
+<t4htlink 
+ href="#x1-11r3" name="x1-11r3"></t4htlink>
+                                                           
+                                                           
+                             </text:p> 
+<!--l. 74--><text:p text:style-name="Text-body">
+                                </text:p> 
+<!--l. 74--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0423;&#x0447;&#x0435;&#x0442;</text:span>
+                              <text:span 
+text:style-name="lass-1440">&#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x043E;&#x0432;</text:span>                              
+</text:p> 
+<!--l. 74--><text:p text:style-name="Text-body">&#x041E; &#x043A;&#x0430;&#x0436;&#x0434;&#x043E;&#x043C; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0435; &#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438; &#x0445;&#x0440;&#x0430;&#x043D;&#x0438;&#x0442;&#x0441;&#x044F; &#x0438;&#x043D;&#x0444;&#x043E;&#x0440;&#x043C;&#x0430;&#x0446;&#x0438;&#x044F; &#x043E; &#x0440;&#x0435;&#x043A;&#x0432;&#x0438;&#x0437;&#x0438;&#x0442;&#x0430;&#x0445;,
+&#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x0430;&#x0445;, &#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x0435; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442; &#x043A;&#x0443;&#x043F;&#x0438;&#x043B; &#x0438;/&#x0438;&#x043B;&#x0438; &#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x0442;. &#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x044B; &#x0432;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438;
+&#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x043E;&#x0432;, &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435; &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432; &#x043E; &#x043D;&#x0438;&#x0445;. &#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E; &#x043F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+&#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432; &#x043A; &#x043F;&#x0440;&#x043E;&#x0444;&#x0438;&#x043B;&#x044E; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430; (&#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;, &#x044D;&#x043B;&#x0435;&#x043A;&#x0442;&#x0440;&#x043E;&#x043D;&#x043D;&#x043E;&#x0439; &#x043A;&#x043E;&#x043F;&#x0438;&#x0438; &#x0434;&#x043E;&#x0433;&#x043E;&#x0432;&#x043E;&#x0440;&#x0430;
+&#x0441; &#x043D;&#x0438;&#x043C;)
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-12r5" name="x1-12r5"></t4htlink>
+<t4htlink 
+ href="#x1-13r4" name="x1-13r4"></t4htlink>
+                                                           
+                                                           
+                             </text:p> 
+<!--l. 81--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 81--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                              <text:span 
+text:style-name="lass-1440">&#x0441;&#x043E;&#x0431;&#x044B;&#x0442;&#x0438;&#x0439;</text:span>                              
+</text:p> 
+<!--l. 81--><text:p text:style-name="Text-body">&#x0421;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0430; &#x043F;&#x043E;&#x0437;&#x0432;&#x043E;&#x043B;&#x044F;&#x0435;&#x0442; &#x0432;&#x0432;&#x043E;&#x0434;&#x0438;&#x0442;&#x044C; &#x201C;&#x0441;&#x043E;&#x0431;&#x044B;&#x0442;&#x0438;&#x044F;&#x201D; (&#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;,
+&#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x044B;, &#x0441;&#x043E;&#x043E;&#x0431;&#x0449;&#x0435;&#x043D;&#x0438;&#x044F; &#x043E; &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044F;&#x0445; &#x0438; &#x0440;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;&#x044B;),
+&#x043F;&#x0440;&#x043E;&#x0438;&#x0437;&#x0432;&#x043E;&#x0434;&#x0438;&#x0442;&#x044C; &#x0441; &#x043D;&#x0438;&#x043C;&#x0438; &#x043E;&#x043F;&#x0435;&#x0440;&#x0430;&#x0446;&#x0438;&#x0438; &#x0432;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438; &#x0438; &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x044F; &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;.
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-14r6" name="x1-14r6"></t4htlink>
+<t4htlink 
+ href="#x1-15r5" name="x1-15r5"></t4htlink>
+                                                           
+                                                           
+                             </text:p> 
+<!--l. 89--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 89--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                          <text:span 
+text:style-name="lass-1440">&#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;</text:span>                          
+</text:p> 
+<!--l. 89--><text:p text:style-name="Text-body">&#x041D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C; &#x043C;&#x043E;&#x0436;&#x0435;&#x0442; &#x0431;&#x044B;&#x0442;&#x044C; &#x0432;&#x0432;&#x0435;&#x0434;&#x0435;&#x043D;&#x0430; &#x0432; &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0443; &#x043B;&#x0438;&#x0431;&#x043E; &#x0441;&#x043E;&#x0442;&#x0440;&#x0443;&#x0434;&#x043D;&#x0438;&#x043A;&#x043E;&#x043C;
+&#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438; &#x0447;&#x0435;&#x0440;&#x0435;&#x0437; &#x0448;&#x0442;&#x0430;&#x0442;&#x043D;&#x044B;&#x0439; &#x0438;&#x043D;&#x0442;&#x0435;&#x0440;&#x0444;&#x0435;&#x0439;&#x0441;, &#x043B;&#x0438;&#x0431;&#x043E; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430;&#x043C;&#x0438; &#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438;
+&#x0447;&#x0435;&#x0440;&#x0435;&#x0437; &#x0438;&#x043D;&#x0442;&#x0435;&#x0440;&#x0444;&#x0435;&#x0439;&#x0441; &#x0434;&#x043B;&#x044F; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x043E;&#x0432; &#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438; &#x0438;&#x043B;&#x0438; &#x043F;&#x0443;&#x0442;&#x0435;&#x043C; &#x043F;&#x043E;&#x0441;&#x044B;&#x043B;&#x043A;&#x0438;
+&#x044D;&#x043B;&#x0435;&#x043A;&#x0442;&#x0440;&#x043E;&#x043D;&#x043D;&#x043E;&#x0433;&#x043E; &#x043F;&#x0438;&#x0441;&#x044C;&#x043C;&#x0430; &#x043D;&#x0430; &#x0441;&#x043F;&#x0435;&#x0446;&#x0438;&#x0430;&#x043B;&#x044C;&#x043D;&#x044B;&#x0439; &#x0430;&#x0434;&#x0440;&#x0435;&#x0441;.
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-16r7" name="x1-16r7"></t4htlink>
+<t4htlink 
+ href="#x1-17r6" name="x1-17r6"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 106--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 106--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                          <text:span 
+text:style-name="lass-1440">&#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;</text:span>                          
+</text:p> 
+<!--l. 106--><text:p text:style-name="Text-body">&#x0421;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0430; &#x043F;&#x0440;&#x0435;&#x0434;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x044F;&#x0435;&#x0442; &#x0441;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0438;&#x0435; &#x0432;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438; &#x0432; &#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0435; &#x0441;
+&#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044F;&#x043C;&#x0438;: 
+    </text:p> 
+<!--l. 106--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;
+    &#x201C;&#x043D;&#x0435;&#x0437;&#x0430;&#x043A;&#x0440;&#x044B;&#x0442;&#x044B;&#x0445;&#x201D;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;
+    (&#x0442;&#x0435;&#x0445;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;,
+    &#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x0435;
+    &#x043D;&#x0435;
+    &#x0431;&#x044B;&#x043B;&#x0438;
+    &#x043B;&#x0438;&#x043A;&#x0432;&#x0438;&#x0434;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x043D;&#x044B;
+    &#x0440;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;&#x043E;&#x043C;)
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0420;&#x0430;&#x043D;&#x0436;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0435;&#x0439;
+    &#x043F;&#x043E;
+    &#x0437;&#x043D;&#x0430;&#x0447;&#x0438;&#x043C;&#x043E;&#x0441;&#x0442;&#x0438;
+    (5
+    &#x0433;&#x0440;&#x0430;&#x0434;&#x0430;&#x0446;&#x0438;&#x0439;
+    &#x043F;&#x043E;
+    &#x0443;&#x043C;&#x043E;&#x043B;&#x0447;&#x0430;&#x043D;&#x0438;&#x044E;)
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;
+    &#x0440;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;&#x043E;&#x0432;,
+    &#x0441;&#x0432;&#x044F;&#x0437;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x0441;
+    &#x0434;&#x0430;&#x043D;&#x043D;&#x043E;&#x0439;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;&#x044E;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0439;
+    &#x0438;&#x043B;&#x0438;
+    &#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x043E;&#x0432;,
+    &#x0432;
+    &#x0440;&#x0435;&#x0437;&#x0443;&#x043B;&#x044C;&#x0442;&#x0430;&#x0442;&#x0435;
+    &#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x0445;
+    &#x0432;&#x044B;&#x044F;&#x0432;&#x043B;&#x0435;&#x043D;&#x0430;
+    &#x0434;&#x0430;&#x043D;&#x043D;&#x0430;&#x044F;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;
+    (&#x0435;&#x0441;&#x043B;&#x0438;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;
+    &#x043D;&#x0435;
+    &#x0441;&#x043E;&#x043E;&#x0431;&#x0449;&#x0435;&#x043D;&#x0430;
+    &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x043E;&#x043C;)
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0430;,
+    &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043D;&#x0435;&#x043E;&#x0433;&#x0440;&#x0430;&#x043D;&#x0438;&#x0447;&#x0435;&#x043D;&#x043D;&#x043E;&#x0433;&#x043E;
+    &#x043A;&#x043E;&#x043B;&#x0438;&#x0447;&#x0435;&#x0441;&#x0442;&#x0432;&#x0430;
+    &#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432;
+    &#x043B;&#x044E;&#x0431;&#x044B;&#x0445;
+    &#x0444;&#x043E;&#x0440;&#x043C;&#x0430;&#x0442;&#x043E;&#x0432;
+    &#x043A;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;
+    (&#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;,
+    &#x0444;&#x043E;&#x0442;&#x043E;&#x0433;&#x0440;&#x0430;&#x0444;&#x0438;&#x0439;
+    &#x0438;&#x043B;&#x0438;
+    &#x0442;&#x0430;&#x0431;&#x043B;&#x0438;&#x0446;)</text:p> 
+</text:list-item> 
+</text:list > 
+                                               
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-18r8" name="x1-18r8"></t4htlink>
+<t4htlink 
+ href="#x1-19r7" name="x1-19r7"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 122--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 122--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                             <text:span 
+text:style-name="lass-1440">&#x0440;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;&#x043E;&#x0432;</text:span>                             
+</text:p> 
+<!--l. 122--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0422;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>                                               
+    </text:p> 
+<!--l. 122--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0420;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;
+    &#x0434;&#x043E;&#x043B;&#x0436;&#x0435;&#x043D;
+    &#x0431;&#x044B;&#x0442;&#x044C;
+    &#x043F;&#x0440;&#x0438;&#x0432;&#x044F;&#x0437;&#x0430;&#x043D;
+    &#x043A;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0420;&#x0435;&#x043C;&#x043E;&#x043D;&#x0442;
+    &#x043C;&#x043E;&#x0436;&#x0435;&#x0442;
+    &#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x0438;&#x0442;&#x044C;
+    &#x0438;&#x043B;&#x0438;
+    &#x043D;&#x0435;
+    &#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x0438;&#x0442;&#x044C;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+<!--l. 122--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;,</text:span>
+<text:span 
+text:style-name="lass-1200">&#x043F;&#x0440;&#x0435;&#x0434;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x044F;&#x0435;&#x043C;&#x044B;&#x0435;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x043E;&#x0439;</text:span>                                                  
+    </text:p> 
+<!--l. 122--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438;,
+    &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-20r9" name="x1-20r9"></t4htlink>
+<t4htlink 
+ href="#x1-21r8" name="x1-21r8"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 143--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 143--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                          <text:span 
+text:style-name="lass-1440">&#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x043E;&#x0432;</text:span>                          
+</text:p> 
+<!--l. 143--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0422;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>                                               
+    </text:p> 
+<!--l. 143--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;
+    &#x043F;&#x0440;&#x043E;&#x0432;&#x043E;&#x0434;&#x0438;&#x0442;&#x0441;&#x044F;
+    &#x0432;
+    &#x0441;&#x043E;&#x043E;&#x0442;&#x0432;&#x0435;&#x0442;&#x0441;&#x0442;&#x0432;&#x0438;&#x0438;
+    &#x0441;
+    &#x0442;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;&#x043C;&#x0438;
+    &#x043E;
+    &#x043F;&#x0435;&#x0440;&#x0438;&#x043E;&#x0434;&#x0438;&#x0447;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;
+    &#x0434;&#x043B;&#x044F;
+    &#x0434;&#x0430;&#x043D;&#x043D;&#x043E;&#x0439;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x044B;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;
+    &#x0441;&#x0447;&#x0438;&#x0442;&#x044B;&#x0432;&#x0430;&#x0435;&#x0442;&#x0441;&#x044F;
+    &#x0437;&#x043D;&#x0430;&#x0447;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;
+    &#x0441;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x044B;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+<!--l. 143--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;,</text:span>
+<text:span 
+text:style-name="lass-1200">&#x043F;&#x0440;&#x0435;&#x0434;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x044F;&#x0435;&#x043C;&#x044B;&#x0435;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x043E;&#x0439;</text:span>                                                  
+    </text:p> 
+<!--l. 143--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x043A;&#x0430;&#x043B;&#x0435;&#x043D;&#x0434;&#x0430;&#x0440;&#x043D;&#x044B;&#x0445;
+    &#x0434;&#x043D;&#x0435;&#x0439;,
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0443;&#x043F;&#x0440;&#x0435;&#x0436;&#x0434;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043F;&#x0435;&#x0440;&#x0441;&#x043E;&#x043D;&#x0430;&#x043B;&#x0430;
+    &#x043E;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x043E;&#x044F;&#x0449;&#x0438;&#x0445;
+    &#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438;,
+    &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-22r10" name="x1-22r10"></t4htlink>
+<t4htlink 
+ href="#x1-23r9" name="x1-23r9"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 162--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 162--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                         <text:span 
+text:style-name="lass-1440">&#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0439;</text:span>                         
+</text:p> 
+<!--l. 162--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0422;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>                                               
+    </text:p> 
+<!--l. 162--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0422;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x043F;&#x0440;&#x043E;&#x0432;&#x043E;&#x0434;&#x0438;&#x0442;&#x0441;&#x044F;
+    &#x0432;
+    &#x0441;&#x043E;&#x043E;&#x0442;&#x0432;&#x0435;&#x0442;&#x0441;&#x0442;&#x0432;&#x0438;&#x0438;
+    &#x0441;
+    &#x0442;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;&#x043C;&#x0438;
+    &#x043E;
+    &#x043F;&#x0435;&#x0440;&#x0438;&#x043E;&#x0434;&#x0438;&#x0447;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    &#x0434;&#x043B;&#x044F;
+    &#x043A;&#x043E;&#x043D;&#x043A;&#x0440;&#x0435;&#x0442;&#x043D;&#x043E;&#x0439;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x044B;
+    &#x0438;
+    &#x0442;&#x0435;&#x043A;&#x0443;&#x0449;&#x0438;&#x043C;
+    &#x0437;&#x043D;&#x0430;&#x0447;&#x0435;&#x043D;&#x0438;&#x0435;&#x043C;
+    &#x043E;&#x0442;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;,
+    &#x0441;&#x0447;&#x0438;&#x0442;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x0441;
+    &#x043D;&#x0435;&#x0435;
+    &#x0432;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x043F;&#x043E;&#x0441;&#x043B;&#x0435;&#x0434;&#x043D;&#x0435;&#x0433;&#x043E;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    &#x0438;&#x043B;&#x0438;
+    &#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    &#x0441;&#x0447;&#x0438;&#x0442;&#x044B;&#x0432;&#x0430;&#x0435;&#x0442;&#x0441;&#x044F;
+    &#x0437;&#x043D;&#x0430;&#x0447;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;
+    &#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;
+    &#x0441;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x044B;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    &#x0442;&#x0440;&#x0430;&#x0442;&#x044F;&#x0442;&#x0441;&#x044F;
+    &#x0440;&#x0430;&#x0441;&#x0445;&#x043E;&#x0434;&#x043D;&#x044B;&#x0435;
+    &#x043C;&#x0430;&#x0442;&#x0435;&#x0440;&#x0438;&#x0430;&#x043B;&#x044B;,
+    &#x0441;&#x043F;&#x0435;&#x0446;&#x0438;&#x0444;&#x0438;&#x0447;&#x043D;&#x044B;&#x0435;
+    &#x0434;&#x043B;&#x044F;
+    &#x043C;&#x0430;&#x0440;&#x043A;&#x0438;
+    &#x043A;&#x043E;&#x043D;&#x043A;&#x0440;&#x0435;&#x0442;&#x043D;&#x043E;&#x0439;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x044B;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-24r11" name="x1-24r11"></t4htlink>
+<t4htlink 
+ href="#x1-25r10" name="x1-25r10"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 178--><text:p text:style-name="Text-body">
+                         </text:p> 
+<!--l. 178--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0416;&#x0443;&#x0440;&#x043D;&#x0430;&#x043B;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;</text:span>
+                         <text:span 
+text:style-name="lass-1440">&#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x0439;</text:span>                         
+</text:p> 
+<!--l. 178--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;,</text:span>
+<text:span 
+text:style-name="lass-1200">&#x043F;&#x0440;&#x0435;&#x0434;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x044F;&#x0435;&#x043C;&#x044B;&#x0435;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x043E;&#x0439;</text:span>                                                  
+    </text:p> 
+<!--l. 178--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x0442;&#x0435;&#x043C;&#x043F;&#x043E;&#x0432;
+    &#x201C;&#x043D;&#x0430;&#x043A;&#x0440;&#x0443;&#x0442;&#x043A;&#x0438;&#x201D;
+    &#x043C;&#x043E;&#x0442;&#x043E;&#x0447;&#x0430;&#x0441;&#x043E;&#x0432;
+    &#x043D;&#x0430;
+    &#x043A;&#x043E;&#x043D;&#x043A;&#x0440;&#x0435;&#x0442;&#x043D;&#x043E;&#x0439;
+    &#x043C;&#x0430;&#x0448;&#x0438;&#x043D;&#x0435;,
+    &#x043F;&#x0440;&#x043E;&#x0433;&#x043D;&#x043E;&#x0437;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x0434;&#x0430;&#x0442;&#x044B;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x043E;&#x044F;&#x0449;&#x0435;&#x0433;&#x043E;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0431;&#x0441;&#x043B;&#x0443;&#x0436;&#x0438;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    &#x0438;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0443;&#x043F;&#x0440;&#x0435;&#x0436;&#x0434;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043F;&#x0435;&#x0440;&#x0441;&#x043E;&#x043D;&#x0430;&#x043B;&#x0430;
+    &#x043E;
+    &#x043F;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x043E;&#x044F;&#x0449;&#x0438;&#x0445;
+    &#x043F;&#x0440;&#x043E;&#x0444;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;&#x043A;&#x0438;,
+    &#x0441;&#x043E;&#x0441;&#x0442;&#x0430;&#x0432;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x043E;&#x0442;&#x0447;&#x0435;&#x0442;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0440;&#x0438;&#x043A;&#x0440;&#x0435;&#x043F;&#x043B;&#x0435;&#x043D;&#x0438;&#x0435;
+    &#x0444;&#x0430;&#x0439;&#x043B;&#x043E;&#x0432;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0423;&#x0447;&#x0435;&#x0442;
+    &#x0440;&#x0430;&#x0441;&#x0445;&#x043E;&#x0434;&#x043D;&#x044B;&#x0445;
+    &#x043C;&#x0430;&#x0442;&#x0435;&#x0440;&#x0438;&#x0430;&#x043B;&#x043E;&#x0432;
+    &#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x043C;&#x044B;&#x0445;
+    &#x0432;&#x043E;
+    &#x0432;&#x0440;&#x0435;&#x043C;&#x044F;
+    &#x0442;&#x0435;&#x0445;&#x043E;&#x0441;&#x043C;&#x043E;&#x0442;&#x0440;&#x0430;,
+    &#x043F;&#x043B;&#x0430;&#x043D;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0435;
+    &#x0438;&#x0445;
+    &#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    </text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-26r2" name="x1-26r2"></t4htlink>
+</text:p> 
+<!--l. 182--><text:p text:style-name="Text-body"><t4htlink 
+ href="#Outline0.2" name="Outline0.2"></t4htlink>
+<t4htlink 
+ href="#x1-27r12" name="x1-27r12"></t4htlink>
+<t4htlink 
+ href="#x1-28r11" name="x1-28r11"></t4htlink>
+                                                           
+                                                           
+                             <!--l. 202--><text:p text:style-name="Text-body">
+                               </text:p> 
+<!--l. 202--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0412;&#x044B;&#x0431;&#x043E;&#x0440;</text:span>
+                            <text:span 
+text:style-name="lass-1440">&#x0442;&#x0435;&#x0445;&#x043D;&#x043E;&#x043B;&#x043E;&#x0433;&#x0438;&#x0439;</text:span>                            
+</text:p> 
+<!--l. 202--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x041E;&#x0441;&#x043D;&#x043E;&#x0432;&#x043D;&#x044B;&#x0435;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x043F;&#x043E;&#x0441;&#x0442;&#x0443;&#x043B;&#x0430;&#x0442;&#x044B;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0434;&#x043B;&#x044F;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0432;&#x044B;&#x0431;&#x043E;&#x0440;&#x0430;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0442;&#x0435;&#x0445;&#x043D;&#x043E;&#x043B;&#x043E;&#x0433;&#x0438;&#x0439;</text:span>                                                
+    </text:p> 
+<!--l. 202--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;-&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x043D;&#x0430;&#x044F;
+    &#x0430;&#x0440;&#x0445;&#x0438;&#x0442;&#x0435;&#x043A;&#x0442;&#x0443;&#x0440;&#x0430;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041D;&#x0435;&#x0442;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x0442;&#x0435;&#x043B;&#x044C;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;
+    &#x043A;
+    &#x0440;&#x0435;&#x0441;&#x0443;&#x0440;&#x0441;&#x0430;&#x043C;
+    &#x0430;&#x043F;&#x043F;&#x0430;&#x0440;&#x0430;&#x0442;&#x043D;&#x043E;&#x0433;&#x043E;
+    &#x043E;&#x0431;&#x0435;&#x0441;&#x043F;&#x0435;&#x0447;&#x0435;&#x043D;&#x0438;&#x044F;
+    &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430;,
+    &#x0440;&#x0430;&#x0441;&#x0447;&#x0435;&#x0442;
+    &#x043D;&#x0430;
+    &#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0443;
+    &#x043D;&#x0430;
+    &#x0441;&#x043B;&#x0430;&#x0431;&#x044B;&#x0445;
+    &#x043A;&#x043E;&#x043C;&#x043F;&#x044C;&#x044E;&#x0442;&#x0435;&#x0440;&#x0430;&#x0445;
+    &#x0438;&#x043B;&#x0438;
+    &#x0434;&#x0430;&#x0436;&#x0435;
+    &#x043D;&#x0430;
+    &#x043C;&#x043E;&#x0431;&#x0438;&#x043B;&#x044C;&#x043D;&#x044B;&#x0445;
+    &#x0442;&#x0435;&#x043B;&#x0435;&#x0444;&#x043E;&#x043D;&#x0430;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041E;&#x0442;&#x043A;&#x0430;&#x0437;&#x043E;&#x0443;&#x0441;&#x0442;&#x043E;&#x0439;&#x0447;&#x0438;&#x0432;&#x043E;&#x0441;&#x0442;&#x044C;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0421;&#x043A;&#x043E;&#x0440;&#x043E;&#x0441;&#x0442;&#x044C;
+    &#x0440;&#x0430;&#x0437;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x043A;&#x0438;
+    &#x0438;
+    &#x043F;&#x0440;&#x043E;&#x0441;&#x0442;&#x043E;&#x0442;&#x0430;
+    &#x043F;&#x043E;&#x0434;&#x0434;&#x0435;&#x0440;&#x0436;&#x043A;&#x0438;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+<!--l. 202--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0412;&#x044B;&#x0431;&#x0440;&#x0430;&#x043D;&#x043D;&#x044B;&#x0435;</text:span>
+<text:span 
+text:style-name="lass-1200">&#x0442;&#x0435;&#x0445;&#x043D;&#x043E;&#x043B;&#x043E;&#x0433;&#x0438;&#x0438;</text:span>                                                
+    </text:p> 
+<!--l. 202--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >Python
+    &#x043A;&#x0430;&#x043A;
+    &#x043E;&#x0441;&#x043D;&#x043E;&#x0432;&#x043D;&#x043E;&#x0439;
+    &#x044F;&#x0437;&#x044B;&#x043A;
+    &#x043F;&#x0440;&#x043E;&#x0433;&#x0440;&#x0430;&#x043C;&#x043C;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >Django
+    &#x043A;&#x0430;&#x043A;
+    &#x0444;&#x0440;&#x0435;&#x0439;&#x043C;&#x0432;&#x043E;&#x0440;&#x043A;
+    &#x0434;&#x043B;&#x044F;
+    &#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x0430;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >Pyjamas
+    &#x043A;&#x0430;&#x043A;
+    &#x0444;&#x0440;&#x0435;&#x0439;&#x0432;&#x043E;&#x0440;&#x043A;
+    &#x0434;&#x043B;&#x044F;
+    &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430;</text:p> 
+</text:list-item> 
+</text:list > 
+
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-29r1" name="x1-29r1"></t4htlink>
+                                                           
+                                                           
+</text:p> 
+<!--l. 205--><text:p text:style-name="Text-body"><t4htlink 
+ href="#Outline0.2.1.37" name="Outline0.2.1.37"></t4htlink>   <t4htlink 
+ href="#x1-30r13" name="x1-30r13"></t4htlink> <t4htlink 
+ href="#x1-31r1" name="x1-31r1"></t4htlink>                             </text:p> 
+<!--l. 216--><text:p text:style-name="Text-body">
+                        </text:p> 
+<!--l. 216--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;-&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x043D;&#x0430;&#x044F;</text:span>
+                            <text:span 
+text:style-name="lass-1440">&#x0430;&#x0440;&#x0445;&#x0438;&#x0442;&#x0435;&#x043A;&#x0442;&#x0443;&#x0440;&#x0430;</text:span>                            
+</text:p> 
+<!--l. 216--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0421;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;</text:span>                                                    
+</text:p> 
+<!--l. 216--><text:p text:style-name="Text-body">&#x0421;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;
+&#x0437;&#x0430;&#x043F;&#x0443;&#x0441;&#x043A;&#x0430;&#x0435;&#x0442;&#x0441;&#x044F;
+&#x043D;&#x0430;
+&#x043C;&#x043E;&#x0449;&#x043D;&#x043E;&#x0441;&#x0442;&#x044F;&#x0445;
+&#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438;
+&#x0438;
+&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;&#x0435;&#x043D;
+&#x043F;&#x043E;&#x0441;&#x0442;&#x043E;&#x044F;&#x043D;&#x043D;&#x043E;.
+&#x042D;&#x0442;&#x0438;&#x043C;
+&#x043E;&#x0431;&#x0435;&#x0441;&#x043F;&#x0435;&#x0447;&#x0438;&#x0432;&#x0430;&#x0435;&#x0442;&#x0441;&#x044F;
+&#x0431;&#x0435;&#x0441;&#x043F;&#x0435;&#x0440;&#x0435;&#x0431;&#x043E;&#x0439;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;
+&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x044B;
+&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x044B;
+&#x0438;
+&#x0446;&#x0435;&#x043B;&#x043E;&#x0441;&#x0442;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C;
+&#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445;                                                    
+</text:p> 
+<!--l. 216--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;</text:span>                                                   
+</text:p> 
+<!--l. 216--><text:p text:style-name="Text-body">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x044B;
+(&#x043A;&#x0430;&#x043A;
+&#x0441;&#x043E;&#x0442;&#x0440;&#x0443;&#x0434;&#x043D;&#x0438;&#x043A;&#x0438;,
+&#x0442;&#x0430;&#x043A;
+&#x0438;
+&#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x044B;
+&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x044B;)
+&#x043F;&#x043E;&#x0434;&#x043A;&#x043B;&#x044E;&#x0447;&#x0430;&#x044E;&#x0442;&#x0441;&#x044F;
+&#x043A;
+&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x0443;
+&#x0440;&#x0430;&#x0437;&#x043B;&#x0438;&#x0447;&#x043D;&#x044B;&#x043C;&#x0438;
+&#x0441;&#x043F;&#x043E;&#x0441;&#x043E;&#x0431;&#x0430;&#x043C;&#x0438;
+&#x0434;&#x043B;&#x044F;
+&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x044B;
+&#x0441;
+&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x043E;&#x0439;                                                  
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-32r14" name="x1-32r14"></t4htlink>
+<t4htlink 
+ href="#x1-33r2" name="x1-33r2"></t4htlink>
+                                                           
+                                                           
+                   <!--l. 236--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;-&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x043D;&#x0430;&#x044F;</text:span>
+                           <text:span 
+text:style-name="lass-1440">&#x0430;&#x0440;&#x0445;&#x0438;&#x0442;&#x0435;&#x043A;&#x0442;&#x0443;&#x0440;&#x0430;:</text:span>
+                               <text:span 
+text:style-name="lass-1440">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;</text:span>                               
+&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x044B; &#x043C;&#x043E;&#x0433;&#x0443;&#x0442; &#x043F;&#x043E;&#x0434;&#x043A;&#x043B;&#x044E;&#x0447;&#x0438;&#x0442;&#x044C;&#x0441;&#x044F; &#x043A; &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0435;: 
+    </text:p> 
+<!--l. 236--><text:list text:style-name="Itemize" > 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0421;
+    &#x043F;&#x043E;&#x043C;&#x043E;&#x0449;&#x044C;&#x044E;
+    &#x043E;&#x0431;&#x044B;&#x0447;&#x043D;&#x043E;&#x0433;&#x043E;
+    &#x0431;&#x0440;&#x0430;&#x0443;&#x0437;&#x0435;&#x0440;&#x0430;
+    (&#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;,
+    Internet
+    Explorer),
+    &#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x044B;&#x0439;
+    &#x0438;&#x043C;&#x0435;&#x0435;&#x0442;&#x0441;&#x044F;
+    &#x043D;&#x0430;
+    &#x043B;&#x044E;&#x0431;&#x043E;&#x043C;
+    &#x043A;&#x043E;&#x043C;&#x043F;&#x044C;&#x044E;&#x0442;&#x0435;&#x0440;&#x0435;
+    &#x0438;
+    &#x043D;&#x0430;
+    &#x043C;&#x043D;&#x043E;&#x0433;&#x0438;&#x0445;
+    &#x043C;&#x043E;&#x0431;&#x0438;&#x043B;&#x044C;&#x043D;&#x044B;&#x0445;
+    &#x0442;&#x0435;&#x043B;&#x0435;&#x0444;&#x043E;&#x043D;&#x0430;&#x0445;
+    </text:p> 
+</text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x0421; &#x043F;&#x043E;&#x043C;&#x043E;&#x0449;&#x044C;&#x044E; &#x0441;&#x043F;&#x0435;&#x0446;&#x0438;&#x0430;&#x043B;&#x044C;&#x043D;&#x043E;&#x0439; &#x043F;&#x0440;&#x043E;&#x0433;&#x0440;&#x0430;&#x043C;&#x043C;&#x044B; - &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430;, &#x0437;&#x0430;&#x043F;&#x0443;&#x0441;&#x043A;&#x0430;&#x0435;&#x043C;&#x043E;&#x0433;&#x043E; &#x043D;&#x0430;
+    &#x043A;&#x043E;&#x043C;&#x043F;&#x044C;&#x044E;&#x0442;&#x0435;&#x0440;&#x0435; &#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0430;. &#x041E;&#x043D;&#x0430; &#x0438;&#x043C;&#x0435;&#x0435;&#x0442; &#x0441;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0438;&#x0435; &#x0432;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;:
+    
+        </text:p> 
+<!--l. 236--><text:list text:style-name="Itemize" > 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x0422;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0436;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0432;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0447;&#x0442;&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0438;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0438;&#x043D;&#x0442;&#x0435;&#x0440;&#x0444;&#x0435;&#x0439;&#x0441;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0431;&#x0440;&#x0430;&#x0443;&#x0437;&#x0435;&#x0440;&#x0430;</text:span>
+        </text:p> 
+</text:list-item> 
+
+        <text:list-item>
+        <text:p text:style-name="Inside-itemize" ><text:span 
+text:style-name="lass-1000">&#x041E;&#x0444;&#x0444;&#x043B;&#x0430;&#x0439;&#x043D;-&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;.</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0422;.&#x0435;.</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0432;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0443;&#x0441;&#x043B;&#x043E;&#x0432;&#x0438;&#x044F;&#x0445;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x0433;&#x0434;&#x0430;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043D;&#x0435;&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;&#x0435;&#x043D;</text:span>
+        <text:span 
+text:style-name="lass-1000">-</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x043E;&#x0437;&#x0434;&#x0430;&#x0442;&#x044C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x043E;&#x0431;&#x044B;&#x0442;&#x0438;&#x0435;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0438;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x043E;&#x0445;&#x0440;&#x0430;&#x043D;&#x0438;&#x0442;&#x044C;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0435;&#x0433;&#x043E;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0437;&#x0430;&#x0442;&#x0435;&#x043C;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043A;&#x043E;&#x0433;&#x0434;&#x0430;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0431;&#x0443;&#x0434;&#x0435;&#x0442;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;&#x0435;&#x043D;,</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x043F;&#x0440;&#x043E;&#x0438;&#x0437;&#x0432;&#x0435;&#x0441;&#x0442;&#x0438;</text:span>
+        <text:span 
+text:style-name="lass-1000">&#x0441;&#x0438;&#x043D;&#x0445;&#x0440;&#x043E;&#x043D;&#x0438;&#x0437;&#x0430;&#x0446;&#x0438;&#x044E;</text:span></text:p> 
+</text:list-item> 
+</text:list > 
+
+    </text:list-item> 
+
+    <text:list-item>
+    <text:p text:style-name="Inside-itemize" >&#x041F;&#x0443;&#x0442;&#x0435;&#x043C;
+    &#x043E;&#x0442;&#x0441;&#x044B;&#x043B;&#x043A;&#x0438;
+    &#x0441;&#x043E;&#x043E;&#x0431;&#x0449;&#x0435;&#x043D;&#x0438;&#x044F;
+    &#x043E;
+    &#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x0438;
+    &#x0447;&#x0435;&#x0440;&#x0435;&#x0437;
+    &#x044D;&#x043B;&#x0435;&#x043A;&#x0442;&#x0440;&#x043E;&#x043D;&#x043D;&#x0443;&#x044E;
+    &#x043F;&#x043E;&#x0447;&#x0442;&#x0443;</text:p> 
+</text:list-item> 
+</text:list > 
+                                                 
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-34r15" name="x1-34r15"></t4htlink>
+<t4htlink 
+ href="#x1-35r3" name="x1-35r3"></t4htlink>
+                                                           
+                                                           
+                             </text:p> 
+<!--l. 254--><text:p text:style-name="Text-body">
+                            </text:p> 
+<!--l. 254--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0421;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x043D;&#x044B;&#x0435;</text:span>
+                            <text:span 
+text:style-name="lass-1440">&#x0442;&#x0440;&#x0435;&#x0431;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;</text:span>                            
+</text:p> 
+<!--l. 254--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x0421;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;</text:span>                                                    
+</text:p> 
+<!--l. 254--><text:p text:style-name="Text-body">&#x0421;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;
+&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x0435;&#x0442;
+&#x043D;&#x0430;
+&#x043B;&#x044E;&#x0431;&#x043E;&#x043C;
+&#x0434;&#x043E;&#x0441;&#x0442;&#x0430;&#x0442;&#x043E;&#x0447;&#x043D;&#x043E;
+&#x0441;&#x043E;&#x0432;&#x0440;&#x0435;&#x043C;&#x0435;&#x043D;&#x043D;&#x043E;&#x043C;
+&#x043E;&#x0431;&#x043E;&#x0440;&#x0443;&#x0434;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x0438;,
+&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;
+&#x043A;
+&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x043E;&#x043C;&#x0443;
+&#x043F;&#x043E;
+&#x0441;&#x0435;&#x0442;&#x0438;
+&#x0438;&#x043C;&#x0435;&#x044E;&#x0442;
+&#x0441;&#x043E;&#x0442;&#x0440;&#x0443;&#x0434;&#x043D;&#x0438;&#x043A;&#x0438;
+&#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438;                                                  
+</text:p> 
+<!--l. 254--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1200">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;</text:span>                                                   
+</text:p> 
+<!--l. 254--><text:p text:style-name="Text-body">&#x041A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;&#x0441;&#x043A;&#x0430;&#x044F;
+&#x0447;&#x0430;&#x0441;&#x0442;&#x044C;
+&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x044B;
+&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x0430;&#x0435;&#x0442;
+&#x0432;
+&#x043B;&#x044E;&#x0431;&#x043E;&#x043C;
+&#x0441;&#x043E;&#x0432;&#x0440;&#x0435;&#x043C;&#x0435;&#x043D;&#x043D;&#x043E;&#x043C;
+&#x0431;&#x0440;&#x0430;&#x0443;&#x0437;&#x0435;&#x0440;&#x0435;,
+&#x043D;&#x0435;&#x043E;&#x0431;&#x0445;&#x043E;&#x0434;&#x0438;&#x043C;
+&#x043B;&#x0438;&#x0448;&#x044C;
+&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;
+&#x043F;&#x043E;
+&#x0441;&#x0435;&#x0442;&#x0438;
+&#x043A;
+&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x0443;
+&#x043A;&#x043E;&#x043C;&#x043F;&#x0430;&#x043D;&#x0438;&#x0438;.
+&#x0412;
+&#x0441;&#x043B;&#x0443;&#x0447;&#x0430;&#x0435;
+&#x043E;&#x0442;&#x0441;&#x0443;&#x0442;&#x0441;&#x0432;&#x0438;&#x044F;
+&#x0434;&#x043E;&#x0441;&#x0442;&#x0443;&#x043F;&#x0430;
+(&#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;,
+&#x043D;&#x0430;
+&#x0443;&#x0434;&#x0430;&#x043B;&#x0435;&#x043D;&#x043D;&#x043E;&#x043C;
+&#x043E;&#x0431;&#x044A;&#x0435;&#x043A;&#x0442;&#x0435;),
+&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;
+&#x0438;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x043E;&#x0432;&#x0430;&#x0442;&#x044C;
+&#x0441;&#x043F;&#x0435;&#x0446;&#x0438;&#x0430;&#x043B;&#x044C;&#x043D;&#x0443;&#x044E;
+&#x043F;&#x0440;&#x043E;&#x0433;&#x0440;&#x0430;&#x043C;&#x043C;&#x0443;-&#x043A;&#x043B;&#x0438;&#x0435;&#x043D;&#x0442;,
+&#x043A;&#x043E;&#x0442;&#x043E;&#x0440;&#x0430;&#x044F;
+&#x0441;&#x043E;&#x0445;&#x0440;&#x0430;&#x043D;&#x0438;&#x0442;
+&#x0432;&#x0441;&#x0435;
+&#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0435;
+&#x0434;&#x043B;&#x044F;
+&#x043F;&#x043E;&#x0441;&#x043B;&#x0435;&#x0434;&#x0443;&#x044E;&#x0449;&#x0435;&#x0439;
+&#x0441;&#x0438;&#x043D;&#x0445;&#x0440;&#x043E;&#x043D;&#x0438;&#x0437;&#x0430;&#x0446;&#x0438;&#x0435;&#x0439;
+&#x0441;
+&#x0441;&#x0435;&#x0440;&#x0432;&#x0435;&#x0440;&#x043E;&#x043C;
+</text:p> 
+<!--l. 254--><text:p text:style-name="Text-body">&#x0412;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x043E;
+&#x0441;&#x043E;&#x043E;&#x0431;&#x0449;&#x0435;&#x043D;&#x0438;&#x0435;
+&#x043E;
+&#x043D;&#x0435;&#x0438;&#x0441;&#x043F;&#x0440;&#x0430;&#x0432;&#x043D;&#x043E;&#x0441;&#x0442;&#x044F;&#x0445;
+&#x043F;&#x043E;&#x0441;&#x0440;&#x0435;&#x0434;&#x0441;&#x0442;&#x0432;&#x043E;&#x043C;
+&#x043E;&#x0431;&#x044B;&#x0447;&#x043D;&#x043E;&#x0433;&#x043E;
+&#x044D;&#x043B;&#x0435;&#x043A;&#x0442;&#x0440;&#x043E;&#x043D;&#x043D;&#x043E;&#x0433;&#x043E;
+&#x043F;&#x0438;&#x0441;&#x044C;&#x043C;&#x0430;                                                    
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-36r16" name="x1-36r16"></t4htlink>
+<t4htlink 
+ href="#x1-37r4" name="x1-37r4"></t4htlink>
+                                                           
+                                                           
+                             </text:p> 
+<!--l. 262--><text:p text:style-name="Text-body">
+                       </text:p> 
+<!--l. 262--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x041E;&#x0442;&#x043A;&#x0430;&#x0437;&#x043E;&#x0443;&#x0441;&#x0442;&#x043E;&#x0439;&#x0447;&#x0438;&#x0432;&#x043E;&#x0441;&#x0442;&#x044C;</text:span>                       
+</text:p> 
+<!--l. 262--><text:p text:style-name="Text-body">&#x0418;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x043C;&#x044B;&#x0435; &#x0442;&#x0435;&#x0445;&#x043D;&#x043E;&#x043B;&#x043E;&#x0433;&#x0438;&#x0438; &#x0434;&#x0435;&#x043B;&#x0430;&#x044E;&#x0442; &#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0435; &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x044B; &#x0443;&#x0434;&#x043E;&#x0431;&#x043D;&#x044B;&#x043C;&#x0438; &#x0434;&#x043B;&#x044F;
+&#x0440;&#x0435;&#x0437;&#x0435;&#x0440;&#x0432;&#x043D;&#x043E;&#x0433;&#x043E; &#x043A;&#x043E;&#x043F;&#x0438;&#x0440;&#x043E;&#x0432;&#x0430;&#x043D;&#x0438;&#x044F;. &#x041F;&#x0435;&#x0440;&#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043D;&#x0442;&#x043D;&#x043E;&#x0441;&#x0442;&#x044C; &#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445; &#x0432; &#x0441;&#x0438;&#x0441;&#x0442;&#x0435;&#x043C;&#x0435; &#x0434;&#x0435;&#x043B;&#x0430;&#x0435;&#x0442;
+&#x043D;&#x0435;&#x0432;&#x043E;&#x0437;&#x043C;&#x043E;&#x0436;&#x043D;&#x044B;&#x043C; &#x0443;&#x0442;&#x0440;&#x0430;&#x0442;&#x0443; &#x0434;&#x0430;&#x043D;&#x043D;&#x044B;&#x0445; &#x0432; &#x0441;&#x043B;&#x0443;&#x0447;&#x0430;&#x0435;, &#x043D;&#x0430;&#x043F;&#x0440;&#x0438;&#x043C;&#x0435;&#x0440;, &#x0430;&#x0432;&#x0430;&#x0440;&#x0438;&#x0439;&#x043D;&#x043E;&#x0433;&#x043E;
+&#x043E;&#x0442;&#x043A;&#x043B;&#x044E;&#x0447;&#x0435;&#x043D;&#x0438;&#x044F; &#x044D;&#x043B;&#x0435;&#x043A;&#x0442;&#x0440;&#x043E;&#x044D;&#x043D;&#x0435;&#x0440;&#x0433;&#x0438;&#x0438;
+                                                           
+                                                           
+                                                           
+                                                           
+<t4htlink 
+ href="#x1-38r17" name="x1-38r17"></t4htlink>
+<t4htlink 
+ href="#x1-39r5" name="x1-39r5"></t4htlink>
+                                                           
+                                                           
+                                   </text:p> 
+<!--l. 268--><text:p text:style-name="Text-body">
+                             </text:p> 
+<!--l. 268--><text:p text:style-name="Text-body"><text:span 
+text:style-name="lass-1440">&#x0421;&#x043A;&#x043E;&#x0440;&#x043E;&#x0441;&#x0442;&#x044C;</text:span>
+                            <text:span 
+text:style-name="lass-1440">&#x0440;&#x0430;&#x0437;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x043A;&#x0438;</text:span>
+                                  <text:span 
+text:style-name="lass-1440">&#x0438;</text:span>
+                              <text:span 
+text:style-name="lass-1440">&#x043F;&#x0440;&#x043E;&#x0441;&#x0442;&#x043E;&#x0442;&#x0430;</text:span>
+                            <text:span 
+text:style-name="lass-1440">&#x043F;&#x043E;&#x0434;&#x0434;&#x0435;&#x0440;&#x0436;&#x043A;&#x0438;</text:span>                            
+</text:p> 
+<!--l. 268--><text:p text:style-name="Text-body">&#x0418;&#x0441;&#x043F;&#x043E;&#x043B;&#x044C;&#x0437;&#x0443;&#x0435;&#x043C;&#x044B;&#x0435; &#x0442;&#x0435;&#x0445;&#x043D;&#x043E;&#x043B;&#x043E;&#x0433;&#x0438;&#x0438; &#x043E;&#x0442;&#x043B;&#x0438;&#x0447;&#x0430;&#x044E;&#x0442;&#x0441;&#x044F; &#x0431;&#x043E;&#x043B;&#x044C;&#x0448;&#x0438;&#x043C; &#x0443;&#x0434;&#x043E;&#x0431;&#x0441;&#x0442;&#x0432;&#x043E;&#x043C;
+&#x0440;&#x0430;&#x0437;&#x0440;&#x0430;&#x0431;&#x043E;&#x0442;&#x043A;&#x0438;, &#x0438;, &#x0441;&#x043E;&#x043E;&#x0442;&#x0432;&#x0435;&#x0442;&#x0441;&#x0442;&#x0432;&#x0435;&#x043D;&#x043D;&#x043E;, &#x0431;&#x044B;&#x0441;&#x0442;&#x0440;&#x044B;&#x043C; &#x0440;&#x0435;&#x0437;&#x0443;&#x043B;&#x044C;&#x0442;&#x0430;&#x0442;&#x043E;&#x043C;
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+                                                           
+</text:p> 
+</office:text></office:body> 
+</office:document-content>
+                                                           
+
+

@@ -2,7 +2,7 @@
 
 
 from django.contrib import admin
-from actions.admin import FixInline, ReportInline, MaintenanceInline, CheckupInline
+from actions.admin import FixInline, ReportInline, ReportTemplateInline, MaintenanceInline, CheckupInline
 from checklists.admin import ChecklistQuestionInline
 from machines.models import Machine, MachineMark, MachineType
 from libs.admin import LinkedInline
@@ -32,7 +32,7 @@ class MachineMarkInline(LinkedInline):
 
 
 class MachineMarkAdmin(admin.ModelAdmin):
-    inlines = [ChecklistQuestionInline, MachineInline]
+    inlines = [ReportTemplateInline, ChecklistQuestionInline, MachineInline]
     inlines += [UploadInline]
 
 class MachineTypeAdmin(admin.ModelAdmin):

@@ -76,10 +76,10 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    'admin_tools',
-    'admin_tools.theming',
-    'admin_tools.menu',
-    'admin_tools.dashboard', 
+#    'admin_tools',
+#    'admin_tools.theming',
+#    'admin_tools.menu',
+#    'admin_tools.dashboard', 
                   
                   
     'django.contrib.auth',
@@ -96,7 +96,7 @@ INSTALLED_APPS = (
     'django_extensions',
     #'django_evolution',
     'south',
-    'jsonrpc',
+#    'jsonrpc',
     'libs',
 )
 
@@ -106,7 +106,7 @@ ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_service.dashboard.CustomIndexDashboard'
 
 
 SERIALIZATION_MODULES = {
-    'json': 'wadofstuff.django.serializers.json'
+  #  'json': 'wadofstuff.django.serializers.json'
 }
 
 TEMPLATE_CONTEXT_PROCESSORS = (

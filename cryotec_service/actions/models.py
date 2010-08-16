@@ -2,13 +2,26 @@
 from django.contrib.auth.models import User
 
 from django.db import models
-from machines.models import Machine
+from machines.models import Machine, MachineMark
 
 
 class ActionManager(models.Manager):
     def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
         pks = Machine.objects.get_pks_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
         return self.filter(machine__pk__in=pks)
+
+
+
+
+
+
+REPORT_INTERESTS_CHOICES = (
+    (1, 'Мелкая поломка'),
+    #(2, 'Средняя поломка'),
+    (3, 'Серьезная неисправность'),
+    (4, 'Полный отказ'),
+)
+
 
 
 
@@ -100,23 +113,41 @@ class Maintenance(PAction):
         verbose_name_plural = "Техобслуживания"
 
 
+
+
+
+class ReportTemplate(models.Model):
+    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
+    """Марка машины, к которой относится действие"""
+    comment = models.TextField("Комментарий", max_length=3000)   
+    
+    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=REPORT_INTERESTS_CHOICES, default=0)
+    """Серьезность неисправности"""
+    
+    class Meta:
+        verbose_name = "Стандартная неисправность"
+        verbose_name_plural = "Стандартные неисправности"
+
+    def __unicode__(self):
+        return u"%s (%d)" % (self.comment, self.interest)
+ 
+
+
 class Report(Action):
     """
     Сообщение о неисправности
     """
+    
+    reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name="Стандартная неисправность")
+    
     paction = models.ForeignKey(PAction, blank=True, null=True, verbose_name="Событие")
     """Периодическое действие, во время которого выявлена неисправность"""
+    
+    
     fixed = models.BooleanField("Исправлена")
     """Исправлена ли неисправность. Изначально - не исправлена. Опциональное"""
 
-    INTERESTS_CHOICES = (
-        (0, 'Сообщение'),
-        (1, 'Мелкая поломка'),
-        (2, 'Средняя поломка'),
-        (3, 'Серьезная неисправность'),
-        (4, 'Полный отказ'),
-    )
-    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=INTERESTS_CHOICES, default=0)
+    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=REPORT_INTERESTS_CHOICES, default=0)
     """Серьезность неисправности"""
 
 
@@ -127,6 +158,12 @@ class Report(Action):
     
     def __unicode__(self):
         return u"%s: %s (%d)" % (self.date.strftime("%d.%m.%y"), self.comment, self.interest)
+    
+        
+    def save(self):
+        if self.reporttemplate is not None:
+            self.interest = self.reporttemplate.interest
+        super(Report,self).save()
     
     
 class Fix(Action):

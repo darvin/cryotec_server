@@ -1,0 +1,1865 @@
+#LyX file created by tex2lyx 1.6.5
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage[scaled]{berasans}\renewcommand*{\familydefault}{\sfdefault}%% Only if the base font of the document is to be sans serif
+%%\usepackage{amssymb,amsfonts,amsmath,mathtext}
+\usepackage{cite}\usepackage{enumerate}\usepackage{float}\usepackage{indentfirst}\usetheme{Singapore}\usecolortheme{default}\title{CryotecService-������������������������������������}\author{������������}\date{������2010}
+
+
+\end_preamble
+\language russian
+\inputencoding auto
+\font_roman default
+\font_sans berasans
+\font_typewriter default
+\font_default_family sfdefault
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language russian
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%%титульная страница
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+section{Описание функций}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Функции программного продукта
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Учет парка машин 
+\end_layout
+
+\begin_layout Itemize
+
+Учет клиентов 
+\end_layout
+
+\begin_layout Itemize
+
+Журналирование событий техобслуживания, ремонтов и неисправностей 
+\end_layout
+
+\begin_layout Itemize
+
+Создание отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+Выборки по различным параметрам 
+\end_layout
+
+\begin_layout Itemize
+
+Прогнозирование времени предстоящих техобслуживаний на основе введенных данных 
+\end_layout
+
+\begin_layout Itemize
+
+Уведомление персонала о предстоящих событиях 
+\end_layout
+
+\begin_layout Itemize
+
+Управление правами пользователей системы 
+\end_layout
+
+\begin_layout Itemize
+
+Учет расходных материалов, используемых во время техобслуживаний 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Учет парка машин
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Каждая машина, введенная в систему, имеет: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Запись о клиенте, которому продана/который ее использует 
+\end_layout
+
+\begin_layout Itemize
+
+Марку 
+\end_layout
+
+\begin_layout Itemize
+
+Тип (категорию) 
+\end_layout
+
+\begin_layout Itemize
+
+Данные о необходимом количестве наработанных моточасов для следующего техобслуживания 
+\end_layout
+
+\begin_layout Itemize
+
+Данные о текущем количестве моточасов 
+\end_layout
+
+\begin_layout Itemize
+
+Периодичность профосмотра (в месяцах) 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Допускаются выборки по любым сочетаниям этих данных, а также составление отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+К машине может быть прикреплено неограниченное количество файлов любых форматов (например, схемы, таблицы, фотографии) 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Учет клиентов
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ О каждом клиенте компании хранится информация о реквизитах, машинах, которые клиент купил и/или использует. Возможны выборки клиентов, составление отчетов о них. Возможно прикрепление файлов к профилю клиента (например, электронной копии договора с ним) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsection{Журналирование}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование событий
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Система позволяет вводить 
+\begin_inset Quotes eld
+\end_inset
+
+события
+\begin_inset Quotes erd
+\end_inset
+
+ (техобслуживания, профосмотры, сообщения о неисправностях и ремонты), производить с ними операции выборки и составления отчетов. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование неисправностей
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Неисправность может быть введена в систему либо сотрудником компании через штатный интерфейс, либо клиентами компании через интерфейс для клиентов компании или путем посылки электронного письма на специальный адрес.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование неисправностей
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Система предоставляет следующие возможности в работе с неисправностями: 
+\end_layout
+
+\begin_layout Itemize
+
+Просмотр 
+\begin_inset Quotes eld
+\end_inset
+
+незакрытых
+\begin_inset Quotes erd
+\end_inset
+
+ неисправностей (тех неисправностей, которые не были ликвидированны ремонтом) 
+\end_layout
+
+\begin_layout Itemize
+
+Ранжирование неисправностей по значимости (5 градаций по умолчанию) 
+\end_layout
+
+\begin_layout Itemize
+
+Просмотр ремонтов, связанных с данной неисправностью 
+\end_layout
+
+\begin_layout Itemize
+
+Просмотр техобслуживаний или профосмотров, в результате которых выявлена данная неисправность (если неисправность не сообщена клиентом) 
+\end_layout
+
+\begin_layout Itemize
+
+Выборка, составление отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+Прикрепление неограниченного количества файлов любых форматов к неисправности (например, фотографий или таблиц) 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование ремонтов
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Требования
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Ремонт должен быть привязан к неисправности 
+\end_layout
+
+\begin_layout Itemize
+
+Ремонт может исправить или не исправить неисправность 
+\end_layout
+
+\end_deeper
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Возможности, предоставляемые системой
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Выборки, составление отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+Прикрепление файлов 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование профосмотров
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Требования
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Профосмотр проводится в соответствии с требованиями о периодичности техосмотра для данной машины 
+\end_layout
+
+\begin_layout Itemize
+
+Во время профосмотра считывается значение отработанных моточасов с машины 
+\end_layout
+
+\end_deeper
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Возможности, предоставляемые системой
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Учет календарных дней, предупреждение персонала о предстоящих профосмотрах 
+\end_layout
+
+\begin_layout Itemize
+
+Выборки, составление отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+Прикрепление файлов
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование техобслуживаний
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Требования
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Техобслуживание проводится в соответствии с требованиями о периодичности техобслуживания для конкретной машины и текущим значением отработанных моточасов, считанных с нее во время последнего техобслуживания или профосмотра 
+\end_layout
+
+\begin_layout Itemize
+
+Во время техобслуживания считывается значение отработанных моточасов с машины 
+\end_layout
+
+\begin_layout Itemize
+
+Во время техобслуживания тратятся расходные материалы, специфичные для марки конкретной машины 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Журналирование техобслуживаний
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Возможности, предоставляемые системой
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Учет темпов 
+\begin_inset Quotes eld
+\end_inset
+
+накрутки
+\begin_inset Quotes erd
+\end_inset
+
+ моточасов на конкретной машине, прогнозирование даты предстоящего техобслуживания и предупреждение персонала о предстоящих профосмотрах 
+\end_layout
+
+\begin_layout Itemize
+
+Выборки, составление отчетов 
+\end_layout
+
+\begin_layout Itemize
+
+Прикрепление файлов 
+\end_layout
+
+\begin_layout Itemize
+
+Учет расходных материалов используемых во время техосмотра, планирование их использования
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+section{Технологии решения}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Выбор технологий
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Основные постулаты для выбора технологий
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Клиент-серверная архитектура 
+\end_layout
+
+\begin_layout Itemize
+
+Нетребовательность к ресурсам аппаратного обеспечения клиента, расчет на работу на слабых компьютерах или даже на мобильных телефонах 
+\end_layout
+
+\begin_layout Itemize
+
+Отказоустойчивость 
+\end_layout
+
+\begin_layout Itemize
+
+Скорость разработки и простота поддержки 
+\end_layout
+
+\end_deeper
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Выбранные технологии
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Python как основной язык программирования 
+\end_layout
+
+\begin_layout Itemize
+
+Django как фреймворк для сервера 
+\end_layout
+
+\begin_layout Itemize
+
+Pyjamas как фрейворк для клиента 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+subsection{Описание технологий}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Клиент-серверная архитектура
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Сервер
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Сервер запускается на мощностях компании и доступен постоянно. Этим обеспечивается бесперебойность работы системы и целостность данных 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Клиент
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Клиенты (как сотрудники, так и клиенты системы) подключаются к серверу различными способами для работы с системой 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Клиент-серверная архитектура: Клиент
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Клиенты могут подключиться к системе: 
+\end_layout
+
+\begin_layout Itemize
+
+С помощью обычного браузера (например, Internet Explorer), который имеется на любом компьютере и на многих мобильных телефонах 
+\end_layout
+
+\begin_layout Itemize
+
+С помощью специальной программы - клиента, запускаемого на компьютере клиента. Она имеет следующие возможности: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+Те же возможности, что и интерфейс браузера 
+\end_layout
+
+\begin_layout Itemize
+
+Оффлайн-работа. Т.е. работа в условиях, когда сервер компании недоступен - можно создать событие и сохранить его, затем, когда сервер будет доступен, произвести синхронизацию 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Путем отсылки сообщения о неисправности через электронную почту 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Системные требования
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Сервер
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Сервер работает на любом достаточно современном оборудовании, доступ к которому по сети имеют сотрудники компании 
+\end_layout
+
+\begin_layout Block
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Клиент
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Клиентская часть системы работает в любом современном браузере, необходим лишь доступ по сети к серверу компании. В случае отсутсвия доступа (например, на удаленном объекте), можно использовать специальную программу-клиент, которая сохранит все данные для последующей синхронизацией с сервером Возможно сообщение о неисправностях посредством обычного электронного письма 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Отказоустойчивость
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Используемые технологии делают данные системы удобными для резервного копирования. Персистентность данных в системе делает невозможным утрату данных в случае, например, аварийного отключения электроэнергии 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+frametitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+Скорость разработки и простота поддержки
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ Используемые технологии отличаются большим удобством разработки, и, соответственно, быстрым результатом и дешевизной для заказчика 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

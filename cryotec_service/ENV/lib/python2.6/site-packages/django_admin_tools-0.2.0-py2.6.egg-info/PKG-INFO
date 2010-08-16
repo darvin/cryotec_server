@@ -1,0 +1,96 @@
+Metadata-Version: 1.0
+Name: django-admin-tools
+Version: 0.2.0
+Summary: A collection of tools for the django administration interface
+Home-page: http://www.bitbucket.org/izi/django-admin-tools/
+Author: David Jean Louis
+Author-email: izimobil@gmail.com
+License: MIT License
+Download-URL: http://www.bitbucket.org/izi/django-admin-tools/downloads/django-admin-tools-0.2.0.tar.gz
+Description: 
+        ==================
+        django-admin-tools
+        ==================
+        
+        django-admin-tools is a collection of extensions/tools for the default django 
+        administration interface, it includes:
+        
+         * a full featured and customizable dashboard,
+         * a customizable menu bar,
+         * tools to make admin theming easier.
+        
+        The project code and bugtracker is hosted on 
+        `Bitbucket <http://bitbucket.org/izi/django-admin-tools/>`_. 
+        
+        Django-admin-tools is generously documented, you can 
+        `browse the documentation online 
+        <http://packages.python.org/django-admin-tools/>`_.
+        a good start is to read `the quickstart guide 
+        <http://packages.python.org/django-admin-tools/quickstart.html>`_.
+        
+        Thanks for downloading django-admin-tools.
+        
+        
+        ============================
+        django-admin-tools changelog
+        ============================
+        
+        Version 0.2.0, 15 March 2010:
+        -----------------------------
+        
+        * bookmarks are now being saved in the database 
+          (fixes issue #20, thanks @alexrobbins); 
+        * dashboard preferences are also saved in the database;
+        * added support for django-staticfiles STATIC_URL settings
+          (fixes issue #21, thanks @dstufft);
+        * fixed issue #23: render_theming_css tag does not work on windows;
+        * added polish, italian, greek and brazilian locales;
+        * updated docs.
+        
+        Backwards incompatible changes in 0.2.0
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Now, django-admin-tools stores menu and dashboard preferences in the database, 
+        so you'll need to run syncdb and to add the django-admin-tools urls to your 
+        urlconf. These steps are described in details in the documentation.
+        You'll also need to add ``admin_tools`` to your ``INSTALLED_APPS`` for the 
+        locales to work (this was not documented in previous versions).
+        
+        
+        Version 0.1.2, 13 February 2010:
+        --------------------------------
+        
+        * fixed documentation issues;
+        * added locales;
+        * fixed issue #9: don't fail when feedparser is not installed;
+        * fixed issue #5: implemented dashboard layout persistence in cookies;
+        * enable all modules by default in the default dashboard;
+        * fixed recent actions log entry urls when displayed in app_index;
+        * added a "bookmarks" menu item and the code to manage bookmarks;
+        * fixed jquery issues with django 1.2.
+        
+        
+        Version 0.1.1, 10 February 2010:
+        --------------------------------
+        
+        * fixed issue #2: template tag libraries have generic names;
+        * changed the way dashboards are selected, don't rely on request variables but 
+          pass an extra argument to the template tag instead (fixes issue #3);
+        * fixed MANIFEST.in (fixes issue #1);
+        * better setup.py file.
+        
+        
+        Version 0.1.0, 10 February 2010:
+        --------------------------------
+        
+        * Initial release
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
