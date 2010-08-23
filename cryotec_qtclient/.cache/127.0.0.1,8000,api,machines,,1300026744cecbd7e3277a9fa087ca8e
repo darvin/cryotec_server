@@ -1,0 +1,74 @@
+status: 200
+content-location: http://127.0.0.1:8000/api/machines/
+vary: Authorization
+server: WSGIServer/0.1 Python/2.6.6rc1
+date: Sun, 22 Aug 2010 19:22:35 GMT
+content-type: application/json; charset=utf-8
+
+[
+    {
+        "alias": "asdwqe11й4в", 
+        "serial": "134234", 
+        "machinemark": {
+            "name": "Марка машины 1", 
+            "id": 1
+        }, 
+        "id": 1, 
+        "client": {
+            "name": "Сам корпорейшн", 
+            "id": 1
+        }
+    }, 
+    {
+        "alias": "", 
+        "serial": "sadfasdf", 
+        "machinemark": {
+            "name": "ненужная марка", 
+            "id": 2
+        }, 
+        "id": 2, 
+        "client": {
+            "name": "Сам корпорейшн", 
+            "id": 1
+        }
+    }, 
+    {
+        "alias": "", 
+        "serial": "", 
+        "machinemark": {
+            "name": "Марка машины 1", 
+            "id": 1
+        }, 
+        "id": 3, 
+        "client": {
+            "name": "Клинет два", 
+            "id": 2
+        }
+    }, 
+    {
+        "alias": "", 
+        "serial": "123", 
+        "machinemark": {
+            "name": "ненужная марка", 
+            "id": 2
+        }, 
+        "id": 4, 
+        "client": {
+            "name": "Клинет два", 
+            "id": 2
+        }
+    }, 
+    {
+        "alias": "", 
+        "serial": "123123", 
+        "machinemark": {
+            "name": "Марка машины 1", 
+            "id": 1
+        }, 
+        "id": 5, 
+        "client": {
+            "name": "Клинет два", 
+            "id": 2
+        }
+    }
+]

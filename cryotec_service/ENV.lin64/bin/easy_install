@@ -1,4 +1,4 @@
-#!/home/darvin/ENV.lin64/bin/python
+#!/home/darvin/workspace/cryotec_service/cryotec_service/ENV.lin64/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'distribute==0.6.10','console_scripts','easy_install'
 __requires__ = 'distribute==0.6.10'
 import sys

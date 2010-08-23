@@ -116,22 +116,6 @@ class Maintenance(PAction):
 
 
 
-class ReportTemplate(models.Model):
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
-    """Марка машины, к которой относится действие"""
-    comment = models.TextField("Комментарий", max_length=3000)   
-    
-    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=REPORT_INTERESTS_CHOICES, default=0)
-    """Серьезность неисправности"""
-    
-    class Meta:
-        verbose_name = "Стандартная неисправность"
-        verbose_name_plural = "Стандартные неисправности"
-
-    def __unicode__(self):
-        return u"%s (%d)" % (self.comment, self.interest)
- 
-
 
 class Report(Action):
     """
@@ -144,10 +128,8 @@ class Report(Action):
     """Периодическое действие, во время которого выявлена неисправность"""
     
     
-    fixed = models.BooleanField("Исправлена")
-    """Исправлена ли неисправность. Изначально - не исправлена. Опциональное"""
 
-    interest = models.PositiveSmallIntegerField("Уровень неисправности", choices=REPORT_INTERESTS_CHOICES, default=0)
+    interest = models.ForeignKey(ReportLevel, verbose_name="Уровень неисправности")
     """Серьезность неисправности"""
 
 

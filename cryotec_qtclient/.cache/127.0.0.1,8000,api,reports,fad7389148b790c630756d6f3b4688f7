@@ -1,0 +1,8 @@
+status: 301
+content-location: http://127.0.0.1:8000/api/reports
+server: WSGIServer/0.1 Python/2.6.6rc1
+location: http://127.0.0.1:8000/api/reports/
+date: Thu, 19 Aug 2010 11:24:27 GMT
+-x-permanent-redirect-url: http://127.0.0.1:8000/api/reports/
+content-type: text/html; charset=utf-8
+

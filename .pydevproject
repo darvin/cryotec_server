@@ -18,5 +18,8 @@
 <pydev_pathproperty name="org.python.pydev.PROJECT_EXTERNAL_SOURCE_PATH">
 <path>/var/lib/python-support/python2.6</path>
 <path>/usr/local/lib/python2.6/dist-packages/mpttadmin-0.3-py2.6.egg</path>
+<path>/home/darvin/workspace/cryotec_service/cryotec_service/ENV.lin64/lib/python2.6/site-packages/django_piston-0.2.2-py2.6.egg</path>
+<path>/home/darvin/workspace/cryotec_service/cryotec_service/ENV.lin64/lib/python2.6/site-packages/Django-1.2.1-py2.6.egg/django</path>
+<path>/home/darvin/workspace/cryotec_service/cryotec_gtkclient/python-rest-client</path>
 </pydev_pathproperty>
 </pydev_project>

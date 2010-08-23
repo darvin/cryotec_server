@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'machines',
     'clients',
     'actions',
+    'actiontemplates',
     'files',
     'checklists',
     'django_extensions',

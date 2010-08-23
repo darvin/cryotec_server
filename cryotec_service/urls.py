@@ -32,6 +32,9 @@ urlpatterns = patterns('',
     (r'^json/(?P<method>[a-zA-Z0-9.]+)$', jsonrpc_site.dispatch), # for HTTP GET only, also omissible
 
 
+    # all my other url mappings
+   (r'^api/', include('api.urls')),
+
  
 )
 
