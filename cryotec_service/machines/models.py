@@ -7,15 +7,15 @@ class MachineType(models.Model):
     """
     Тип машины
     """
-    name = models.CharField("Название типа машин", max_length=30)
+    name = models.CharField("Название типа оборудования", max_length=30)
     """Название"""
     
     def __unicode__(self):
         return u"%s" % self.name
 
     class Meta:
-        verbose_name = "Тип машины"
-        verbose_name_plural = "Типы машин"
+        verbose_name = "Тип оборудования"
+        verbose_name_plural = "Типы оборудования"
 
 
     
@@ -29,15 +29,15 @@ class MachineMark(models.Model):
     """
     name = models.CharField("Марка", max_length=30)
     """Название"""
-    machinetype = models.ForeignKey(MachineType, verbose_name="Тип машин")
+    machinetype = models.ForeignKey(MachineType, verbose_name="Тип оборудования")
     """Тип машин, к которому принадлежит марка"""
 
     month_default = models.IntegerField("Количество месяцев до следущего профосмотра (по умолчанию)")
     motohours_default = models.IntegerField("Количество моточасов до следующего техобслуживания (по умолчанию)")
     
     class Meta:
-        verbose_name = "Марка машины"
-        verbose_name_plural = "Марки машин"
+        verbose_name = "Марка оборудования"
+        verbose_name_plural = "Марки оборудования"
 
 
     def __unicode__(self):
@@ -77,13 +77,13 @@ class Machine(models.Model):
     """
     serial = models.CharField("Серийный номер", max_length=30,  blank=True, null=True)
     """Серийный номер машины"""
-    client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит машина",   related_name="machines")
-    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил машину",  blank=True, null=True,  related_name="machines_customer")
+    client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит оборудование",   related_name="machines")
+    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил оборудование",  blank=True, null=True,  related_name="machines_customer")
 
     """Клиент, которому продана машина"""
     alias = models.CharField("Псевдоним", max_length=30, blank=True)
     """Псевдоним машины"""
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
+    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка оборудования")
     """Марка машины"""
     
     month = models.IntegerField("Количество месяцев до следущего профосмотра")
@@ -93,8 +93,8 @@ class Machine(models.Model):
     objects = MachineManager()
 
     class Meta:
-        verbose_name = "Машина"
-        verbose_name_plural = "Машины"
+        verbose_name = "Оборудование"
+        verbose_name_plural = "Оборудование"
     
 
     def __unicode__(self):
