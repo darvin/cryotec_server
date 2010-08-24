@@ -16,7 +16,7 @@ class ChecklistAnswerInlineForm(ModelForm):
         super(ChecklistAnswerInlineForm, self).__init__(*args, **kwargs)
         instance = getattr(self, 'instance', None)
         try:
-            self.fields['checklistquestion'].queryset = instance.paction.machine.machinemark.checklistquestion_set.all()
+            self.fields['checklistquestion'].queryset = instance.maitenance.machine.machinemark.checklistquestion_set.all()
             self.fields['comment'].required = instance.checklistquestion.required
         except:
             pass
@@ -55,7 +55,7 @@ class ChecklistAnswerInlineFormset(BaseInlineFormSet):
                         comment = "введите ответ"
                     else:
                         comment = ""
-                    answer = cq.checklistanswer_set.create(paction=kwargs['instance'], \
+                    answer = cq.checklistanswer_set.create(maintenance=kwargs['instance'], \
                                                            comment=comment, )
                     answer.save()
                 print answer
