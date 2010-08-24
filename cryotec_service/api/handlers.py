@@ -2,14 +2,14 @@ from piston.handler import BaseHandler
 from actions.models import Report, Action
 from machines.models import Machine, MachineMark, MachineType
 from clients.models import Client
-
+from actiontemplates.models import ReportLevel, ReportTemplate
 
 
 class CollectionHandler(BaseHandler):
     allowed_methods = ('GET',)
     
     def read(self, request):
-       return self.model.objects.all()     
+        return self.model.objects.all()     
 
 class ReportsHandler(CollectionHandler):
     model = Report
@@ -22,22 +22,33 @@ class ReportsHandler(CollectionHandler):
 
 
 class MachinesHandler(CollectionHandler):
-   model = Machine 
-   fields = ("id",("client", ("name", "id",)),("machinemark",("name","id",)),"serial", "alias")
+    model = Machine 
+    fields = ("id",("client", ("name", "id",)),("machinemark",("name","id",)),"serial", "alias")
 
 
 class MachineMarksHandler(CollectionHandler):
-   model = MachineMark 
+    model = MachineMark 
  
  
  
 class MachineTypesHandler(CollectionHandler):
-   model = MachineType 
+    model = MachineType 
    
 
 
 
 class ClientsHandler(CollectionHandler):
-   model = Client 
+    model = Client 
+    
+    
+class ReportLevelsHandler(CollectionHandler):
+    model = ReportLevel
+    
+class ReportTemplatesHandler(CollectionHandler):
+    model = ReportTemplate
+    
+
+
+
 
 

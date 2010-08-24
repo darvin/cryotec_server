@@ -2,7 +2,9 @@
 
 
 from django.contrib import admin
-from actions.admin import FixInline, ReportInline, ReportTemplateInline, MaintenanceInline, CheckupInline
+from actions.admin import FixInline, ReportInline, MaintenanceInline, CheckupInline
+
+from actiontemplates.admin import ReportTemplateInline
 from checklists.admin import ChecklistQuestionInline
 from machines.models import Machine, MachineMark, MachineType
 from libs.admin import LinkedInline

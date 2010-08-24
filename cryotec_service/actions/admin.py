@@ -1,6 +1,6 @@
 from django.contrib import admin
 from checklists.admin import ChecklistAnswerInline
-from actions.models import Checkup, Maintenance, Fix, Report, PAction, Action, ReportTemplate
+from actions.models import Checkup, Maintenance, Fix, Report, PAction, Action
 from actions.forms import ReportAdminForm
 from libs.admin import LinkedInline
 from files.admin import UploadInline
@@ -32,9 +32,6 @@ admin.site.register(Report, ReportAdmin)
 
 
 
-admin.site.register(ReportTemplate)
-
-
 
 
 class ActionInline(LinkedInline):
@@ -45,9 +42,6 @@ class ReportInline(LinkedInline):
     model = Report
     form = ReportAdminForm
 
-
-class ReportTemplateInline(LinkedInline):
-    model = ReportTemplate
 
 
 

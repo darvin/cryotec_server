@@ -1,8 +1,18 @@
+# -*- coding: utf-8 -*-
+
+
 from django.db import models
 from machines.models import MachineMark
 
 class ReportLevel(models.Model):
     name = models.CharField("Название", max_length=30)
+    order = models.IntegerField("Числовое выражение уровня")
+    class Meta:
+        verbose_name = "Уровень неисправность"
+        verbose_name_plural = "Уровни неисправности"
+
+    def __unicode__(self):
+        return u"%s (%d)" % (self.name, self.order)
 
 
 
@@ -19,5 +29,5 @@ class ReportTemplate(models.Model):
         verbose_name_plural = "Стандартные неисправности"
 
     def __unicode__(self):
-        return u"%s (%d)" % (self.comment, self.interest)
+        return u"%s (%d)" % (self.comment, self.interest.order)
  

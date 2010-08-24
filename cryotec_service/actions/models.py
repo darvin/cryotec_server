@@ -2,8 +2,8 @@
 from django.contrib.auth.models import User
 
 from django.db import models
-from machines.models import Machine, MachineMark
-
+from machines.models import Machine
+from actiontemplates.models import ReportLevel, ReportTemplate
 
 class ActionManager(models.Manager):
     def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
@@ -14,13 +14,6 @@ class ActionManager(models.Manager):
 
 
 
-
-REPORT_INTERESTS_CHOICES = (
-    (1, 'Мелкая поломка'),
-    #(2, 'Средняя поломка'),
-    (3, 'Серьезная неисправность'),
-    (4, 'Полный отказ'),
-)
 
 
 
@@ -99,8 +92,8 @@ class Checkup(PAction):
     """
     pass
     class Meta:
-        verbose_name = "Профосмотр"
-        verbose_name_plural = "Профосмотры"
+        verbose_name = "Считывание моточасов"
+        verbose_name_plural = "Считывания моточасов"
 
     
 class Maintenance(PAction):
@@ -124,7 +117,7 @@ class Report(Action):
     
     reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name="Стандартная неисправность")
     
-    paction = models.ForeignKey(PAction, blank=True, null=True, verbose_name="Событие")
+    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name="Техобслуживание")
     """Периодическое действие, во время которого выявлена неисправность"""
     
     
@@ -139,7 +132,7 @@ class Report(Action):
 
     
     def __unicode__(self):
-        return u"%s: %s (%d)" % (self.date.strftime("%d.%m.%y"), self.comment, self.interest)
+        return u"%s: %s (%d)" % (self.date.strftime("%d.%m.%y"), self.comment, self.interest.order)
     
         
     def save(self):
@@ -154,6 +147,8 @@ class Fix(Action):
     """
     report = models.ForeignKey(Report, verbose_name="Сообщение о неисправности, ремонт которой проводился")
     """Сообщение о неисправности, ремонт которой проводился"""
+    fixed = models.BooleanField("Исправлена")
+    """Исправлена ли неисправность"""
     
     class Meta:
         verbose_name = "Ремонт"
