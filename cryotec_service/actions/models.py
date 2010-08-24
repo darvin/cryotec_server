@@ -88,12 +88,12 @@ class PAction(Action):
 
 class Checkup(PAction):
     """
-    Профосмотр - проводится в соответствии с календарным планом
+    Контроль наработки моточасов - проводится в соответствии с календарным планом
     """
     pass
     class Meta:
-        verbose_name = "Считывание моточасов"
-        verbose_name_plural = "Считывания моточасов"
+        verbose_name = "Контроль моточасов"
+        verbose_name_plural = "Контроли моточасов"
 
     
 class Maintenance(PAction):
