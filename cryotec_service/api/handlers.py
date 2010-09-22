@@ -34,17 +34,19 @@ class MachinesHandler(CollectionHandler):
 
 class MachineMarksHandler(CollectionHandler):
     model = MachineMark 
+    fields = ("id","machinetype", "name")
  
  
  
 class MachineTypesHandler(CollectionHandler):
     model = MachineType 
-   
+    fields = ("id", "name")
 
 
 
 class ClientsHandler(CollectionHandler):
     model = Client 
+    fields = ("id","comment", "name")
     
     
 class ReportLevelsHandler(CollectionHandler):

@@ -2,7 +2,7 @@
 
 from django.db import models
 from machines.models import MachineMark
-from actions.models import PAction
+from actions.models import Maintenance
 
 class ChecklistQuestion(models.Model):
     """
@@ -32,9 +32,9 @@ class ChecklistAnswer(models.Model):
     """
     checklistquestion = models.ForeignKey(ChecklistQuestion, verbose_name="Вопрос к этому ответу")
     """Вопрос к этому ответу"""
-    paction = models.ForeignKey(PAction, verbose_name="Переодическое проверка, в результате которой получен ответ")
+    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name="Техобслуживание")
     """Переодическое проверка, в результате которой получен ответ"""
-    comment = models.CharField("Текстовый комментарий",max_length=300)
+    comment = models.TextField("Текстовый комментарий",max_length=300)
     """Текстовый комментарий"""
 
     def __unicode__(self):
