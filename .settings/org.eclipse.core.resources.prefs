@@ -1,9 +1,10 @@
-#Thu Sep 02 20:13:02 EEST 2010
+#Mon Sep 27 21:47:59 EEST 2010
 eclipse.preferences.version=1
 encoding//cryotec_client/CryotecClient.py=utf-8
 encoding//cryotec_qtclient/Client.py=utf-8
 encoding//cryotec_qtclient/actiondialog.py=utf-8
 encoding//cryotec_qtclient/mainform.py=utf-8
+encoding//cryotec_qtclient/models/machines.py=utf-8
 encoding//cryotec_qtclient/qtdjango/views.py=utf-8
 encoding//cryotec_service/actions/forms.py=utf-8
 encoding//cryotec_service/actions/models.py=utf-8

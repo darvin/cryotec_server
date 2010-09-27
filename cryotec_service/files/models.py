@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-
-from django.db import models
+try:
+    from django.db import models
+except ImportError:
+    from qtdjango import models
 from actions.models import Action
 from clients.models import Client
 from machines.models import Machine, MachineMark

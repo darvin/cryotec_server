@@ -1,7 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 from qtdjango.views import *
-from models import Machine, Client
+from cryotec_service.machines.models import Machine
+from cryotec_service.clients.models import Client
 
 class MachineView(DetailView):
 #    fields = ["comment", "name", "id"]
@@ -9,6 +10,7 @@ class MachineView(DetailView):
     
 
 class MachinesTableView(TableView):
+#    fields = ["alias","serial"]
     pass
  
 

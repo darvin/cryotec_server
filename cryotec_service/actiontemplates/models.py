@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
-
-from django.db import models
+try:
+    from django.db import models
+except ImportError:
+    from qtdjango import models
+    
 from machines.models import MachineMark
 
 class ReportLevel(models.Model):

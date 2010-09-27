@@ -2,13 +2,22 @@
     
     @author: darvin
 '''
+
+from inspect import getmro
+
+def istype(obj, typename):
+    try:
+        return typename in [clsobj.__name__ for clsobj in getmro(obj.__class__)]
+    except AttributeError:
+        return False
+
 class Field(object):
     
     widget = None
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, verbose_name=None, *args, **kwargs):
         try:
-            self.verbose_name = args[0]
+            self.verbose_name = verbose_name
         except IndexError:
             pass
 
@@ -35,10 +44,15 @@ class IdField(Field):
 class TextField(Field):
     pass
 
+
 class CharField(Field):
     pass
 
-class IntField(Field):
+
+class EmailField(CharField):
+    pass
+
+class IntegerField(Field):
     def load(self, data):
         return int(data)
     
@@ -53,9 +67,9 @@ class ForeignKey(Field):
     def dump(self, data):
         return unicode(data)
     
-    def __init__(self, *args, **kwargs):
-        super(ForeignKey, self).__init__( *args, **kwargs)
-        self.model = kwargs["model"]
+    def __init__(self, model, verbose_name=None, *args, **kwargs):
+        super(ForeignKey, self).__init__(verbose_name=verbose_name, *args, **kwargs)
+        self.model = model
         self.model.load()
         
         
@@ -73,7 +87,7 @@ class Model(object):
     '''
     classdocs
     '''
-    resource_name = "resource_name"
+    resource_name = None
     loaded = False
     fields = {}
 
@@ -82,6 +96,19 @@ class Model(object):
     @classmethod
     def load(cls):
         if not cls.loaded:
+            if cls.resource_name is None:
+                cls.resource_name =  cls.__name__.lower()+"s"
+                print cls.resource_name
+                print cls.fields
+            
+            cls.fields={}
+            for name in dir(cls):
+                attr = getattr(cls,name)
+                if istype(attr, "Field"):
+                    cls.fields[name]=attr
+                    delattr(cls, name)
+            
+            
             cls.fields["id"] = IdField("Id")
             raw = Connection.get(cls.resource_name)
             cls.objects = [cls(**x) for x in raw]
@@ -182,4 +209,16 @@ class Model(object):
 if __name__=="__main__":
     
     
-    pass
+    from cryotec_service.machines.models import *
+    from cryotec_service.clients.models import *
+    Machine.load()
+ 
+    print Machine.fields
+    
+    
+    print Machine.resource_name
+    print Client.resource_name
+    print Client.get(1).name
+    print Machine.get(1).serial
+    print Machine.get(1).motohours
+  

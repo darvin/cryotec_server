@@ -112,7 +112,7 @@ class BaseView(object):
     fieldwidgets_dict = {TextField:TextEditWidget,
                          IdField:IdLabelWidget,
                        CharField:LineEditWidget,
-                       IntField:SpinBoxWidget,
+                       IntegerField:SpinBoxWidget,
                        ForeignKey:ComboBoxWidget
                        }
     fields = ()
@@ -199,10 +199,10 @@ class TableModel(QtCore.QAbstractTableModel):
         else:
             return self.model.filter(**self.filter)
     
-    def rowCount(self, parent):
+    def columnCount(self, parent):
         return len(self.fields)
 
-    def columnCount(self, parent):
+    def rowCount(self, parent):
         return len(self.filtered_model())
 
     def headerData(self, section, orientation, role):

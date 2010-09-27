@@ -101,11 +101,15 @@ INSTALLED_APPS = (
 #    'jsonrpc',
     'libs',
 )
+def name():
+    """
+    """
+    
 
 
 ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_service.dashboard.CustomIndexDashboard'
 
-
+AD
 
 SERIALIZATION_MODULES = {
   #  'json': 'wadofstuff.django.serializers.json'

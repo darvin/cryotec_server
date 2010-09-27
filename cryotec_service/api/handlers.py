@@ -8,6 +8,7 @@ from actiontemplates.models import ReportLevel, ReportTemplate
 from piston.utils import rc
 
 class CollectionHandler(BaseHandler):
+    exclude = ()
     allowed_methods = ('GET',)
     
     def read(self, request,  *args, **kwargs):
@@ -29,24 +30,24 @@ class ReportsHandler(CollectionHandler):
 
 class MachinesHandler(CollectionHandler):
     model = Machine 
-    fields = ("id",("client", ("name", "id",)),("machinemark",("name","id",)),"serial", "alias")
+#    fields = ("id",("client", ("name", "id",)),("machinemark",("name","id",)),"serial", "alias")
 
 
 class MachineMarksHandler(CollectionHandler):
     model = MachineMark 
-    fields = ("id","machinetype", "name")
+#    fields = ("id","machinetype", "name")
  
  
  
 class MachineTypesHandler(CollectionHandler):
     model = MachineType 
-    fields = ("id", "name")
+#    fields = ("id", "name")
 
 
 
 class ClientsHandler(CollectionHandler):
     model = Client 
-    fields = ("id","comment", "name")
+#    fields = ("id","comment", "name")
     
     
 class ReportLevelsHandler(CollectionHandler):

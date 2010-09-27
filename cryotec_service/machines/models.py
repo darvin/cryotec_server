@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-
-from django.db import models
+try:
+    from django.db import models
+except ImportError:
+    from cryotec_qtclient.qtdjango import models
 from clients.models import Client
 
 class MachineType(models.Model):
@@ -47,29 +49,29 @@ class MachineMark(models.Model):
     def get_absolute_url(self):
         return "/machine_mark%s" % self.name
 
-
-
-class MachineManager(models.Manager):
-    def get_pks_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-        ms = self.get_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
-        pks = [m.pk for m in ms]
-        return pks
- 
-    
-    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-        if not (machine_pk in (None, -1)):
-            m = [self.get(pk=machine_pk)]
-        elif not (client_pk in (None, -1)):
-            if not (machinemark_pk in (None, -1)):
-                m = self.filter(client__pk=client_pk, machinemark__pk=machinemark_pk)
-            else:
-                m = self.filter(client__pk=client_pk)
-        elif not (machinemark_pk in (None, -1)):
-            m = self.filter(machinemark__pk=machinemark_pk)
-        else:
-            m = self.all()
-            
-        return m
+#
+#
+#class MachineManager(models.Manager):
+#    def get_pks_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
+#        ms = self.get_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
+#        pks = [m.pk for m in ms]
+#        return pks
+# 
+#    
+#    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
+#        if not (machine_pk in (None, -1)):
+#            m = [self.get(pk=machine_pk)]
+#        elif not (client_pk in (None, -1)):
+#            if not (machinemark_pk in (None, -1)):
+#                m = self.filter(client__pk=client_pk, machinemark__pk=machinemark_pk)
+#            else:
+#                m = self.filter(client__pk=client_pk)
+#        elif not (machinemark_pk in (None, -1)):
+#            m = self.filter(machinemark__pk=machinemark_pk)
+#        else:
+#            m = self.all()
+#            
+#        return m
 
 class Machine(models.Model):
     """
@@ -90,7 +92,7 @@ class Machine(models.Model):
     motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
     
     
-    objects = MachineManager()
+#    objects = MachineManager()
 
     class Meta:
         verbose_name = "Оборудование"

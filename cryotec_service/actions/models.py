@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
-from django.contrib.auth.models import User
 
-from django.db import models
+try:
+    from django.contrib.auth.models import User
+    
+    from django.db import models
+except ImportError:
+    from qtdjango import models
+
 from machines.models import Machine
 from actiontemplates.models import ReportLevel, ReportTemplate
 
@@ -23,6 +28,7 @@ class Action(models.Model):
     Отцовский класс для всех событий (действий) - тех-обслуживаний, профосмотров, репортов неисправностей
     и ремонтов.
     """
+    
     machine = models.ForeignKey(Machine, verbose_name="Машина")
     """Машина, к которой относится действие"""
     comment = models.TextField("Комментарий", max_length=3000)

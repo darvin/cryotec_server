@@ -35,7 +35,8 @@ class RemoteService(JSONProxy):
             self.encode = getattr(parser, 'encode')
             self.decode = getattr(parser, 'decodeAsObject')
             JSONDecodeException = None 
-        
+	    bla
+	    
 #        self.parser = JSONParser()
 #
 #        

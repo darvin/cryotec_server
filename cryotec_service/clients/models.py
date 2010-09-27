@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-
-from django.db import models
+try:
+    from django.db import models
+except ImportError:
+    from cryotec_qtclient.qtdjango import models
 
 class Client(models.Model):
     """
