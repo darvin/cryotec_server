@@ -1,5 +1,4 @@
-
-        
+from qtdjango.views import 
 
 class NameByIdFieldLabel(FieldLabel):
     

@@ -1,73 +1,78 @@
-#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
 
+'''
 
-from PyQt4.QtCore import *
+@author: darvin
+'''
+from qtdjango.models import *
 
-def joinl(data):
-#    if isinstance(data,list) or isinstance(data,tuple):
-#        return "_".join(data)
-#    else:
-    return data
-        
+    
+class MachineType(Model):
+    resource_name = "machinetypes"
+    
+    fields = {"name":CharField()}
 
+    
+    def __unicode__(self):
+        return self.name
 
-class ReportModel(QAbstractTableModel):
-
-
-    fieldnames = (("machine", "id"), "comment", "interest", "date")
-    headers = fieldnames
+class MachineMark(Model):
+    resource_name = "machinemarks"
+    
+    fields = {"name":CharField(),
+              "machinetype":ForeignKey(model=MachineType),
+             }
     
     
-    def addFromDialog(self, dialog):
-        newrow = dialog.getData()
-        newrow["date"] = ""
-        self.addData(newrow)
-        
-        
-        
-    def addData(self, datadict):
-        self._data.append(datadict)
-        from pprint import pprint
-        pprint( self._data)
-        self.emit(SIGNAL("dataChanged"))
-        
+    def __unicode__(self):
+        return self.name
+
     
+class Client(Model):
+    resource_name = "clients"
     
-    def __init__(self, service, parent=None, *args):
-        QAbstractTableModel.__init__(self, parent, *args)
-        
-        datain = service.get_reports()
-        
-        
-        def ind(dict, index):
-            try:
-                return dict[index]
-            except KeyError:
-                print index
-                return dict[index[0]][index[1]]
-        
-  
-        self._data = []
-        for row in datain:
-            dict = {}
-            for fieldname in self.fieldnames:
-                dict[joinl(fieldname)] = ind(row, fieldname)
-            self._data.append(dict)
-                
-      
+    fields = {"name":CharField(),
+              "comment":TextField()
+            }
+    
+    def __unicode__(self):
+        return self.name
 
-    def rowCount(self, parent):
-        return len(self._data)
+class Machine(Model):
+    resource_name = "machines"
+    fields = {
+              "alias":CharField("Альяс"),
+              "serial":CharField("Серийный номер"),
+              "client":ForeignKey("Клиент", model=Client),
+              "machinemark":ForeignKey("Марка машины", model=MachineMark),}
 
-    def columnCount(self, parent):
-        return len(self.headers)
+    
+    def __unicode__(self):
+        if self.alias is not None:
+            return self.alias
+        return "%s_%s" % self.client, self.machinemark.name
 
-    def data(self, index, role):
-       
-        if not index.isValid():
-            return QVariant()
-        elif role != Qt.DisplayRole:
-            return QVariant()
-        return QVariant(self._data[index.row()][joinl(self.fieldnames[index.column()])])
 
+if __name__=="__main__":
+    
+    Machine.load()
+    from pprint import pprint
+#    pprint (MachineModel.objects)
+#    pprint (Machine.filter())
+#    
+#    
+##    some = Machine.new()
+##    some.save()
+#    
+##    
+#    pprint (Machine.filter())
+#    pprint (Machine.get(2))
+
+    Client.load()
+#    pprint(Client.get(1).machine_se)
+    pprint (Machine.get(1).client)
+    pprint (Client.get(1).__dict__)
+##    print Machine.get(3).machinemark.name
+#    pprint (Machine.filter(machinemark__id=1))
+#    print Machine.filter(machinemark__id=1)[0]
     

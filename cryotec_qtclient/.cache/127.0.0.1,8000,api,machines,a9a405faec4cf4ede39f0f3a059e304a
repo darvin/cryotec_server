@@ -1,8 +1,0 @@
-status: 301
-content-location: http://127.0.0.1:8000/api/machines
-server: WSGIServer/0.1 Python/2.6.6rc1
-location: http://127.0.0.1:8000/api/machines/
-date: Fri, 20 Aug 2010 14:02:16 GMT
--x-permanent-redirect-url: http://127.0.0.1:8000/api/machines/
-content-type: text/html; charset=utf-8
-
