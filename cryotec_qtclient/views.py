@@ -1,8 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 from qtdjango.views import *
-from cryotec_service.machines.models import Machine
-from cryotec_service.clients.models import Client
+from models import *
 
 class MachineView(DetailView):
 #    fields = ["comment", "name", "id"]
@@ -11,7 +10,7 @@ class MachineView(DetailView):
 
 class MachinesTableView(TableView):
 #    fields = ["alias","serial"]
-    pass
+    model = Machine
  
 
 class MachineTreeView(TableView):
@@ -21,7 +20,7 @@ def main():
     
     
     
-    Machine.load()
+#    Machine.load()
 
     from pprint import pprint
 #    pprint (MachineModel.objects)
@@ -34,7 +33,7 @@ def main():
 ##    
 #    pprint (Machine.filter())
 #    pprint (Machine.get(2))
-    Client.load()
+#    Client.load()
    
 ##    print Machine.get(3).machinemark.name
 #    pprint (Machine.filter(machinemark__id=1))
@@ -48,7 +47,7 @@ def main():
 #    form.show()  # даёт команду на отображение объекта формы и содержимого
     
     form = QMainWindow()
-    form.layout().addWidget(MachinesTableView(Machine,None))
+    form.layout().addWidget(MachinesTableView())
     form.show()
     
     

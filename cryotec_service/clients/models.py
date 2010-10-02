@@ -2,7 +2,7 @@
 try:
     from django.db import models
 except ImportError:
-    from cryotec_qtclient.qtdjango import models
+    from qtdjango import models
 
 class Client(models.Model):
     """
