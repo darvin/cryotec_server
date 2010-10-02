@@ -18,6 +18,7 @@ for model in models:
     setattr(current_module, model.__name__, model)
 for model in models:
     model.refresh_foreing_keys()
+    model.printall_foreing_keys()
 
 
 if __name__=="__main__":
