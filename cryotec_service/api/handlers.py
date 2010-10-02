@@ -5,7 +5,7 @@ from actions.models import Report, Action
 from machines.models import Machine, MachineMark, MachineType
 from clients.models import Client
 from actiontemplates.models import ReportLevel, ReportTemplate
-from piston.utils import rc
+
 
 class CollectionHandler(BaseHandler):
     exclude = ()
@@ -20,34 +20,29 @@ class CollectionHandler(BaseHandler):
 
 class ReportsHandler(CollectionHandler):
     model = Report
-    fields = ("id","comment", "date", "interest", ("reporttemplate", ("id", "comment", "interest")),\
-              \
-              ("machine",("id","name",("client", ("name", "id",)) ,("machinemark",("name","id",))) ) )
-
-
- 
+#    fields = ("id","comment", "date", "interest", ("reporttemplate", ("id", "comment", "interest")),\
+#              \
+#              ("machine",("id","name",("client", ("name", "id",)) ,("machinemark",("name","id",))) ) )
+#
+#
+# 
 
 
 class MachinesHandler(CollectionHandler):
-    model = Machine 
-#    fields = ("id",("client", ("name", "id",)),("machinemark",("name","id",)),"serial", "alias")
-
+    model = Machine
 
 class MachineMarksHandler(CollectionHandler):
     model = MachineMark 
-#    fields = ("id","machinetype", "name")
  
  
  
 class MachineTypesHandler(CollectionHandler):
     model = MachineType 
-#    fields = ("id", "name")
 
 
 
 class ClientsHandler(CollectionHandler):
     model = Client 
-#    fields = ("id","comment", "name")
     
     
 class ReportLevelsHandler(CollectionHandler):
