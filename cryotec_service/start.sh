@@ -1,3 +1,4 @@
 #!/bin/sh
-. ENV/bin/activate
-ENV/bin/python manage.py runserver
+. ENV.lin64/bin/activate
+export PYTHONPATH=/home/darvin/workspace/qtdjango/src/
+ENV.lin64/bin/python manage.py runserver

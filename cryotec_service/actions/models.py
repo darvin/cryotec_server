@@ -6,14 +6,15 @@ try:
     from django.db import models
 except ImportError:
     from qtdjango import models
+    User = models.User
 
 from machines.models import Machine
 from actiontemplates.models import ReportLevel, ReportTemplate
-
-class ActionManager(models.Manager):
-    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-        pks = Machine.objects.get_pks_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
-        return self.filter(machine__pk__in=pks)
+#
+#class ActionManager(models.Manager):
+#    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
+#        pks = Machine.objects.get_pks_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
+#        return self.filter(machine__pk__in=pks)
 
 
 
@@ -37,7 +38,7 @@ class Action(models.Model):
     """Дата/время действия"""
     user = models.ForeignKey(User, verbose_name="Пользователь")
     
-    objects = ActionManager()
+#    objects = ActionManager()
     
     
     class Meta:

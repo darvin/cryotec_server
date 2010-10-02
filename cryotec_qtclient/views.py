@@ -18,4 +18,16 @@ class MachineTreeView(TableView):
     
 
 class ReportView(TableView):
-    model = Machine
+    model = Report
+    
+#
+#class FixView(TableView):
+#    model = Fix
+#
+#
+#class MaitenanceView(TableView):
+#    model = Maitenance
+#    
+#
+#class CheckupView(TableView):
+#    model = Checkup
