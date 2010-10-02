@@ -14,6 +14,9 @@ class MachinesTableView(TableView):
     pass
  
 
+class MachineTreeView(TableView):
+    model = Machine
+
 def main():
     
     

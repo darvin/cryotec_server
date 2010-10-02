@@ -8,7 +8,7 @@ import mainform  # подключает модуль описания формы
  
 def main():
     app = QtGui.QApplication(sys.argv)  # создаёт основной объект программы
-    form = mainform.MainForm()  # создаёт объект формы
+    form = mainform.MainWindow()  # создаёт объект формы
     form.show()  # даёт команду на отображение объекта формы и содержимого
     app.exec_()  # запускает приложение
  
