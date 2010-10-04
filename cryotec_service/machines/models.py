@@ -11,7 +11,7 @@ class MachineType(models.Model):
     """
     name = models.CharField("Название типа оборудования", max_length=30)
     """Название"""
-    
+
     def __unicode__(self):
         return u"%s" % self.name
 

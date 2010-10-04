@@ -2,12 +2,12 @@
 @author: darvin
 '''
 
-from cryotec_service.actions.models import Report, Checkup, Fix, Maintenance
-from cryotec_service.clients.models import Client
-from cryotec_service.machines.models import Machine,MachineMark , MachineType
-from cryotec_service.files.models import Upload
-from cryotec_service.actiontemplates.models import ReportLevel, ReportTemplate
-from cryotec_service.checklists.models import ChecklistAnswer, ChecklistQuestion
+import actions.models
+import clients.models
+import machines.models
+import files.models
+import actiontemplates.models
+import checklists.models
 try:
     from django.contrib.auth.models import User
 except ImportError:
@@ -15,28 +15,27 @@ except ImportError:
 
 current_module =__import__(__name__)
 
-models = {r"actions/reports/":Report,
-          r"actions/checkups/":Checkup,
-          r"actions/fixes/":Fix,
-          r"actions/maintenances/":Maintenance,
-          r"clients/clients/":Client,
-          r"machines/machines/":Machine,
-          r"machines/machinemarkes/":MachineMark,
-          r"machines/machinetypes/":MachineType,
+models = {r"actions/reports/":actions.models.Report,
+          r"actions/checkups/":actions.models.Checkup,
+          r"actions/fixes/":actions.models.Fix,
+          r"actions/maintenances/":actions.models.Maintenance,
+          r"clients/clients/":clients.models.Client,
+          r"machines/machines/":machines.models.Machine,
+          r"machines/machinemarkes/":machines.models.MachineMark,
+          r"machines/machinetypes/":machines.models.MachineType,
 #          r"files/uploads/":Upload,
-          r"actiontemplates/reportlevels/":ReportLevel,
-          r"actiontemplates/reporttemplates/":ReportTemplate,
-          r"checklists/checklistanswers/":ChecklistAnswer,
-          r"checklists/checklistquestions/":ChecklistQuestion,
+          r"actiontemplates/reportlevels/":actiontemplates.models.ReportLevel,
+          r"actiontemplates/reporttemplates/":actiontemplates.models.ReportTemplate,
+          r"checklists/checklistanswers/":checklists.models.ChecklistAnswer,
+          r"checklists/checklistquestions/":checklists.models.ChecklistQuestion,
           r"django/users/":User,
           }
-          
-#
-#for model in models:
-#    setattr(current_module, model.__name__, model)
+
+for url, model in models.items():
+    setattr(current_module, model.__name__, model)
 
 
 
 
 if __name__=="__main__":
-    print models
+    dir(current_module)

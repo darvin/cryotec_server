@@ -5,7 +5,7 @@ try:
 except ImportError:
     from qtdjango import models
     
-from machines.models import MachineMark
+import machines.models
 
 class ReportLevel(models.Model):
     name = models.CharField("Название", max_length=30)
@@ -20,7 +20,7 @@ class ReportLevel(models.Model):
 
 
 class ReportTemplate(models.Model):
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины")
+    machinemark = models.ForeignKey(machines.models.MachineMark, verbose_name="Марка машины")
     """Марка машины, к которой относится действие"""
     comment = models.TextField("Комментарий", max_length=3000)   
     

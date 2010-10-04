@@ -6,7 +6,7 @@
 '''
 
 
-from cryotec_service.cryotec_qtdjango_objects import models
+from cryotec_qtdjango_objects import models
 from qtdjango.helpers import get_registered_models
 
 models = get_registered_models(models)
