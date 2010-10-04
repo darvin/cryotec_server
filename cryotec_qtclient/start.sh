@@ -1,1 +1,1 @@
-PYTHONPATH=../../qtdjango/src:../cryotec_service python cryotec_client.py 
+PYTHONPATH=../../qtdjango/src python cryotec_client.py 
