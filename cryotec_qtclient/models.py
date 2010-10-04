@@ -6,20 +6,19 @@
 '''
 
 
-from cryotec_qtdjango_objects import models
 from qtdjango.helpers import get_registered_models
 
-models = get_registered_models(models)
+models = get_registered_models("/home/darvin/workspace/cryotec_service/cryotec_service", \
+                              ["machines","actions","actiontemplates","clients",],
+                              ("Action", "PAction",))
 
 current_module =__import__(__name__)
 
 for model in models:
-    model.load()
     setattr(current_module, model.__name__, model)
-for model in models:
-    model.refresh_foreing_keys()
-    model.printall_foreing_keys()
 
+
+print dir(current_module)
 
 if __name__=="__main__":
     print models

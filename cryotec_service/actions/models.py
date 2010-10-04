@@ -8,8 +8,8 @@ except ImportError:
     from qtdjango import models
     User = models.User
 
-import machines.models
-import actiontemplates.models
+from machines.models import Machine
+from actiontemplates.models import ReportLevel, ReportTemplate
 #
 #class ActionManager(models.Manager):
 #    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
@@ -30,7 +30,7 @@ class Action(models.Model):
     и ремонтов.
     """
     
-    machine = models.ForeignKey(machines.models.Machine, verbose_name="Машина")
+    machine = models.ForeignKey(Machine, verbose_name="Машина")
     """Машина, к которой относится действие"""
     comment = models.TextField("Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
@@ -122,14 +122,14 @@ class Report(Action):
     Сообщение о неисправности
     """
     
-    reporttemplate = models.ForeignKey(actiontemplates.models.ReportTemplate, blank=True, null=True, verbose_name="Стандартная неисправность")
+    reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name="Стандартная неисправность")
     
     maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name="Техобслуживание")
     """Периодическое действие, во время которого выявлена неисправность"""
     
     
 
-    interest = models.ForeignKey(actiontemplates.models.ReportLevel, verbose_name="Уровень неисправности")
+    interest = models.ForeignKey(ReportLevel, verbose_name="Уровень неисправности")
     """Серьезность неисправности"""
 
 
