@@ -143,8 +143,9 @@ class Report(Action):
     
         
     def save(self):
-        if self.reporttemplate is not None:
-            self.interest = self.reporttemplate.interest
+        #FIXME
+        #if self.reporttemplate is not None:
+            #self.interest = self.reporttemplate.interest
         super(Report,self).save()
     
     
