@@ -28,12 +28,7 @@ class ActionView(TableView):
     def filterByMachine(self, machine):
         print machine
         self.set_filter({"machine":machine})
-    #@pyqtSlot(Model)
-    #def filterByClient(self, client):
-        #print client
-    #@pyqtSlot(Model)
-    #def filterByMark(self, mark):
-        #print mark
+
 
 class ReportDetailView(DetailView):
     model = Report
