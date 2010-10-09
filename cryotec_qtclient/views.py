@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
-from qtdjango.views import *
+from qtdjango.detailviews import *
+from qtdjango.undetailviews import *
 from models import *
 from PyQt4 import QtCore
 
