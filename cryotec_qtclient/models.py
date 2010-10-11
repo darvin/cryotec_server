@@ -6,22 +6,27 @@
 '''
 
 
-from qtdjango.helpers import get_registered_models
+from qtdjango.modelsmanager import ModelsManager
 
-models = get_registered_models("/home/darvin/workspace/cryotec_service/cryotec_service", \
+ADDRESS = "http://127.0.0.1:8000"
+API_PATH= "/api/"
+mm = ModelsManager(ADDRESS, API_PATH, "/home/darvin/workspace/cryotec_service/cryotec_service", \
                               ["machines","actions","actiontemplates","clients",],
                               ("Action", "PAction",))
 
 current_module =__import__(__name__)
 
-for model in models:
-    setattr(current_module, model.__name__, model)
 
 
-print dir(current_module)
+mm.do_models_magic_with_module(current_module)
 
-if __name__=="__main__":
-    print models
-    for model in models:
-        print model.__name__, model.resource_name
-        model.load()
+if __name__ == '__main__':
+    print Machine.all()
+    m1 = Machine.new()
+    m1.save()
+    m2 = Machine.new()
+    m2.save()
+
+    from pprint import pprint
+    for m in Machine.all():
+        pprint (m.__dict__)

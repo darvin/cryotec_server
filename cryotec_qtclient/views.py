@@ -10,24 +10,23 @@ class MachinesTableView(TableView):
     model = Machine
 
 
-class MachineTreeView(ListView):
+class MachineTreeView(TreeView):
     model = Machine
-    tree = {"customer":Client,
-
-           }
+    tree = (
+            ("customer", Client),
+            ("machinemark", MachineMark),
+           )
+    fields = "__unicode__"
 
 
 
 class ActionView(TableView):
-    def __init__(self, machine_tree):
+    def __init__(self):
         """docstring for __init__"""
         super(ActionView, self).__init__()
-        self.machine_tree = machine_tree
-        self.machine_tree.modelSelectionChanged.connect(self.filterByMachine)
 
     @QtCore.pyqtSlot(Model)
     def filterByMachine(self, machine):
-        print machine
         self.set_filter({"machine":machine})
 
 
@@ -39,6 +38,7 @@ class ReportView(ActionView):
     detail_view = ReportDetailView
 
 class ReportWithButtonsView(UndetailWithButtonsView):
+    edit_dumped = False
     viewclass = ReportView
 
 
@@ -50,6 +50,7 @@ class FixView(ActionView):
     detail_view = FixDetailView
 
 class FixWithButtonsView(UndetailWithButtonsView):
+    edit_dumped = False
     viewclass = FixView
 
 
@@ -61,6 +62,7 @@ class MaintenanceView(ActionView):
     detail_view = MaintenanceDetailView
 
 class MaintenanceWithButtonsView(UndetailWithButtonsView):
+    edit_dumped = False
     viewclass = MaintenanceView
 
 
@@ -72,5 +74,6 @@ class CheckupView(ActionView):
     detail_view = CheckupDetailView
 
 class CheckupWithButtonsView(UndetailWithButtonsView):
+    edit_dumped = False
     viewclass = CheckupView
 

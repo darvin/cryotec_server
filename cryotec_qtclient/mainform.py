@@ -15,6 +15,7 @@ class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
         self.machine_tree = MachineTreeView()
+        #self.machine_tree.setSelectionMode(QAbstractItemView.MultiSelection)
         self.notebook = CentralNotebook(self.machine_tree)
 
         self.setCentralWidget(self.notebook)
@@ -39,7 +40,8 @@ class CentralNotebook(QTabWidget):
         self.widgets = []
         self.machine_tree = machine_tree
         for label, widget in self.note_widgets.items():
-            w = widget(machine_tree=self.machine_tree)
+            w = widget()
+            machine_tree.modelSelectionChanged.connect(w.view.filterByMachine)
             self.widgets.append(w)
             self.addTab(w, label)
 
