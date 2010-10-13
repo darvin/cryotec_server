@@ -11,7 +11,7 @@ from qtdjango.modelsmanager import ModelsManager
 ADDRESS = "http://127.0.0.1:8000"
 API_PATH= "/api/"
 mm = ModelsManager(ADDRESS, API_PATH, "/home/darvin/workspace/cryotec_service/cryotec_service", \
-                              ["machines","actions","actiontemplates","clients",],
+                              ["machines","actions","actiontemplates","clients","checklists"],
                               ("Action", "PAction",))
 
 current_module =__import__(__name__)

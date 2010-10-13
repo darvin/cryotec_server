@@ -20,26 +20,49 @@ class MachineTreeView(TreeView):
 
 
 
-class ActionView(TableView):
-    def __init__(self):
+class ChecklistInlineView(QFrame, UndetailView):
+    model = ChecklistAnswer
+
+    def __init__(self, filter):
         """docstring for __init__"""
-        super(ActionView, self).__init__()
+        QFrame.__init__(self)
+        self._widgets =[]
+        self.formlayout = QFormLayout()
+        self.setLayout(self.formlayout)
+        UndetailView.__init__(self, filter)
+        self.set_filter(filter)
+
+    def __clean(self):
+        """Deletes all old widgets"""
+        pass
+
+    def set_filter(self, filter):
+        """Creates all widgets when we sets filter"""
+        self.__clean()
+        print filter["paction"], "#######"
+        machine = filter["paction"].machine
+        print machine
+        mmark = machine.machinemark
+        questions =[q for q in ChecklistQuestion.filter(machinemark=mmark)]
+        for q in questions:
+            print unicode(q), ChecklistAnswers.filter(maitenance=filter["paction"],\
+                                               checklistquestion=q)
+
+
+    def save(self):
+        pass
+
+
+
+
+class ActionView(TableView):
+    def __init__(self, filter):
+        """docstring for __init__"""
+        super(ActionView, self).__init__(filter)
 
     @QtCore.pyqtSlot(Model)
     def filterByMachine(self, machine):
         self.set_filter({"machine":machine})
-
-
-class ReportDetailView(DetailView):
-    model = Report
-
-class ReportView(ActionView):
-    model = Report
-    detail_view = ReportDetailView
-
-class ReportWithButtonsView(UndetailWithButtonsView):
-    edit_dumped = False
-    viewclass = ReportView
 
 
 class FixDetailView(DetailView):
@@ -54,8 +77,22 @@ class FixWithButtonsView(UndetailWithButtonsView):
     viewclass = FixView
 
 
+class ReportDetailView(DetailView):
+    model = Report
+    inline_views = ((FixWithButtonsView, "report", u"Ремонты этой неисправности"),)
+
+class ReportView(ActionView):
+    model = Report
+    detail_view = ReportDetailView
+
+class ReportWithButtonsView(UndetailWithButtonsView):
+    edit_dumped = False
+    viewclass = ReportView
+
+
 class MaintenanceDetailView(DetailView):
     model = Maintenance
+    inline_views = ((ChecklistInlineView, "paction", u"Ответы на чеклист"),)
 
 class MaintenanceView(ActionView):
     model = Maintenance
