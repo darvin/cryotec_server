@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
 
         self.statusBar()
 
+
 class CentralNotebook(QTabWidget):
     note_widgets = {
         u"Сообщения об ошибках":ReportWithButtonsView,

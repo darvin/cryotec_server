@@ -21,12 +21,13 @@ current_module =__import__(__name__)
 mm.do_models_magic_with_module(current_module)
 
 if __name__ == '__main__':
-    print Machine.all()
-    m1 = Machine.new()
-    m1.save()
-    m2 = Machine.new()
-    m2.save()
-
-    from pprint import pprint
-    for m in Machine.all():
-        pprint (m.__dict__)
+#    print Machine.all()
+#    m1 = Machine.new()
+#    m1.save()
+#    m2 = Machine.new()
+#    m2.save()
+#
+#    from pprint import pprint
+#    for m in Machine.all():
+#        pprint (m.__dict__)
+    pass

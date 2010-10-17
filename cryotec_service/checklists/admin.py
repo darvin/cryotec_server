@@ -13,6 +13,3 @@ class ChecklistAnswerInline(LinkedInline):
     model = ChecklistAnswer
     form = ChecklistAnswerInlineForm
     formset = ChecklistAnswerInlineFormset
-
-class ChecklistQuestionInline(LinkedInline):
-    model = ChecklistQuestion

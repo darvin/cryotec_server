@@ -39,14 +39,14 @@ class ChecklistInlineView(QFrame, UndetailView):
     def set_filter(self, filter):
         """Creates all widgets when we sets filter"""
         self.__clean()
-        print filter["paction"], "#######"
+#        print filter["paction"], "#######"
         machine = filter["paction"].machine
-        print machine
+#        print machine
         mmark = machine.machinemark
         questions =[q for q in ChecklistQuestion.filter(machinemark=mmark)]
-        for q in questions:
-            print unicode(q), ChecklistAnswers.filter(maitenance=filter["paction"],\
-                                               checklistquestion=q)
+#        for q in questions:
+#            print unicode(q), ChecklistAnswers.filter(maitenance=filter["paction"],\
+#                                               checklistquestion=q)
 
 
     def save(self):

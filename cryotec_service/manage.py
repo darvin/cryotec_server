@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+#FIXME
+activate_this = 'ENV.lin64/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+
+
 from django.core.management import execute_manager
 try:
     import settings # Assumed to be in the same directory.

@@ -12,7 +12,7 @@ class ChecklistQuestion(models.Model):
     """
     comment = models.CharField("Текст вопроса",max_length=100)
     """Содержание вопроса"""
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машин, к которым относится вопрос чеклиста")
+    machinemark = models.ManyToManyField(MachineMark, verbose_name="Марка машин, к которым относится вопрос чеклиста")
     """Марка машин, к которым относится вопрос чеклиста"""
     required = models.BooleanField("Требуемый")
     """Необходим ли ответ для вопроса"""

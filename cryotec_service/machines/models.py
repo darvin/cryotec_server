@@ -29,13 +29,13 @@ class MachineMark(models.Model):
     """
     Марка машины
     """
-    name = models.CharField("Марка", max_length=30)
+    name = models.CharField("Марка", max_length=90)
     """Название"""
     machinetype = models.ForeignKey(MachineType, verbose_name="Тип оборудования")
     """Тип машин, к которому принадлежит марка"""
 
-    month_default = models.IntegerField("Количество месяцев до следущего профосмотра (по умолчанию)")
-    motohours_default = models.IntegerField("Количество моточасов до следующего техобслуживания (по умолчанию)")
+    month_default = models.IntegerField("Количество месяцев до следущего профосмотра (по умолчанию)", blank=True, null=True)
+    motohours_default = models.IntegerField("Количество моточасов до следующего техобслуживания (по умолчанию)", blank=True, null=True)
     
     class Meta:
         verbose_name = "Марка оборудования"
@@ -88,8 +88,8 @@ class Machine(models.Model):
     machinemark = models.ForeignKey(MachineMark, verbose_name="Марка оборудования")
     """Марка машины"""
     
-    month = models.IntegerField("Количество месяцев до следущего профосмотра")
-    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания")
+    month = models.IntegerField("Количество месяцев до следущего профосмотра", blank=True, null=True)
+    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания", blank=True, null=True)
     
     
 #    objects = MachineManager()
