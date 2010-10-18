@@ -55,7 +55,10 @@ class ChecklistInlineView(QFrame, UndetailView):
 
 
 
-class ActionView(TableView):
+class ActionView(UndetailWithButtonsView):
+    edit_dumped = False
+    edit_filtered_only = True
+
     def __init__(self, filter):
         """docstring for __init__"""
         super(ActionView, self).__init__(filter)
@@ -68,12 +71,12 @@ class ActionView(TableView):
 class FixDetailView(DetailView):
     model = Fix
 
-class FixView(ActionView):
+class FixView(TableView):
     model = Fix
     detail_view = FixDetailView
 
-class FixWithButtonsView(UndetailWithButtonsView):
-    edit_dumped = False
+class FixWithButtonsView(ActionView):
+
     viewclass = FixView
 
 
@@ -81,12 +84,11 @@ class ReportDetailView(DetailView):
     model = Report
     inline_views = ((FixWithButtonsView, "report", u"Ремонты этой неисправности"),)
 
-class ReportView(ActionView):
+class ReportView(TableView):
     model = Report
     detail_view = ReportDetailView
 
-class ReportWithButtonsView(UndetailWithButtonsView):
-    edit_dumped = False
+class ReportWithButtonsView(ActionView):
     viewclass = ReportView
 
 
@@ -94,23 +96,21 @@ class MaintenanceDetailView(DetailView):
     model = Maintenance
     inline_views = ((ChecklistInlineView, "paction", u"Ответы на чеклист"),)
 
-class MaintenanceView(ActionView):
+class MaintenanceView(TableView):
     model = Maintenance
     detail_view = MaintenanceDetailView
 
-class MaintenanceWithButtonsView(UndetailWithButtonsView):
-    edit_dumped = False
+class MaintenanceWithButtonsView(ActionView):
     viewclass = MaintenanceView
 
 
 class CheckupDetailView(DetailView):
     model = Checkup
 
-class CheckupView(ActionView):
+class CheckupView(TableView):
     model = Checkup
     detail_view = CheckupDetailView
 
-class CheckupWithButtonsView(UndetailWithButtonsView):
-    edit_dumped = False
+class CheckupWithButtonsView(ActionView):
     viewclass = CheckupView
 

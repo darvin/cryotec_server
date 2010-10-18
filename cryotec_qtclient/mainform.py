@@ -10,6 +10,7 @@ from PyQt4.QtGui import *
 from views import FixWithButtonsView, ReportWithButtonsView, \
         MaintenanceWithButtonsView, CheckupWithButtonsView, MachineTreeView
 from qtdjango.models import Model
+from models import mm
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
@@ -26,7 +27,32 @@ class MainWindow(QMainWindow):
         dockWidget.setWidget(self.machine_tree)
         self.addDockWidget(Qt.LeftDockWidgetArea, dockWidget)
 
-        self.statusBar()
+
+        syncAction = QAction(u"Синхронизировать", self)
+        syncAction.triggered.connect(self.synchronize)
+
+        machinetreepanelAction = dockWidget.toggleViewAction()
+
+        toolbar = self.addToolBar("main")
+
+        toolbar.addAction(machinetreepanelAction)
+        toolbar.addAction(syncAction)
+
+        self.mm = mm
+        self.mm.add_notify_dumped(self.synced)
+        self.mm.add_notify_undumped(self.unsynced)
+
+    def synchronize(self):
+        """Synchronizes ModelsManager"""
+        self.mm.dump()
+
+    def synced(self):
+        self.statusBar().showMessage(u'Синхронизированно')
+
+    def unsynced(self):
+        self.statusBar().showMessage(u'Есть несохранненные записи')
+
+
 
 
 class CentralNotebook(QTabWidget):
@@ -41,8 +67,8 @@ class CentralNotebook(QTabWidget):
         self.widgets = []
         self.machine_tree = machine_tree
         for label, widget in self.note_widgets.items():
-            w = widget()
-            machine_tree.modelSelectionChanged.connect(w.view.filterByMachine)
+            w = widget(None)
+            machine_tree.modelSelectionChanged.connect(w.filterByMachine)
             self.widgets.append(w)
             self.addTab(w, label)
 

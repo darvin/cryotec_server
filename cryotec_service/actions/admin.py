@@ -15,7 +15,7 @@ class FixAdmin(admin.ModelAdmin):
     inlines = [UploadInline]
     
 class CheckupAdmin(admin.ModelAdmin):
-    inlines = [ChecklistAnswerInline,UploadInline]
+    inlines = [UploadInline]
 
 class MaintenanceAdmin(admin.ModelAdmin):
     inlines = [ChecklistAnswerInline,UploadInline]
