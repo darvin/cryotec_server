@@ -4,10 +4,8 @@ from qtdjango.detailviews import *
 from qtdjango.undetailviews import *
 from models import *
 from PyQt4 import QtCore
-
-class MachinesTableView(TableView):
-#    fields = ["alias","serial"]
-    model = Machine
+from PyQt4.QtGui import *
+from PyQt4.QtCore import QRect
 
 
 class MachineTreeView(TreeView):
@@ -17,6 +15,30 @@ class MachineTreeView(TreeView):
             ("machinemark", MachineMark),
            )
     fields = "__unicode__"
+
+    def __init__(self, *args, **kwargs):
+        super(MachineTreeView, self).__init__(*args, **kwargs)
+        self.header().hide()
+
+
+
+class MachinePanel(QFrame):
+    def __init__(self):
+        super(MachinePanel, self).__init__()
+        layout = QVBoxLayout()
+        buttonShowAll = QPushButton(u"Показать все")
+        self.view = MachineTreeView()
+        self.setLayout(layout)
+        layout.addWidget(buttonShowAll)
+        layout.addWidget(self.view)
+
+        buttonShowAll.clicked.connect(self.show_all)
+
+    def show_all(self, checked):
+        #FIXME
+        self.view.clearSelection()
+        self.view.modelSelectionCleared.emit()
+
 
 
 
@@ -67,6 +89,9 @@ class ActionView(UndetailWithButtonsView):
     def filterByMachine(self, machine):
         self.set_filter({"machine":machine})
 
+    @QtCore.pyqtSlot()
+    def filterCleared(self):
+        self.set_filter(None)
 
 class FixDetailView(DetailView):
     model = Fix

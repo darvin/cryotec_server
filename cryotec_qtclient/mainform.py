@@ -8,14 +8,14 @@ from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 
 from views import FixWithButtonsView, ReportWithButtonsView, \
-        MaintenanceWithButtonsView, CheckupWithButtonsView, MachineTreeView
+        MaintenanceWithButtonsView, CheckupWithButtonsView, MachinePanel
 from qtdjango.models import Model
 from models import mm
 
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
-        self.machine_tree = MachineTreeView()
+        self.machine_tree = MachinePanel()
         #self.machine_tree.setSelectionMode(QAbstractItemView.MultiSelection)
         self.notebook = CentralNotebook(self.machine_tree)
 
@@ -68,7 +68,9 @@ class CentralNotebook(QTabWidget):
         self.machine_tree = machine_tree
         for label, widget in self.note_widgets.items():
             w = widget(None)
-            machine_tree.modelSelectionChanged.connect(w.filterByMachine)
+            machine_tree.view.modelSelectionChanged.connect(w.filterByMachine)
+            machine_tree.view.modelSelectionCleared.connect(w.filterCleared)
+
             self.widgets.append(w)
             self.addTab(w, label)
 
