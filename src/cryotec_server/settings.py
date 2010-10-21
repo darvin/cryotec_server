@@ -67,7 +67,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'cryotec_service.urls'
+ROOT_URLCONF = 'cryotec_server.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -102,7 +102,7 @@ INSTALLED_APPS = (
 )
 
 
-ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_service.dashboard.CustomIndexDashboard'
+ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_server.dashboard.CustomIndexDashboard'
 
 
 
