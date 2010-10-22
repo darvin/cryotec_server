@@ -95,12 +95,19 @@ INSTALLED_APPS = (
     'files',
     'checklists',
     'django_extensions',
-    #'django_evolution',
+    'qtdjango.django_qtdjango',
     'south',
-#    'jsonrpc',
     'libs',
 )
 
+#apps that has qtdjango api
+QTDJANGO_APPS = (
+    "machines",
+    "actions",
+    "actiontemplates",
+    "clients",
+    "checklists",
+               )
 
 ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_server.dashboard.CustomIndexDashboard'
 
