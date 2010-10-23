@@ -9,11 +9,11 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
 )
-
+__PATH_TO_SETTINGS = os.path.abspath(os.path.dirname(__file__))
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'cryotek.db'             # Or path to database file if using sqlite3.
+DATABASE_NAME = os.path.join(os.path.dirname(__file__), '..', '..', 'cryotek.db')
 DATABASE_USER = ''             # Not used with sqlite3.
 DATABASE_PASSWORD = ''         # Not used with sqlite3.
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
@@ -146,7 +146,3 @@ if DEBUG_TOOLBAR:
         'EXCLUDE_URLS': ('/admin',),
         'INTERCEPT_REDIRECTS': False,
     }
-    
-    
-
-
