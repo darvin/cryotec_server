@@ -37,7 +37,9 @@ class Action(models.Model):
     date = models.DateField("Дата", auto_now_add=True)
     """Дата/время действия"""
     user = models.ForeignKey(User, verbose_name="Пользователь")
-    
+
+    read_only_fields = ["date",]
+    auto_user_fields = ["user",]
 #    objects = ActionManager()
     
     
