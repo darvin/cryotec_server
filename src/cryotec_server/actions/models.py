@@ -44,8 +44,8 @@ class Action(models.Model):
     
     
     class Meta:
-        verbose_name = "Событие"
-        verbose_name_plural = "События"
+        verbose_name = u"Событие"
+        verbose_name_plural = u"События"
 
     
     def __unicode__(self):
@@ -81,8 +81,8 @@ class PAction(Action):
     """Моточасы, считанные во время профосмотра с машины"""
 
     class Meta:
-        verbose_name = "Периодическое событие"
-        verbose_name_plural = "Периодическое события"
+        verbose_name = u"Периодическое событие"
+        verbose_name_plural = u"Периодическое события"
 
 
     def get_real(self):
@@ -101,8 +101,8 @@ class Checkup(PAction):
     """
     pass
     class Meta:
-        verbose_name = "Контроль моточасов"
-        verbose_name_plural = "Контроли моточасов"
+        verbose_name = u"Контроль моточасов"
+        verbose_name_plural = u"Контроли моточасов"
 
     
 class Maintenance(PAction):
@@ -111,8 +111,8 @@ class Maintenance(PAction):
     """    
     pass
     class Meta:
-        verbose_name = "Техобслуживание"
-        verbose_name_plural = "Техобслуживания"
+        verbose_name = u"Техобслуживание"
+        verbose_name_plural = u"Техобслуживания"
 
 
 
@@ -136,8 +136,8 @@ class Report(Action):
 
 
     class Meta:
-        verbose_name = "Неисправность"
-        verbose_name_plural = "Неисправности"
+        verbose_name = u"Неисправность"
+        verbose_name_plural = u"Неисправности"
 
     
     def __unicode__(self):
@@ -160,5 +160,5 @@ class Fix(Action):
     """Исправлена ли неисправность"""
     
     class Meta:
-        verbose_name = "Ремонт"
-        verbose_name_plural = "Ремонты"
+        verbose_name = u"Ремонт"
+        verbose_name_plural = u"Ремонты"

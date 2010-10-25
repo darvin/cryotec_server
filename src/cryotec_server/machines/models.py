@@ -16,8 +16,8 @@ class MachineType(models.Model):
         return u"%s" % self.name
 
     class Meta:
-        verbose_name = "Тип оборудования"
-        verbose_name_plural = "Типы оборудования"
+        verbose_name = u"Тип оборудования"
+        verbose_name_plural = u"Типы оборудования"
 
 
     
@@ -95,8 +95,8 @@ class Machine(models.Model):
 #    objects = MachineManager()
 
     class Meta:
-        verbose_name = "Оборудование"
-        verbose_name_plural = "Оборудование"
+        verbose_name = u"Оборудование"
+        verbose_name_plural = u"Оборудование"
     
 
     def __unicode__(self):
