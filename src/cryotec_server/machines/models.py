@@ -20,9 +20,7 @@ class MachineType(models.Model):
         verbose_name_plural = u"Типы оборудования"
 
 
-    
-    def get_absolute_url(self):
-        return "/machine_tyep%s" % self.name
+
     
     
 class MachineMark(models.Model):
@@ -34,8 +32,8 @@ class MachineMark(models.Model):
     machinetype = models.ForeignKey(MachineType, verbose_name="Тип оборудования")
     """Тип машин, к которому принадлежит марка"""
 
-    month_default = models.IntegerField("Количество месяцев до следущего профосмотра (по умолчанию)", blank=True, null=True)
-    motohours_default = models.IntegerField("Количество моточасов до следующего техобслуживания (по умолчанию)", blank=True, null=True)
+    month_default = models.IntegerField("Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
+    motohours_default = models.IntegerField("Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
     
     class Meta:
         verbose_name = "Марка оборудования"
@@ -46,32 +44,6 @@ class MachineMark(models.Model):
         return u"%s" % self.name
     
     
-    def get_absolute_url(self):
-        return "/machine_mark%s" % self.name
-
-#
-#
-#class MachineManager(models.Manager):
-#    def get_pks_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-#        ms = self.get_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
-#        pks = [m.pk for m in ms]
-#        return pks
-# 
-#    
-#    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-#        if not (machine_pk in (None, -1)):
-#            m = [self.get(pk=machine_pk)]
-#        elif not (client_pk in (None, -1)):
-#            if not (machinemark_pk in (None, -1)):
-#                m = self.filter(client__pk=client_pk, machinemark__pk=machinemark_pk)
-#            else:
-#                m = self.filter(client__pk=client_pk)
-#        elif not (machinemark_pk in (None, -1)):
-#            m = self.filter(machinemark__pk=machinemark_pk)
-#        else:
-#            m = self.all()
-#            
-#        return m
 
 class Machine(models.Model):
     """
@@ -88,11 +60,10 @@ class Machine(models.Model):
     machinemark = models.ForeignKey(MachineMark, verbose_name="Марка оборудования")
     """Марка машины"""
     
-    month = models.IntegerField("Количество месяцев до следущего профосмотра", blank=True, null=True)
-    motohours = models.IntegerField("Количество моточасов до следующего техобслуживания", blank=True, null=True)
-    
-    
-#    objects = MachineManager()
+    month = models.IntegerField("Количество месяцев между профосмотрами", blank=True, null=True)
+    motohours = models.IntegerField("Количество моточасов между техобслуживаниями", blank=True, null=True)
+
+    include_methods_results = ["get_current_motohours", "get_last_checkup_date"]
 
     class Meta:
         verbose_name = u"Оборудование"
@@ -105,24 +76,17 @@ class Machine(models.Model):
         else:
             return u"%s_%s" % (self.client.name, self.machinemark)
         
-    def get_absolute_url(self):
-        return "/machine_%s" % self
-    
-    def get_machinetype_name(self):
-        return self.machinemark.machinetype.name
-    
-    
-    def get_machinemark_name(self):
-        return self.machinemark.name
-    
-    def get_machinetype_pk(self):
-        return self.machinemark.machinetype.pk
-    
-    
-    def get_machinemark_pk(self):
-        return self.machinemark.pk
+
     
     def save(self):
         if self.customer == None:
             self.customer = self.client
         super(Machine,self).save()
+
+
+    def get_current_motohours(self):
+        return self.checkup_set.order_by("date")[0].motohours
+
+
+    def get_last_checkup_date(self):
+        return self.checkup_set.order_by("date")[0].date

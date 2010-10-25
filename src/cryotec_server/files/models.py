@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+from django.contrib.contenttypes import generic
+from django.contrib.contenttypes.models import ContentType
+
 try:
     from django.db import models
 except ImportError:
@@ -30,10 +33,9 @@ def make_upload_path(instance, filename):
 
 
 class Upload(models.Model):
-    action = models.ForeignKey(Action, verbose_name="Событие", blank=True, null=True)
-    machine = models.ForeignKey(Machine, verbose_name="Машина", blank=True, null=True)
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка машины", blank=True, null=True)
-    client = models.ForeignKey(Client, verbose_name="Клиент", blank=True, null=True)
+    content_type = models.ForeignKey(ContentType)
+    object_id = models.PositiveIntegerField()
+    related_to = generic.GenericForeignKey()
     file = models.FileField("Файл", upload_to=make_upload_path)
     uploaded_date = models.DateTimeField("Дата загрузки", auto_now_add=True)
     

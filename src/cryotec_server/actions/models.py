@@ -10,11 +10,6 @@ except ImportError:
 
 from machines.models import Machine
 from actiontemplates.models import ReportLevel, ReportTemplate
-#
-#class ActionManager(models.Manager):
-#    def get_by_machine_client_mark(self, machine_pk=None, client_pk=None, machinemark_pk=None):
-#        pks = Machine.objects.get_pks_by_machine_client_mark(machine_pk, client_pk, machinemark_pk)
-#        return self.filter(machine__pk__in=pks)
 
 
 
@@ -40,72 +35,34 @@ class Action(models.Model):
 
     read_only_fields = ["date",]
     auto_user_fields = ["user",]
-#    objects = ActionManager()
-    
-    
+
     class Meta:
+        abstract = True
         verbose_name = u"Событие"
         verbose_name_plural = u"События"
 
     
     def __unicode__(self):
         return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
-    @classmethod
-    def get_admin_path(cls):
-        print "sdf!"
-        print cls.get_real()
-        return cls.get_real()
-    
-    
-    def get_real(self):
-        try:
-            return self.report
-        except Report.DoesNotExist:
-            pass
-        try:
-            return self.fix
-        except Fix.DoesNotExist:
-            pass
-        try:
-            if self.paction:
-                return self.paction.get_real()
-        except PAction.DoesNotExist:
-            pass
 
 
-class PAction(Action):
-    """
-    Отцовский класс для периодических действий
-    """
-    motohours = models.IntegerField("Моточасы")
-    """Моточасы, считанные во время профосмотра с машины"""
-
-    class Meta:
-        verbose_name = u"Периодическое событие"
-        verbose_name_plural = u"Периодическое события"
 
 
-    def get_real(self):
-        try:
-            return self.checkup
-        except Checkup.DoesNotExist:
-            pass
-        try:
-            return self.maintenance
-        except Maintenance.DoesNotExist:
-            pass
 
-class Checkup(PAction):
+class Checkup(Action):
     """
     Контроль наработки моточасов - проводится в соответствии с календарным планом
     """
-    pass
+    motohours = models.IntegerField("Моточасы")
+    """Моточасы, считанные во время профосмотра с машины"""
     class Meta:
         verbose_name = u"Контроль моточасов"
         verbose_name_plural = u"Контроли моточасов"
 
+
+
     
-class Maintenance(PAction):
+class Maintenance(Action):
     """
     Техобслуживание = проводится в соответствии с моточасами
     """    
@@ -134,6 +91,7 @@ class Report(Action):
     interest = models.ForeignKey(ReportLevel, verbose_name="Уровень неисправности")
     """Серьезность неисправности"""
 
+    include_methods_results = ["is_fixed"]
 
     class Meta:
         verbose_name = u"Неисправность"
@@ -148,7 +106,9 @@ class Report(Action):
         if self.reporttemplate is not None:
             self.interest = self.reporttemplate.interest
         super(Report,self).save()
-    
+
+    def is_fixed(self):
+        return self.fix_set.order_by("date")[0].fixed
     
 class Fix(Action):
     """

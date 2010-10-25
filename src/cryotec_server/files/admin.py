@@ -1,12 +1,13 @@
 from django.contrib import admin
 from files.models import Upload
 from files.forms import UploadInlineForm
-from libs.admin import LinkedInline
+from django.contrib.contenttypes import generic
 
 admin.site.register(Upload)
 
 
-class UploadInline(LinkedInline):
+
+class UploadInline(generic.GenericStackedInline):
     form = UploadInlineForm
     model = Upload
     
