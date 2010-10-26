@@ -91,7 +91,7 @@ class Report(Action):
     interest = models.ForeignKey(ReportLevel, verbose_name="Уровень неисправности")
     """Серьезность неисправности"""
 
-    include_methods_results = ["is_fixed"]
+    include_methods_results = {"is_fixed":models.BooleanField("Исправлена")}
 
     class Meta:
         verbose_name = u"Неисправность"
@@ -108,7 +108,10 @@ class Report(Action):
         super(Report,self).save()
 
     def is_fixed(self):
-        return self.fix_set.order_by("date")[0].fixed
+        try:
+            return self.fix_set.order_by("date")[0].fixed
+        except IndexError:
+            return False
     
 class Fix(Action):
     """

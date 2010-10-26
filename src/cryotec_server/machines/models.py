@@ -9,7 +9,7 @@ class MachineType(models.Model):
     """
     Тип машины
     """
-    name = models.CharField("Название типа оборудования", max_length=30)
+    name = models.CharField(u"Название типа оборудования", max_length=30)
     """Название"""
 
     def __unicode__(self):
@@ -27,17 +27,17 @@ class MachineMark(models.Model):
     """
     Марка машины
     """
-    name = models.CharField("Марка", max_length=90)
+    name = models.CharField(u"Марка", max_length=90)
     """Название"""
-    machinetype = models.ForeignKey(MachineType, verbose_name="Тип оборудования")
+    machinetype = models.ForeignKey(MachineType, verbose_name=u"Тип оборудования")
     """Тип машин, к которому принадлежит марка"""
 
-    month_default = models.IntegerField("Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
-    motohours_default = models.IntegerField("Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
+    month_default = models.IntegerField(u"Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
+    motohours_default = models.IntegerField(u"Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
     
     class Meta:
-        verbose_name = "Марка оборудования"
-        verbose_name_plural = "Марки оборудования"
+        verbose_name = u"Марка оборудования"
+        verbose_name_plural = u"Марки оборудования"
 
 
     def __unicode__(self):
@@ -49,21 +49,26 @@ class Machine(models.Model):
     """
     Конкретная машина
     """
-    serial = models.CharField("Серийный номер", max_length=30,  blank=True, null=True)
+    serial = models.CharField(u"Серийный номер", max_length=30,  blank=True, null=True)
     """Серийный номер машины"""
-    client = models.ForeignKey(Client, verbose_name="Клиент, которому принадлежит оборудование",   related_name="machines")
-    customer = models.ForeignKey(Client, verbose_name="Клиент, который купил оборудование",  blank=True, null=True,  related_name="machines_customer")
+    client = models.ForeignKey(Client, verbose_name=u"Клиент, которому принадлежит оборудование",   related_name="machines")
+    customer = models.ForeignKey(Client, verbose_name=u"Клиент, который купил оборудование",  blank=True, null=True,  related_name="machines_customer")
 
     """Клиент, которому продана машина"""
-    alias = models.CharField("Псевдоним", max_length=30, blank=True)
+    alias = models.CharField(u"Псевдоним", max_length=30, blank=True)
     """Псевдоним машины"""
-    machinemark = models.ForeignKey(MachineMark, verbose_name="Марка оборудования")
+    machinemark = models.ForeignKey(MachineMark, verbose_name=u"Марка оборудования")
     """Марка машины"""
-    
-    month = models.IntegerField("Количество месяцев между профосмотрами", blank=True, null=True)
-    motohours = models.IntegerField("Количество моточасов между техобслуживаниями", blank=True, null=True)
 
-    include_methods_results = ["get_current_motohours", "get_last_checkup_date"]
+    date = models.DateField(u"Дата ввода в эксп.")
+    """Дата ввода в эксплуатацию оборудования"""
+
+    month = models.IntegerField(u"Количество месяцев между профосмотрами", blank=True, null=True)
+    motohours = models.IntegerField(u"Количество моточасов между техобслуживаниями", blank=True, null=True)
+
+    include_methods_results = {"get_current_motohours":models.IntegerField(u"Моточасы", blank=True, null=True),\
+                               "get_last_checkup_date":models.DateField(u"Дата последнего считывания", auto_now_add=True), \
+                            }
 
     class Meta:
         verbose_name = u"Оборудование"
@@ -85,8 +90,14 @@ class Machine(models.Model):
 
 
     def get_current_motohours(self):
-        return self.checkup_set.order_by("date")[0].motohours
+        try:
+            return self.checkup_set.order_by("date")[0].motohours
+        except IndexError:
+            return 0
 
 
     def get_last_checkup_date(self):
-        return self.checkup_set.order_by("date")[0].date
+        try:
+            return self.checkup_set.order_by("date")[0].date
+        except IndexError:
+            return self.date
