@@ -43,7 +43,10 @@ class Action(models.Model):
 
     
     def __unicode__(self):
-        return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
+        try:
+            return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
+        except AttributeError:
+            return u"%s: %s" % (u"<новая>", self.comment, )
 
 
 
@@ -99,7 +102,11 @@ class Report(Action):
 
     
     def __unicode__(self):
-        return u"%s: %s (%d)" % (self.date.strftime("%d.%m.%y"), self.comment, self.interest.order)
+        try:
+            date = self.date.strftime("%d.%m.%y")
+        except AttributeError:
+            date = u"<новая>"
+        return u"%s: %s (%d)" % (date, self.comment, self.interest.order)
     
         
     def save(self):
