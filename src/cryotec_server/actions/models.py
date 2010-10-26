@@ -25,13 +25,13 @@ class Action(models.Model):
     и ремонтов.
     """
     
-    machine = models.ForeignKey(Machine, verbose_name="Машина")
+    machine = models.ForeignKey(Machine, verbose_name=u"Машина")
     """Машина, к которой относится действие"""
-    comment = models.TextField("Комментарий", max_length=3000)
+    comment = models.TextField(u"Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
-    date = models.DateField("Дата", auto_now_add=True)
+    date = models.DateField(u"Дата", auto_now_add=True)
     """Дата/время действия"""
-    user = models.ForeignKey(User, verbose_name="Пользователь")
+    user = models.ForeignKey(User, verbose_name=u"Пользователь")
 
     read_only_fields = ["date",]
     auto_user_fields = ["user",]
@@ -56,7 +56,7 @@ class Checkup(Action):
     """
     Контроль наработки моточасов - проводится в соответствии с календарным планом
     """
-    motohours = models.IntegerField("Моточасы")
+    motohours = models.IntegerField(u"Моточасы")
     """Моточасы, считанные во время профосмотра с машины"""
     class Meta:
         verbose_name = u"Контроль моточасов"
@@ -84,17 +84,17 @@ class Report(Action):
     Сообщение о неисправности
     """
     
-    reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name="Стандартная неисправность")
+    reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name=u"Стандартная неисправность")
     
-    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name="Техобслуживание")
+    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Техобслуживание")
     """Периодическое действие, во время которого выявлена неисправность"""
     
     
 
-    interest = models.ForeignKey(ReportLevel, verbose_name="Уровень неисправности")
+    interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""
 
-    include_methods_results = {"is_fixed":models.BooleanField("Исправлена")}
+    include_methods_results = {"is_fixed":models.BooleanField(u"Исправлена")}
 
     class Meta:
         verbose_name = u"Неисправность"
@@ -124,9 +124,9 @@ class Fix(Action):
     """
     Ремонт
     """
-    report = models.ForeignKey(Report, verbose_name="Сообщение о неисправности, ремонт которой проводился")
+    report = models.ForeignKey(Report, verbose_name=u"Сообщение о неисправности, ремонт которой проводился")
     """Сообщение о неисправности, ремонт которой проводился"""
-    fixed = models.BooleanField("Исправлена")
+    fixed = models.BooleanField(u"Исправлена")
     """Исправлена ли неисправность"""
     
     class Meta:
