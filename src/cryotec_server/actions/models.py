@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.core.exceptions import ValidationError
 
 try:
     from django.contrib.auth.models import User
@@ -13,7 +14,14 @@ from actiontemplates.models import ReportLevel, ReportTemplate
 
 
 
-
+def smart_truncate(s, width=20):
+    try:
+        if s[width].isspace():
+            return s[0:width];
+        else:
+            return s[0:width].rsplit(None, 1)[0]
+    except IndexError:
+        return s
 
 
 
@@ -25,7 +33,7 @@ class Action(models.Model):
     и ремонтов.
     """
     
-    machine = models.ForeignKey(Machine, verbose_name=u"Машина")
+    machine = models.ForeignKey(Machine, verbose_name=u"Машина", blank=True, null=True)
     """Машина, к которой относится действие"""
     comment = models.TextField(u"Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
@@ -44,11 +52,13 @@ class Action(models.Model):
     
     def __unicode__(self):
         try:
-            return u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment)
+            return smart_truncate(u"%s: %s" % (self.date.strftime("%d.%m.%y"), self.comment))
         except AttributeError:
-            return u"%s: %s" % (u"<новая>", self.comment, )
+            return smart_truncate(u"%s: %s" % (u"<новая>", self.comment, ))
 
-
+    def clean(self):
+        if self.machine is None:
+            raise ValidationError(u"Не выбранна единица оборудования!")
 
 
 
@@ -69,14 +79,14 @@ class Maintenance(Action):
     """
     Техобслуживание = проводится в соответствии с моточасами
     """    
-    include_methods_results = {"extra_to_html":models.TextField(u"Подробное представление дополнительных данных")
-                            }
+
     class Meta:
         verbose_name = u"Техобслуживание"
         verbose_name_plural = u"Техобслуживания"
 
     def extra_to_html(self):
-        answers = self.checklistanswer_set.all()
+        answers = self.checklistanswer_set
+
         html = u""
         for answer in answers:
             a = answer.comment
@@ -117,7 +127,7 @@ class Report(Action):
             date = self.date.strftime("%d.%m.%y")
         except AttributeError:
             date = u"<новая>"
-        return u"%s: %s (%d)" % (date, self.comment, self.interest.order)
+        return smart_truncate(u"%s: %s (%d)" % (date, self.comment, self.interest.order))
     
         
     def save(self):
@@ -144,13 +154,16 @@ class Fix(Action):
     """Сообщение о неисправности, ремонт которой проводился"""
     fixed = models.BooleanField(u"Исправлена")
     """Исправлена ли неисправность"""
-    
+
+
+    read_only_fields = ["machine",]
+
     class Meta:
         verbose_name = u"Ремонт"
         verbose_name_plural = u"Ремонты"
 
-
     def clean(self):
-        from django.core.exceptions import ValidationError
-        if self.report.machine!=self.machine:
-            raise ValidationError(u"Выбранно неверное сообщение о неисправности другой машины")
+        if self.report is not None:
+            self.machine = self.report.machine
+        else:
+            raise ValidationError(u"Не выбранно сообщение о неисправности!")
