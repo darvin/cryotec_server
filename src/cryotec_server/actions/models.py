@@ -85,7 +85,7 @@ class Maintenance(Action):
         verbose_name_plural = u"Техобслуживания"
 
     def extra_to_html(self):
-        answers = self.checklistanswer_set
+        answers = self.checklistanswer_set()
 
         html = u""
         for answer in answers:
