@@ -69,10 +69,21 @@ class Maintenance(Action):
     """
     Техобслуживание = проводится в соответствии с моточасами
     """    
-    pass
+    include_methods_results = {"extra_to_html":models.TextField(u"Подробное представление дополнительных данных")
+                            }
     class Meta:
         verbose_name = u"Техобслуживание"
         verbose_name_plural = u"Техобслуживания"
+
+    def extra_to_html(self):
+        answers = self.checklistanswer_set.all()
+        html = u""
+        for answer in answers:
+            a = answer.comment
+            q = answer.checklistquestion.comment
+            html += u"<b>%s</b>: <i>%s</i><br>"%(q, a)
+
+        return html
 
 
 
@@ -114,6 +125,11 @@ class Report(Action):
             self.interest = self.reporttemplate.interest
         super(Report,self).save()
 
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        if self.maintenance is not None and self.maintenance.machine!=self.machine:
+            raise ValidationError(u"Выбранно неверное техобслуживание другой машины")
+
     def is_fixed(self):
         try:
             return self.fix_set.order_by("date")[0].fixed
@@ -132,3 +148,9 @@ class Fix(Action):
     class Meta:
         verbose_name = u"Ремонт"
         verbose_name_plural = u"Ремонты"
+
+
+    def clean(self):
+        from django.core.exceptions import ValidationError
+        if self.report.machine!=self.machine:
+            raise ValidationError(u"Выбранно неверное сообщение о неисправности другой машины")

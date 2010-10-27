@@ -14,12 +14,12 @@ class ChecklistAnswerInlineForm(ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(ChecklistAnswerInlineForm, self).__init__(*args, **kwargs)
-        instance = getattr(self, 'instance', None)
-        try:
-            self.fields['checklistquestion'].queryset = instance.maitenance.machine.machinemark.checklistquestion_set.all()
-            self.fields['comment'].required = instance.checklistquestion.required
-        except:
-            pass
+#        instance = getattr(self, 'instance', None)
+#        try:
+#            self.fields['checklistquestion'].queryset = instance.maitenance.machine.machinemark.checklistquestion_set.all()
+#            self.fields['comment'].required = instance.checklistquestion.required
+#        except:
+#            pass
 #        if instance and instance.id:
 
         
@@ -42,24 +42,24 @@ class ChecklistAnswerInlineForm(ModelForm):
     
 class ChecklistAnswerInlineFormset(BaseInlineFormSet):
     def __init__(self, *args, **kwargs):
-        if kwargs['instance'].id is not None:
-            checkquestions = kwargs['instance'].machine.machinemark.checklistquestion_set.all()
-    #        print checkquestions
-            qs = kwargs['instance'].checklistanswer_set.all()
-            for cq in checkquestions:
-                try:
-                    answer = qs.get(checklistquestion__pk=cq.pk)
-                    
-                except ChecklistAnswer.DoesNotExist:
-                    if cq.required:
-                        comment = "введите ответ"
-                    else:
-                        comment = ""
-                    answer = cq.checklistanswer_set.create(maintenance=kwargs['instance'], \
-                                                           comment=comment, )
-                    answer.save()
-                print answer
-            
-            
-            self.queryset = kwargs['instance'].checklistanswer_set.all()
+#        if kwargs['instance'].id is not None:
+#            checkquestions = kwargs['instance'].machine.machinemark.checklistquestion_set.all()
+#    #        print checkquestions
+#            qs = kwargs['instance'].checklistanswer_set.all()
+#            for cq in checkquestions:
+#                try:
+#                    answer = qs.get(checklistquestion__pk=cq.pk)
+#
+#                except ChecklistAnswer.DoesNotExist:
+#                    if cq.required:
+#                        comment = "введите ответ"
+#                    else:
+#                        comment = ""
+#                    answer = cq.checklistanswer_set.create(maintenance=kwargs['instance'], \
+#                                                           comment=comment, )
+#                    answer.save()
+#                print answer
+#
+#
+#            self.queryset = kwargs['instance'].checklistanswer_set.all()
         super(ChecklistAnswerInlineFormset, self).__init__(*args, **kwargs)

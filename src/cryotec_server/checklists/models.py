@@ -10,18 +10,20 @@ class ChecklistQuestion(models.Model):
     """
     Вопрос чеклиста
     """
-    comment = models.CharField("Текст вопроса",max_length=100)
+    comment = models.CharField(u"Текст вопроса",max_length=100)
     """Содержание вопроса"""
-    machinemark = models.ManyToManyField(MachineMark, verbose_name="Марка машин, к которым относится вопрос чеклиста")
+    machinemark = models.ManyToManyField(MachineMark, verbose_name=u"Марка машин, к которым относится вопрос чеклиста")
     """Марка машин, к которым относится вопрос чеклиста"""
-    required = models.BooleanField("Требуемый")
+    required = models.BooleanField(u"Требуемый")
     """Необходим ли ответ для вопроса"""
-    order = models.PositiveIntegerField("Порядковый номер в чеклисте")
+    order = models.PositiveIntegerField(u"Порядковый номер в чеклисте")
     """Порядковый номер в чеклисте"""
-    
+
+    dump_order = -1
+
     class Meta:
-        verbose_name = "Чеклист-вопрос"
-        verbose_name_plural = "Чеклист-вопросы"
+        verbose_name = u"Чеклист-вопрос"
+        verbose_name_plural = u"Чеклист-вопросы"
 
     
     def __unicode__(self):
@@ -32,12 +34,14 @@ class ChecklistAnswer(models.Model):
     """
     Ответ на вопрос чеклиста
     """
-    checklistquestion = models.ForeignKey(ChecklistQuestion, verbose_name="Вопрос к этому ответу")
+    checklistquestion = models.ForeignKey(ChecklistQuestion, verbose_name=u"Вопрос к этому ответу")
     """Вопрос к этому ответу"""
-    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name="Техобслуживание")
+    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Техобслуживание")
     """Переодическое проверка, в результате которой получен ответ"""
-    comment = models.TextField("Текстовый комментарий",max_length=300)
+    comment = models.TextField(u"Текстовый комментарий",max_length=300)
     """Текстовый комментарий"""
+
+    dump_order = 100
 
     def __unicode__(self):
         return u"%d. %s" % (self.checklistquestion.order, self.comment)
@@ -45,8 +49,8 @@ class ChecklistAnswer(models.Model):
     class Meta:
         ordering = ['checklistquestion__order']
         
-        verbose_name = "Чеклист-ответ"
-        verbose_name_plural = "Чеклист-ответы"
+        verbose_name = u"Чеклист-ответ"
+        verbose_name_plural = u"Чеклист-ответы"
 
 
     
