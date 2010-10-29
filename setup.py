@@ -1,9 +1,11 @@
 #!/usr/bin/python
 from setuptools import setup, find_packages
 
+execfile('src/cryotec_server/__init__.py')
+
 setup(
           name = "cryotec_server",
-          version = "1.1.1",
+          version = __version__,
           url = 'http://github.com/darvin/cryotec_server',
           license = 'Greedy Open Source',
           description = "Cryotec Service Server",
