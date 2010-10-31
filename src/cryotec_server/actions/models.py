@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.core.exceptions import ValidationError
+from libs.modelmixins import UrlMixin
 
 try:
     from django.contrib.auth.models import User
@@ -27,17 +28,17 @@ def smart_truncate(s, width=20):
 
 
 
-class Action(models.Model):
+class Action(models.Model, UrlMixin):
     """
     Отцовский класс для всех событий (действий) - тех-обслуживаний, профосмотров, репортов неисправностей
     и ремонтов.
     """
     
-    machine = models.ForeignKey(Machine, verbose_name=u"Машина", blank=True, null=True)
+    machine = models.ForeignKey(Machine, verbose_name=u"Машина")
     """Машина, к которой относится действие"""
     comment = models.TextField(u"Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
-    date = models.DateField(u"Дата", auto_now_add=True)
+    date = models.DateTimeField(u"Дата", auto_now_add=True)
     """Дата/время действия"""
     user = models.ForeignKey(User, verbose_name=u"Пользователь")
 
@@ -115,7 +116,6 @@ class Report(Action):
     interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""
 
-    include_methods_results = {"is_fixed":models.BooleanField(u"Исправлена")}
 
     class Meta:
         verbose_name = u"Неисправность"
@@ -145,6 +145,8 @@ class Report(Action):
             return self.fix_set.order_by("date")[0].fixed
         except IndexError:
             return False
+
+    is_fixed.method_as_field = models.BooleanField(u"Исправлена")
     
 class Fix(Action):
     """
@@ -156,14 +158,11 @@ class Fix(Action):
     """Исправлена ли неисправность"""
 
 
-    read_only_fields = ["machine",]
 
     class Meta:
         verbose_name = u"Ремонт"
         verbose_name_plural = u"Ремонты"
 
     def clean(self):
-        if self.report is not None:
-            self.machine = self.report.machine
-        else:
-            raise ValidationError(u"Не выбранно сообщение о неисправности!")
+        if self.report is not None and self.report.machine!=self.machine:
+            raise ValidationError(u"Выбранно неверное сообщение о неисправности другой машины")

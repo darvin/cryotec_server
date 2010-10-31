@@ -1,16 +1,20 @@
 # -*- coding: utf-8 -*-
+from libs.modelmixins import UrlMixin
+
 try:
     from django.db import models
 except ImportError:
     from qtdjango import models
 from clients.models import Client
 
-class MachineType(models.Model):
+class MachineType(models.Model, UrlMixin):
     """
     Тип машины
     """
     name = models.CharField(u"Название типа оборудования", max_length=30)
     """Название"""
+
+
 
     def __unicode__(self):
         return u"%s" % self.name
@@ -23,7 +27,7 @@ class MachineType(models.Model):
 
     
     
-class MachineMark(models.Model):
+class MachineMark(models.Model, UrlMixin):
     """
     Марка машины
     """
@@ -34,7 +38,9 @@ class MachineMark(models.Model):
 
     month_default = models.IntegerField(u"Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
     motohours_default = models.IntegerField(u"Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
-    
+
+
+
     class Meta:
         verbose_name = u"Марка оборудования"
         verbose_name_plural = u"Марки оборудования"
@@ -43,9 +49,10 @@ class MachineMark(models.Model):
     def __unicode__(self):
         return u"%s" % self.name
     
-    
 
-class Machine(models.Model):
+
+
+class Machine(models.Model, UrlMixin):
     """
     Конкретная машина
     """
@@ -66,9 +73,6 @@ class Machine(models.Model):
     month = models.IntegerField(u"Количество месяцев между профосмотрами", blank=True, null=True)
     motohours = models.IntegerField(u"Количество моточасов между техобслуживаниями", blank=True, null=True)
 
-    include_methods_results = {"get_current_motohours":models.IntegerField(u"Моточасы", blank=True, null=True),\
-                               "get_last_checkup_date":models.DateField(u"Дата последнего считывания", auto_now_add=True), \
-                            }
 
     class Meta:
         verbose_name = u"Оборудование"
@@ -95,9 +99,14 @@ class Machine(models.Model):
         except IndexError:
             return 0
 
+    get_current_motohours.method_as_field = models.IntegerField(u"Моточасы", blank=True, null=True)
+
 
     def get_last_checkup_date(self):
         try:
             return self.checkup_set.order_by("date")[0].date
         except IndexError:
             return self.date
+
+
+    get_last_checkup_date.method_as_field = models.DateField(u"Дата последнего считывания", auto_now_add=True),

@@ -2,6 +2,7 @@
 
 import os
 
+
 DEBUG = True
 DEBUG_TOOLBAR = False
 TEMPLATE_DEBUG = DEBUG
@@ -146,3 +147,7 @@ if DEBUG_TOOLBAR:
         'EXCLUDE_URLS': ('/admin',),
         'INTERCEPT_REDIRECTS': False,
     }
+
+
+MY_SITE_PROTOCOL = "http"
+MY_SITE_PORT = "8000"
