@@ -66,6 +66,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    "django.middleware.gzip.GZipMiddleware",
 )
 
 ROOT_URLCONF = 'cryotec_server.urls'

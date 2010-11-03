@@ -11,7 +11,7 @@ class MachineType(models.Model, UrlMixin):
     """
     Тип машины
     """
-    name = models.CharField(u"Название типа оборудования", max_length=30)
+    name = models.CharField(u"Название типа оборудования", max_length=128)
     """Название"""
 
 
@@ -31,7 +31,7 @@ class MachineMark(models.Model, UrlMixin):
     """
     Марка машины
     """
-    name = models.CharField(u"Марка", max_length=90)
+    name = models.CharField(u"Марка", max_length=128)
     """Название"""
     machinetype = models.ForeignKey(MachineType, verbose_name=u"Тип оборудования")
     """Тип машин, к которому принадлежит марка"""
@@ -56,13 +56,13 @@ class Machine(models.Model, UrlMixin):
     """
     Конкретная машина
     """
-    serial = models.CharField(u"Серийный номер", max_length=30,  blank=True, null=True)
+    serial = models.CharField(u"Серийный номер", max_length=128,  blank=True, null=True)
     """Серийный номер машины"""
     client = models.ForeignKey(Client, verbose_name=u"Клиент, которому принадлежит оборудование",   related_name="machines")
     customer = models.ForeignKey(Client, verbose_name=u"Клиент, который купил оборудование",  blank=True, null=True,  related_name="machines_customer")
 
     """Клиент, которому продана машина"""
-    alias = models.CharField(u"Псевдоним", max_length=30, blank=True)
+    alias = models.CharField(u"Псевдоним", max_length=128, blank=True)
     """Псевдоним машины"""
     machinemark = models.ForeignKey(MachineMark, verbose_name=u"Марка оборудования")
     """Марка машины"""

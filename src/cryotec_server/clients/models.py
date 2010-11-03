@@ -8,7 +8,7 @@ class Client(models.Model):
     """
     Клиент
     """
-    name = models.CharField("Имя", max_length=30)
+    name = models.CharField("Имя", max_length=128)
     """Имя клиента"""
     
     comment = models.TextField("Комментарий", max_length=3000)
