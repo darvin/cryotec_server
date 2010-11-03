@@ -8,14 +8,14 @@ class Client(models.Model):
     """
     Клиент
     """
-    name = models.CharField("Имя", max_length=128)
+    name = models.CharField(u"Имя", max_length=128)
     """Имя клиента"""
     
-    comment = models.TextField("Комментарий", max_length=3000)
+    comment = models.TextField(u"Комментарий", max_length=3000)
 
     class Meta:
-        verbose_name = "Клиент"
-        verbose_name_plural = "Клиенты"
+        verbose_name = u"Клиент"
+        verbose_name_plural = u"Клиенты"
 
     def __unicode__(self):
         return u"%s" % self.name

@@ -1,4 +1,6 @@
-# Django settings for cryotec_service project.
+# -*- coding: utf-8 -*-
+
+# Django settings for cryotec_server project.
 
 import os
 
@@ -59,7 +61,7 @@ SECRET_KEY = '%8^5t2ms&#2$dfy&%hbsmffshi01u=)rbm)h4p#s&3j*&*&7e#'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+    'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -79,10 +81,10 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-#    'admin_tools',
-#    'admin_tools.theming',
-#    'admin_tools.menu',
-#    'admin_tools.dashboard',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -101,6 +103,15 @@ INSTALLED_APPS = (
     'south',
     'libs',
 )
+APP_NAMES = {"files": u"Файлы",
+             "actiontemplates": u"Шаблоны событий",
+             'machines': u"Оборудование",
+    'clients': u"Клиенты",
+    'actions': u"События",
+    'checklists': u"Чеклисты",
+    'auth': u"Авторизация",
+    'sites':u"Сайты",
+}
 
 #apps that has qtdjango api
 QTDJANGO_APPS = (
@@ -112,12 +123,10 @@ QTDJANGO_APPS = (
                )
 
 ADMIN_TOOLS_INDEX_DASHBOARD = 'cryotec_server.dashboard.CustomIndexDashboard'
+ADMIN_TOOLS_MENU = 'cryotec_server.menu.CustomMenu'
+ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'cryotec_server.dashboard.CustomAppIndexDashboard'
 
 
-
-SERIALIZATION_MODULES = {
-  #  'json': 'wadofstuff.django.serializers.json'
-}
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.auth",

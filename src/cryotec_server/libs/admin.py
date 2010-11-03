@@ -14,4 +14,3 @@ class LinkedInline(admin.options.InlineModelAdmin):
             self.admin_model_path = self.model.__module__.split('.')[0] + "/" + self.model.__name__.lower()
             
 
-
