@@ -74,6 +74,11 @@ class Checkup(Action):
         verbose_name_plural = u"Контроли моточасов"
 
 
+    def clean(self):
+       from django.core.exceptions import ValidationError
+       if self.machine.get_current_motohours()>self.motohours:
+           raise ValidationError(u"Введенные моточасы не могут быть меньше текущих моточасов машины")
+
 
     
 class Maintenance(Action):
