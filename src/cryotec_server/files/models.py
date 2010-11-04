@@ -3,6 +3,10 @@ from django.contrib.contenttypes import generic
 from django.contrib.contenttypes.models import ContentType
 
 try:
+    from libs.modelmixins import UrlMixin
+except ImportError:
+    from cryotec_server.libs.modelmixins import UrlMixin
+try:
     from django.db import models
 except ImportError:
     from qtdjango import models

@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 
 try:
+    from libs.modelmixins import UrlMixin
+except ImportError:
+    from cryotec_server.libs.modelmixins import UrlMixin
+try:
     from django.db import models
 except ImportError:
     from qtdjango import models

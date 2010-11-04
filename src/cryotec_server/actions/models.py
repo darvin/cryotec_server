@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from django.core.exceptions import ValidationError
-from libs.modelmixins import UrlMixin
+try:
+    from libs.modelmixins import UrlMixin
+except ImportError:
+    from cryotec_server.libs.modelmixins import UrlMixin
 
 try:
     from django.contrib.auth.models import User
