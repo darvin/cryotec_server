@@ -18,7 +18,7 @@ from actiontemplates.models import ReportLevel, ReportTemplate
 
 
 
-def smart_truncate(s, width=20):
+def smart_truncate(s, width=40):
     try:
         if s[width].isspace():
             return s[0:width];
@@ -155,6 +155,8 @@ class Report(Action):
             return False
 
     is_fixed.method_as_field = models.BooleanField(u"Исправлена")
+    is_fixed.short_description = u"Исправлена"
+    
     
 class Fix(Action):
     """

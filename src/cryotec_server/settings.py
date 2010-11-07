@@ -7,7 +7,7 @@ import os
 
 DEBUG = True
 DEBUG_TOOLBAR = False
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = True
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),

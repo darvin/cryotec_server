@@ -9,6 +9,7 @@ from files.admin import UploadInline
 class ReportAdmin(admin.ModelAdmin):
     form = ReportAdminForm
     inlines = [UploadInline]
+    readonly_fields = ["is_fixed",]
     
     
 class FixAdmin(admin.ModelAdmin):

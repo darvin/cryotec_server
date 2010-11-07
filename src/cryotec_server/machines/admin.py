@@ -16,12 +16,14 @@ from files.admin import UploadInline
 class MachineClientInline(LinkedInline):
     model = Machine
     fk_name = 'client'
-    verbose_name = "Машины, эксплуатируемые клиентом"   
+    verbose_name = u"Машина, эксплуатируемая клиентом"   
+    verbose_name_plural = u"Машины, эксплуатируемые клиентом"   
     
 class MachineCustomerInline(LinkedInline):
     model = Machine
     fk_name = 'client'
-    verbose_name = "Машины, купленные клиентом"   
+    verbose_name = u"Машина, купленная клиентом"   
+    verbose_name_plural = u"Машины, купленные клиентом"   
 
     
 class MachineInline(LinkedInline):
@@ -46,6 +48,7 @@ class MachineAdmin(admin.ModelAdmin):
                CheckupInline, \
                UploadInline, \
                ]
+    readonly_fields = ["get_current_motohours","get_last_checkup_date"]
 
 
 

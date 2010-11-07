@@ -104,6 +104,7 @@ class Machine(models.Model, UrlMixin):
             return 0
 
     get_current_motohours.method_as_field = models.IntegerField(u"Моточасы", blank=True, null=True)
+    get_current_motohours.short_description = u"Моточасы"
 
 
     def get_last_checkup_date(self):
@@ -114,3 +115,4 @@ class Machine(models.Model, UrlMixin):
 
 
     get_last_checkup_date.method_as_field = models.DateField(u"Дата последнего считывания", auto_now_add=True),
+    get_last_checkup_date.short_description = u"Дата последнего считывания"

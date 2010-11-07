@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.core.urlresolvers import reverse, NoReverseMatch
 from django.utils.translation import ugettext_lazy as _
-from admin_tools.menu.models import *
-from admin_tools.menu.items import AppList
+from admin_tools.menu.items import AppList, MenuItem
+from admin_tools.menu import Menu
 from django.template.defaultfilters import capfirst
 from django.conf import settings
 
