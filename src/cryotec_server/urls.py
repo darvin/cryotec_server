@@ -8,12 +8,18 @@ import checklists.views
 from django.contrib import admin
 admin.autodiscover()
 
+import os
 
 urlpatterns = patterns('',
 
     url(r'^admin_tools/', include('admin_tools.urls')),
+    (r'^admin/doc/(?P<path>.*)$', 'django.views.static.serve', 
+         {'document_root':     os.path.join(os.path.dirname(__file__),
+                                            'client_doc'),
+          'show_indexes':True
+          }),
+    #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/', include(admin.site.urls)),
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     #qtdjango api
     (r'^api/', include('qtdjango.django_qtdjango.urls')),

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QHelpCollectionProject version="1.0">
+    <assistant>
+        <title>Криотек Клиент</title>
+        <applicationIcon>images/handbook.png</applicationIcon>
+        <cacheDirectory>SKOpenCodes/CryotecClient</cacheDirectory>
+        <startPage>qthelp://com.trolltech.examples.simpletextviewer/doc/index.html</startPage>
+        <aboutMenuText>
+            <text>О клиенте</text>
+        </aboutMenuText>
+        <aboutDialog>
+            <file>about.txt</file>
+            <icon>images/icon.png</icon>
+        </aboutDialog>
+        <enableDocumentationManager>false</enableDocumentationManager>
+        <enableAddressBar>false</enableAddressBar>
+        <enableFilterFunctionality>false</enableFilterFunctionality>
+    </assistant>
+    <docFiles>
+        <generate>
+            <file>
+                <input>cryotec_client.qhp</input>
+                <output>cryotec_client.qch</output>
+                </file>
+            </generate>
+        <register>
+            <file>cryotec_client.qch</file>
+            </register>
+        </docFiles>
+    </QHelpCollectionProject>

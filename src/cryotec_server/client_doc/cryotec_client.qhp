@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.trolltech.examples.simpletextviewer</namespace>
+    <virtualFolder>doc</virtualFolder>
+    <filterSection>
+        <toc>
+            <section title="Криотек Клиент" ref="index.html">
+                <section title="Краткое руководство" ref="./quickstart.html"></section>
+                <section title="Оборудование" ref="./machines.html"></section>
+                <section title="Панель информации" ref="./infopanel.html"></section>
+                <section title="Таблица событий" ref="./actions.html"></section>
+                <section title="События" ref="./action.html"></section>
+                <section title="Синхронизация" ref="./sync.html"></section>
+                <section title="Настройки" ref="./settings.html"></section>
+                </section>
+            </toc>
+        <keywords>
+        </keywords>
+	<files>
+		<file>action.html</file>
+		<file>actions.html</file>
+		<file>cryotec_client.qhcp</file>
+		<file>cryotec_client.qhp</file>
+		<file>images</file>
+		<file>index.html</file>
+		<file>infopanel.html</file>
+		<file>machines.html</file>
+		<file>quickstart.html</file>
+		<file>settings.html</file>
+		<file>sync.html</file>
+		<file>images/actions.png</file>
+		<file>images/checkup.png</file>
+		<file>images/firststart1.png</file>
+		<file>images/firststart2.png</file>
+		<file>images/fix.png</file>
+		<file>images/infopanel.png</file>
+		<file>images/machinetree.png</file>
+		<file>images/maintenance.png</file>
+		<file>images/mainwindow.png</file>
+		<file>images/report.png</file>
+		<file>images/settings.png</file>
+		<file>images/sync.png</file>
+		<file>images/unsynced.png</file>
+
+
+            </files>
+        </filterSection>
+    </QtHelpProject>
