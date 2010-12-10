@@ -1,4 +1,5 @@
 from django.conf.urls.defaults import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 import machines.views
 import clients.views
@@ -24,13 +25,8 @@ urlpatterns = patterns('',
     #qtdjango api
     (r'^api/', include('qtdjango.django_qtdjango.urls')),
 
- 
 )
-if settings.DEBUG:
-    import os
-    urlpatterns += patterns('',
-        (r'^site_media/(?P<path>.*)$', 'django.views.static.serve', 
-         {'document_root':     os.path.join(os.path.dirname(__file__), 'media'),
-          'show_indexes':True
-          }),
-    )
+
+
+
+urlpatterns += staticfiles_urlpatterns()

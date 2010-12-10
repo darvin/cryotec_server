@@ -41,7 +41,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'media')
+MEDIA_ROOT = os.path.join(os.path.dirname(__file__), 'site_media')
 
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -52,7 +52,7 @@ MEDIA_URL = '/site_media/'
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = '%8^5t2ms&#2$dfy&%hbsmffshi01u=)rbm)h4p#s&3j*&*&7e#'
@@ -166,5 +166,9 @@ MY_SITE_PORT = "8000"
 
 
 STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', '..', 'static_media')
-STATICFILES_DIRS = ( os.path.join(os.path.dirname(__file__), 'static'),)
+STATICFILES_DIRS = ( 
+                    ##FIXME
+               os.path.join(os.path.dirname(__file__), '..', '..',\
+                'eggs','django_admin_tools-0.3.0-py2.7.egg','admin_tools','media'),
+os.path.join(os.path.dirname(__file__), 'static'),)
 STATIC_URL = "/static/"
