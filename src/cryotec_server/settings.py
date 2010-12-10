@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.markup',
@@ -161,3 +162,9 @@ if DEBUG_TOOLBAR:
 
 MY_SITE_PROTOCOL = "http"
 MY_SITE_PORT = "8000"
+
+
+
+STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', '..', 'static_media')
+STATICFILES_DIRS = ( os.path.join(os.path.dirname(__file__), 'static'),)
+STATIC_URL = "/static/"
