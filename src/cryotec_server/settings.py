@@ -161,7 +161,7 @@ if DEBUG_TOOLBAR:
 
 
 MY_SITE_PROTOCOL = "http"
-MY_SITE_PORT = "8000"
+MY_SITE_PORT = "80"
 
 
 
@@ -169,6 +169,6 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', '..', 'static_media'
 STATICFILES_DIRS = ( 
                     ##FIXME
                os.path.join(os.path.dirname(__file__), '..', '..',\
-                'eggs','django_admin_tools-0.3.0-py2.7.egg','admin_tools','media'),
+                'eggs','django_admin_tools-0.3.0-py2.6.egg','admin_tools','media'),
 os.path.join(os.path.dirname(__file__), 'static'),)
 STATIC_URL = "/static/"
