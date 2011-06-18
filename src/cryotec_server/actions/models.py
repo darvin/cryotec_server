@@ -41,11 +41,11 @@ class Action(models.Model, UrlMixin):
     """Машина, к которой относится действие"""
     comment = models.TextField(u"Комментарий", max_length=3000)
     """Текстовое содержание действия - комментарий"""
-    date = models.DateTimeField(u"Дата", auto_now_add=True)
+    date = models.DateTimeField(u"Дата")
     """Дата/время действия"""
     user = models.ForeignKey(User, verbose_name=u"Автор")
 
-    read_only_fields = ["date",]
+#    read_only_fields = ["date",]
     auto_user_fields = ["user",]
 
     class Meta:
