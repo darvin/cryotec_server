@@ -33,7 +33,7 @@ class ContactFace(models.Model):
     Контактное лицо
     """
     client = models.ForeignKey(Client, verbose_name="Клиент")
-    name = models.CharField("Имя", max_length=30)
+    name = models.CharField("Имя", max_length=120)
     phone = models.CharField("Телефон", max_length=30, blank=True)
     email = models.EmailField("E-mail", blank=True)
     
