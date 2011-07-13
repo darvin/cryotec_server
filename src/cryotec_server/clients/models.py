@@ -40,3 +40,6 @@ class ContactFace(models.Model):
     class Meta:
         verbose_name = "Контактное лицо"
         verbose_name_plural = "Контактное лицо"
+
+    def __unicode__(self):
+        return u"%s (%s)" % (self.name, self.client)

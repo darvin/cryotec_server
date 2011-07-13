@@ -119,7 +119,7 @@ class Report(Action):
     maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Техобслуживание")
     """Периодическое действие, во время которого выявлена неисправность"""
     
-    
+    reported_by = models.ForeignKey('ContactFace', verbose_name=u"Сообщено клиентом")
 
     interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""
