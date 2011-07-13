@@ -43,6 +43,7 @@ class MachineMark(models.Model, UrlMixin):
     month_default = models.IntegerField(u"Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
     motohours_default = models.IntegerField(u"Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
 
+    manufacturer = models.CharField(u"Производитель", max_length=128)
 
 
     class Meta:
@@ -73,7 +74,9 @@ class Machine(models.Model, UrlMixin):
 
     date = models.DateField(u"Дата ввода в эксп.")
     """Дата ввода в эксплуатацию оборудования"""
+   
 
+    manufacturing_year = models.IntegerField(u"Год производства")
     month = models.IntegerField(u"Количество месяцев между профосмотрами", blank=True, null=True)
     motohours = models.IntegerField(u"Количество моточасов между техобслуживаниями", blank=True, null=True)
 
