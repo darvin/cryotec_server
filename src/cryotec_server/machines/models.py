@@ -62,8 +62,8 @@ class Machine(models.Model, UrlMixin):
     """
     serial = models.CharField(u"Серийный номер", max_length=128,  blank=True, null=True)
     """Серийный номер машины"""
-    client = models.ForeignKey(Client, verbose_name=u"Клиент, которому принадлежит оборудование",   related_name="machines")
-    customer = models.ForeignKey(Client, verbose_name=u"Клиент, который купил оборудование",  blank=True, null=True,  related_name="machines_customer")
+    client = models.ForeignKey(Client, verbose_name=u"Пользователь",   related_name="machines")
+    customer = models.ForeignKey(Client, verbose_name=u"Покупатель",  blank=True, null=True,  related_name="machines_customer")
 
     """Клиент, которому продана машина"""
     alias = models.CharField(u"Псевдоним", max_length=128, blank=True)
