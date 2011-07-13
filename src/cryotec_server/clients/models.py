@@ -16,6 +16,9 @@ class Client(models.Model):
     """Имя клиента"""
     
     comment = models.TextField(u"Комментарий", max_length=3000)
+    address_machine = models.TextField(u"Адрес установки", max_length=30000)
+    address_legal = models.TextField(u"Юридический адрес", max_length=30000)
+    address_phys = models.TextField(u"Фактический адрес", max_length=30000)
 
     class Meta:
         verbose_name = u"Клиент"
