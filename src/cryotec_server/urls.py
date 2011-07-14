@@ -25,6 +25,8 @@ urlpatterns = patterns('',
     #qtdjango api
     (r'^api/', include('qtdjango.django_qtdjango.urls')),
 
+    (r'^tinymce/', include('tinymce.urls')),    
+
 )
 
 

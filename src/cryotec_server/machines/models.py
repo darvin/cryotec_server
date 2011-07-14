@@ -7,8 +7,13 @@ except ImportError:
 
 try:
     from django.db import models
+    from tinymce import models as tinymce_models
+    from south.modelsinspector import add_introspection_rules
+    add_introspection_rules([], ["^tinymce\.models\.HTMLField"])
 except ImportError:
     from qtdjango import models
+    from qtdjango import models as tinymce_models
+
 from clients.models import Client
 
 class MachineType(models.Model, UrlMixin):
@@ -45,6 +50,8 @@ class MachineMark(models.Model, UrlMixin):
 
     manufacturer = models.CharField(u"Производитель", max_length=128)
 
+    info = tinymce_models.HTMLField(u"Дополнительная информация", null=True, blank=True)
+
 
     class Meta:
         verbose_name = u"Марка оборудования"
@@ -54,8 +61,6 @@ class MachineMark(models.Model, UrlMixin):
     def __unicode__(self):
         return u"%s" % self.name
     
-
-
 
 class Machine(models.Model, UrlMixin):
     """

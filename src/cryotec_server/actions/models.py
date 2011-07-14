@@ -15,7 +15,7 @@ except ImportError:
 
 from machines.models import Machine
 from actiontemplates.models import ReportLevel, ReportTemplate
-
+from clients.models import ContactFace
 
 
 def smart_truncate(s, width=40):
@@ -119,7 +119,7 @@ class Report(Action):
     maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Техобслуживание")
     """Периодическое действие, во время которого выявлена неисправность"""
     
-    reported_by = models.ForeignKey('ContactFace', verbose_name=u"Сообщено клиентом")
+    reported_by = models.ForeignKey(ContactFace, verbose_name=u"Сообщено клиентом", blank=True, null=True)
 
     interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""

@@ -103,6 +103,7 @@ INSTALLED_APPS = (
     'qtdjango.django_qtdjango',
     'south',
     'libs',
+    'tinymce',
 )
 APP_NAMES = {"files": u"Файлы",
              "actiontemplates": u"Шаблоны событий",
@@ -169,6 +170,6 @@ STATIC_ROOT = os.path.join(os.path.dirname(__file__), '..', '..', 'static_media'
 STATICFILES_DIRS = ( 
                     ##FIXME
                os.path.join(os.path.dirname(__file__), '..', '..',\
-                'eggs','django_admin_tools-0.3.0-py2.6.egg','admin_tools','media'),
+                'eggs','django_admin_tools-0.3.0-py2.7.egg','admin_tools','media'),
 os.path.join(os.path.dirname(__file__), 'static'),)
 STATIC_URL = "/static/"
