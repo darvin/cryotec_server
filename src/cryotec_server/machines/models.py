@@ -97,6 +97,26 @@ class Machine(models.Model, UrlMixin):
         else:
             return u"%s_%s" % (self.client.name, self.machinemark)
         
+    def tohtml(self):
+        table = (
+            (u"Оборудование", self),
+            (u"Производитель", self.machinemark.manufacturer),
+            (u"Серийный номер", self.serial),
+            (u"Год производства", self.manufacturing_year),
+            (u"Покупатель", self.customer),
+            (u"Пользователь", self.client),
+            (u"Место установки", self.client.address_machine),
+#            (u"Контактное лицо", self.client.contactface_set.all()),
+            (u"Дата ввода в эксплуатацию", self.date),
+#            (u"Срок гарантии", ),
+        )
+        html = u"<table>"
+        for rowname, rowvalue in table:
+            html += u"<tr><td><b>{0}</b></td> <td>{1}</td></tr>".format(rowname, rowvalue)
+
+        html +=u"</table><br>"
+        html += self.machinemark.info
+        return html
 
     
     def save(self):

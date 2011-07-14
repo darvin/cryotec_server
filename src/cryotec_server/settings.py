@@ -173,3 +173,11 @@ STATICFILES_DIRS = (
                 'eggs','django_admin_tools-0.3.0-py2.7.egg','admin_tools','media'),
 os.path.join(os.path.dirname(__file__), 'static'),)
 STATIC_URL = "/static/"
+
+
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+}
