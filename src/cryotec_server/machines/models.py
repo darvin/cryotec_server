@@ -48,7 +48,7 @@ class MachineMark(models.Model, UrlMixin):
     month_default = models.IntegerField(u"Количество месяцев между профосмотрами (по умолчанию)", blank=True, null=True)
     motohours_default = models.IntegerField(u"Количество моточасов между техобслуживаниями (по умолчанию)", blank=True, null=True)
 
-    manufacturer = models.CharField(u"Производитель", max_length=128)
+    manufacturer = models.CharField(u"Производитель", max_length=128, null=True, blank=True)
 
     info = tinymce_models.HTMLField(u"Дополнительная информация", null=True, blank=True)
 
