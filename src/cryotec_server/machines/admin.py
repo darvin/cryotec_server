@@ -16,14 +16,14 @@ from files.admin import UploadInline
 class MachineClientInline(LinkedInline):
     model = Machine
     fk_name = 'client'
-    verbose_name = u"Машина, эксплуатируемая клиентом"   
-    verbose_name_plural = u"Машины, эксплуатируемые клиентом"   
+    verbose_name = u"Оборудование, эксплуатируемое клиентом"
+    verbose_name_plural = u"Оборудование, эксплуатируемое клиентом"
     
 class MachineCustomerInline(LinkedInline):
     model = Machine
     fk_name = 'client'
-    verbose_name = u"Машина, купленная клиентом"   
-    verbose_name_plural = u"Машины, купленные клиентом"   
+    verbose_name = u"Оборудование, купленное клиентом"
+    verbose_name_plural = u"Оборудование, купленное клиентом"
 
     
 class MachineInline(LinkedInline):

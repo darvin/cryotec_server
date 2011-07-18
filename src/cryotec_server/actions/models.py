@@ -37,9 +37,9 @@ class Action(models.Model, UrlMixin):
     и ремонтов.
     """
     
-    machine = models.ForeignKey(Machine, verbose_name=u"Машина")
+    machine = models.ForeignKey(Machine, verbose_name=u"Оборудование")
     """Машина, к которой относится действие"""
-    comment = models.TextField(u"Комментарий", max_length=3000)
+    comment = models.TextField(u"Примечание", max_length=3000)
     """Текстовое содержание действия - комментарий"""
     date = models.DateTimeField(u"Дата")
     """Дата/время действия"""
@@ -87,7 +87,14 @@ class Checkup(Action):
 class Maintenance(Action):
     """
     Техобслуживание = проводится в соответствии с моточасами
-    """    
+    """
+    engineers = models.ManyToManyField(User, verbose_name=u"Сервис-инженеры", related_name="maintenances_by")
+    next_date = models.DateTimeField(u"Ориентир. срок очередной замены")
+    name = models.TextField(u"Выполненные работы, результат", max_length=3000)
+    needed_time = models.TextField(u"Затраты времени", max_length=3000)
+    needed_resources = models.TextField(u"Затраты материалов", max_length=3000)
+    motohours = models.IntegerField(u"Наработка часов установки к моменту выполнения работ")
+    operation_mode = models.TextField(u"Режим работы установки (час/дн, час/мес)", max_length=3000)
 
     class Meta:
         verbose_name = u"Техобслуживание"
@@ -113,13 +120,15 @@ class Report(Action):
     """
     Сообщение о неисправности
     """
-    
+    name = models.TextField(u"Рекламация/неисправность, способ извещения, от кого поступила", max_length=3000)
+    info = models.TextField(u"Сбои и неисправности, выявленные дистанционно или после диагностики на месте", max_length=3000)
+
     reporttemplate = models.ForeignKey(ReportTemplate, blank=True, null=True, verbose_name=u"Стандартная неисправность")
     
-    maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Техобслуживание")
-    """Периодическое действие, во время которого выявлена неисправность"""
-    
-    reported_by = models.ForeignKey(ContactFace, verbose_name=u"Сообщено клиентом", blank=True, null=True)
+    source_maintenance = models.ForeignKey(Maintenance, blank=True, null=True, verbose_name=u"Источник (Техобслуживание)", related_name="source_for_reports")
+    source_contactface = models.ForeignKey(ContactFace, verbose_name=u"Источник (Контактное лицо клиента)", blank=True, null=True, related_name="source_for_reports")
+    source_user = models.ForeignKey(User, verbose_name=u"Источник (Сервис-инженер)", blank=True, null=True, related_name="source_for_reports")
+
 
     interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""
@@ -145,7 +154,7 @@ class Report(Action):
 
     def clean(self):
         from django.core.exceptions import ValidationError
-        if self.maintenance is not None and self.maintenance.machine!=self.machine:
+        if self.source_maintenance is not None and self.source_maintenance.machine!=self.machine:
             raise ValidationError(u"Выбранно неверное техобслуживание другой машины")
 
     def is_fixed(self):
@@ -156,18 +165,29 @@ class Report(Action):
 
     is_fixed.method_as_field = models.BooleanField(u"Исправлена")
     is_fixed.short_description = u"Исправлена"
-    
+
+    def source(self):
+        for sourcefield in ("source_maintenance", "source_contactface", "source_user"):
+            if getattr(self, sourcefield):
+                return unicode(getattr(self, sourcefield))
+
+    source.method_as_field = models.CharField(u"Источник")
+    source.short_description = u"Источник"
     
 class Fix(Action):
     """
     Ремонт
     """
-    report = models.ForeignKey(Report, verbose_name=u"Сообщение о неисправности, ремонт которой проводился")
+    name = models.TextField(u"Выполненные работы, результат", max_length=3000)
+    report = models.ForeignKey(Report, verbose_name=u"Рекламация/неисправность")
     """Сообщение о неисправности, ремонт которой проводился"""
     fixed = models.BooleanField(u"Исправлена")
     """Исправлена ли неисправность"""
 
 
+    needed_time = models.TextField(u"Затраты времени", max_length=3000)
+    needed_resources = models.TextField(u"Затраты материалов", max_length=3000)
+    engineers = models.ManyToManyField(User, verbose_name=u"Сервис-инженеры", related_name="fixes_by")
 
     class Meta:
         verbose_name = u"Ремонт"

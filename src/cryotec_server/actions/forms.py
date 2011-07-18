@@ -5,7 +5,7 @@ from django.forms import ModelForm, ModelChoiceField, CharField
 from actions.models import Report, Maintenance
 
 class ReportAdminForm(ModelForm):
-    maintenance = ModelChoiceField(Maintenance.objects.all(), empty_label="Сообщено пользователем", required=False, label="Техобслуживание")
+#    maintenance = ModelChoiceField(Maintenance.objects.all(), empty_label="Сообщено пользователем", required=False, label="Техобслуживание")
     
     def __init__(self, *args, **kwargs):
         super(ReportAdminForm, self).__init__(*args, **kwargs)
