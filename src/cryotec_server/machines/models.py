@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from libs import humanize_value
+
 try:
     from libs.modelmixins import UrlMixin
 except ImportError:
@@ -61,6 +63,21 @@ class MachineMark(models.Model, UrlMixin):
     def __unicode__(self):
         return u"%s" % self.name
     
+    def tohtml(self):
+        table = (
+            (u"Марка", self.name),
+            (u"Тип машин", self.machinetype),
+            (u"Количество месяцев между профосмотрами", self.month_default),
+            (u"Количество моточасов между техобслуживаниями", self.motohours_default),
+            (u"Производитель", self.manufacturer),
+        )
+        html = u"<table>"
+        for rowname, rowvalue in table:
+            html += u"<tr><td><b>{0}</b></td> <td>{1}</td></tr>".format(rowname, humanize_value(rowvalue))
+
+        html +=u"</table><br>"
+        html += self.info
+        return html
 
 class Machine(models.Model, UrlMixin):
     """
@@ -112,7 +129,7 @@ class Machine(models.Model, UrlMixin):
         )
         html = u"<table>"
         for rowname, rowvalue in table:
-            html += u"<tr><td><b>{0}</b></td> <td>{1}</td></tr>".format(rowname, rowvalue)
+            html += u"<tr><td><b>{0}</b></td> <td>{1}</td></tr>".format(rowname, humanize_value(rowvalue))
 
         html +=u"</table><br>"
         html += self.machinemark.info

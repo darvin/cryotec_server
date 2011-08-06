@@ -24,6 +24,8 @@ class ReportLevel(models.Model):
 
 
 class ReportTemplate(models.Model):
+    name = models.CharField("Заголовок", max_length=64)
+
     machinemark = models.ForeignKey(machines.models.MachineMark, verbose_name="Марка машины")
     """Марка машины, к которой относится действие"""
     comment = models.TextField("Комментарий", max_length=3000)   
@@ -36,5 +38,5 @@ class ReportTemplate(models.Model):
         verbose_name_plural = "Стандартные неисправности"
 
     def __unicode__(self):
-        return u"%s (%d)" % (self.comment, self.interest.order)
+        return u"%s (%d)" % (self.name, self.interest.order)
  

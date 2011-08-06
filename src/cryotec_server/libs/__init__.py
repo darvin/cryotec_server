@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 
 
 def django_root_url(fq=False):
@@ -30,3 +30,14 @@ def current_site_url():
     if port:
         url += ':%s' % port
     return url
+
+
+def humanize_value(value):
+    if value == 'None':
+        return u"пусто"
+    elif value=='False':
+        return u"нет"
+    elif value=='True':
+        return u"да"
+    else:
+        return value

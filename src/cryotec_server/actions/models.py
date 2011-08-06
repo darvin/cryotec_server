@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.core.exceptions import ValidationError
+from libs import humanize_value
+
 try:
     from libs.modelmixins import UrlMixin
 except ImportError:
@@ -48,6 +50,8 @@ class Action(models.Model, UrlMixin):
 #    read_only_fields = ["date",]
     auto_user_fields = ["user",]
 
+    _fields_in_html = []
+
     class Meta:
         abstract = True
         verbose_name = u"Событие"
@@ -65,6 +69,16 @@ class Action(models.Model, UrlMixin):
             raise ValidationError(u"Не выбранна единица оборудования!")
 
 
+    def tohtml(self):
+        html = u"<table>"
+        for field_name in self._fields_in_html:
+            rowname = getattr(self.__class__, field_name).verbose_name
+            rowvalue = unicode(getattr(self, field_name))
+            html += u"<tr><td><b>{0}</b></td> <td>{1}</td></tr>".format(rowname, humanize_value(rowvalue))
+
+        html +=u"</table><br>"
+        return html
+
 
 class Checkup(Action):
     """
@@ -72,6 +86,9 @@ class Checkup(Action):
     """
     motohours = models.IntegerField(u"Моточасы")
     """Моточасы, считанные во время профосмотра с машины"""
+
+    _fields_in_html = ('date', 'comment', 'motohours', 'user','machine')
+
     class Meta:
         verbose_name = u"Контроль моточасов"
         verbose_name_plural = u"Контроли моточасов"
@@ -95,6 +112,9 @@ class Maintenance(Action):
     needed_resources = models.TextField(u"Затраты материалов", max_length=3000)
     motohours = models.IntegerField(u"Наработка часов установки к моменту выполнения работ")
     operation_mode = models.TextField(u"Режим работы установки (час/дн, час/мес)", max_length=3000)
+
+    _fields_in_html = ('date', 'name', 'needed_time','needed_resources','motohours','operation_mode','next_date','engineers', 'user', 'machine', 'comment')
+
 
     class Meta:
         verbose_name = u"Техобслуживание"
@@ -133,6 +153,7 @@ class Report(Action):
     interest = models.ForeignKey(ReportLevel, verbose_name=u"Уровень неисправности")
     """Серьезность неисправности"""
 
+    _fields_in_html = ('date', 'name', 'info', 'reporttemplate', 'interest', 'is_fixed', "source_maintenance", "source_contactface", "source_user", 'user', 'machine', 'comment')
 
     class Meta:
         verbose_name = u"Неисправность"
@@ -188,6 +209,10 @@ class Fix(Action):
     needed_time = models.TextField(u"Затраты времени", max_length=3000)
     needed_resources = models.TextField(u"Затраты материалов", max_length=3000)
     engineers = models.ManyToManyField(User, verbose_name=u"Сервис-инженеры", related_name="fixes_by")
+
+
+    _fields_in_html = ("date", "report", "name", 'needed_time', 'needed_resources', "engineers", "fixed",  "user","machine", "comment")
+
 
     class Meta:
         verbose_name = u"Ремонт"
